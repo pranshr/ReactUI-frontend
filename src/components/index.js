@@ -1,0 +1,16 @@
+export { default as Header } from "./Header";
+export { default as Footer } from "./Footer";
+export { default as Home } from "./Home";
+export { default as Companies } from "./Companies";
+export { default as Services } from "./Services";
+export { default as Contact } from "./Contact";
+export { default as About } from "./About";
+export { default as Disclaimers } from "./Disclaimers";
+export { default as Faq } from "./Faq";
+export { default as Terms } from "./Terms";
+export { default as Scompanies } from "./Scompanies";
+export { default as Institutions } from "./Institutions";
+export { default as Investors } from "./Investors";
+export { default as Shareholders } from "./Shareholders";
+export { default as Cdetail } from "./Cdetail";
+export { default as Why } from "./Why";
