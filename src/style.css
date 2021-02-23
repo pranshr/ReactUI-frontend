@@ -336,7 +336,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     .forgotdiv a{color: #333; margin: 0 20px; font-weight: bold; font-size: 13px;}
     .signup{margin-top: 30px; border-top:1px solid #ccc; padding: 30px 0;}
     .modalleft,.modalright{padding: 0 50px;}
-    .modalleft img{ margin-top: 70px; margin-bottom: 50px }
+   /* .modalleft img{ margin-top: 70px; margin-bottom: 50px }*/
     .sidenav{background-color:#111;height:100%;left:0;overflow-x:hidden;position:fixed;top:0;transition:.5s;width:0;z-index:1;}
 .sidenavR{height:100%;overflow-x:hidden;position:fixed;right:-70px;top:0;transition:.5s;width:0;z-index:1;}
 .sidenav a,.sidenavR a{color:#fff;display:block;padding:8px 0;text-decoration:none;transition:.3s;}
@@ -406,12 +406,160 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   .modal-display-block{
     display: block;
   }
+  .auth-form label{
+    font-size: 12px;
+  }
+  .auth-form .form-control{
+    font-size: 12px;
+  }
+  .auth-form h3{
+    font-size: 18px;
+  }
+
+  .signup {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+  .signup p{
+    font-size: 13px;
+  }
+  .signup button{
+    background: transparent;
+    border: 0;
+    color: #731b67;
+  }
+  .signup button:focus{
+    outline: none;
+  }
+  .modal-center-row{
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .social-login{
+    margin-top: 12px;
+  }
+  .social-login button{
+    margin-bottom: 5px;
+    font-weight: 600;
+    border: none;
+    font-size: 12px;
+  }
+  .social-login button:focus{
+    outline: 0;
+    border: none;
+  }
+  .social-login p{
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #333333c4;
+    margin-top: 5px;
+  }
+  .react-tel-input .form-control{
+    width: 100% !important;
+  }
+  /* Important part */
+.modal-dialog{
+  overflow-y: initial !important
+}
+ .modal-body.auth-modal{
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+/* width */
+.auth-modal::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.auth-modal::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  display: none;
+}
+ 
+/* Handle */
+.auth-modal::-webkit-scrollbar-thumb {
+  background: #888; 
+  display: none;
+}
+.register-form .form-group{
+  margin-bottom: 7px;
+}
+.sign-up-btn{
+  margin-top: 15px;
+}
+  .social-login button img{width: 20px;
+    margin-right: 10px;}
+.header-hide{
+  display: none;
+}
+.back_link{
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+  color: #050e18c2;
+}
+.back-btn-modal{
+  margin: 10px 12px;
+}
+.back_link span{
+  border: 1px solid #050e183d;
+    color: #050e183d;
+    padding: 2px 6px;
+}
+.back_link:focus{
+  outline: none;
+}
+.password-forms{
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 5px 0px 35px 0px;
+}
+.password-forms label, .password-forms .form-control{
+  font-size: 12px;
+}
+.form-top{
+  text-align: center;
+}
+.form-top img{
+max-width: 125px;
+}
+.form-top p{
+font-size: 13px;
+}
+.form-top h3{
+  font-size: 18px;
+  }
+  .forgotdiv button{
+    background: transparent;
+    border: 0;
+    font-size: 12px;
+    font-weight: 600;
+    
+  }
+  .forgotdiv {
+    display: flex;
+  }
+  .forgotdiv .text-left {
+    flex-grow: 1;
+  }
+  .forgotdiv button:focus{
+    outline: none;
+  }
+  
 @media screen and max-height 450px {
 .sidenav,.sidenavR{padding-top:15px;}
 .sidenav a,.sidenavR a{font-size:18px;}
 }
 @media (max-width:767px)
 {
+  .modal-center-row{
+    display: unset;
+    align-items: unset;
+    height: unset;
+  }
 	.header ul{ padding:0 }
 	.header ul li { display: block; }
 	.item img{ margin-top: 30px }

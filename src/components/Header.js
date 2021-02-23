@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Modal from './auth/Modal';
+import Login from './auth/Login';
+import Register from './auth/Register';
+import ForgetPassword from './auth/ForgetPassword';
+import ForgetUserId from './auth/ForgetUserId';
+
+import AuthLayout from './auth/AuthLayout';
 
 class Header extends Component {
   constructor(props){
@@ -8,7 +14,11 @@ class Header extends Component {
     this.state  = {
       sidenav:false,
       show: false,
-      topbar:true
+      topbar:true,
+      isLogin:true,
+      isRegister:false,
+      isForgetPassword:false,
+      isForgetUserid:false,
       }
       this.OpenSidebar = this.OpenSidebar.bind(this);
       this.showModal = this.showModal.bind(this);
@@ -34,8 +44,39 @@ class Header extends Component {
   hideModal = () => {
     this.setState({ show: false });
   };
+  
+  onRegister= () =>{
+    this.setState({
+      isRegister:true
+    });
+  }
+  onLogin = () =>{
+    this.setState({
+      isRegister:false
+    });
+  }
+
+  onForgetPassword = () =>{
+    this.setState({
+      isLogin:false,
+      isForgetPassword:true
+    });
+  }
+  onForgetUserid = () =>{
+    this.setState({
+      isLogin:false,
+      isForgetUserid:true
+    });
+  }
+  onBack = () =>{
+    this.setState({
+      isLogin:true,
+      isForgetPassword:false,
+      isForgetUserid:false
+    });
+  }
   render(){
-    const { sidenav, topbar  } = this.state;
+    const { sidenav, topbar, isRegister, isForgetPassword, isLogin, isForgetUserid  } = this.state;
 	return(
 		<>
     {
@@ -76,10 +117,10 @@ class Header extends Component {
                       </button>
                     </li>
                       <li>
-					  <button className="side-nav-btn"   onClick={this.OpenSidebar}>
-					  <i className="fa fa-list" />
-              </button> 
-					 </li>
+					          <button className="side-nav-btn"   onClick={this.OpenSidebar}>
+				        	    <i className="fa fa-list" />
+                    </button> 
+					         </li>
                     </ul>
                   </div>
                   <div className="clearfix" />
@@ -107,49 +148,26 @@ class Header extends Component {
           <p><Link to="#">FAQ</Link></p>
         </div>
       </div>
-      <Modal show={this.state.show} handleClose={this.hideModal}>
-          
+        <Modal show={this.state.show} handleClose={this.hideModal} headerClass={ !isForgetPassword && !isForgetUserid ? null: "header-hide"}>
+        {  isLogin || isRegister ? 
+            <AuthLayout>
+              {
+                !isForgetPassword && !isRegister && <Login onRegister={this.onRegister} onForgetPassword={this.onForgetPassword} onForgetUserid={this.onForgetUserid}/> 
+              }
+             
+              {
+                isRegister && <Register onLogin={this.onLogin}/> 
+              }
+            </AuthLayout>   
+            :null
+          } 
+              {
+                !isLogin && isForgetPassword && <ForgetPassword onBack={this.onBack} />
+              }   
 
-    
-    
-      <div class="modal-body">
-       <div class="row">
-       	<div class="col-md-6">
-       		<div class="modalleft">
-       			<img src={`${process.env.PUBLIC_URL}/assets/images/modalimg.png`} class="center-block" alt="modalimg" />
-       			<h4 class="text-center text-bold">Your data 100% secure <br class="hidden-xs"/> with us</h4>
-       			<p class="text-center ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
-       		</div>
-       	</div>
-       	<div class="col-md-6">
-       		<div class="modalright">
-       			<img src={`${process.env.PUBLIC_URL}/assets/images/modallogo.png`} alt="modallogo" />
-       			<h3 class="text-bold">Welcome Back</h3>
-       			<div class="form-group">
-       				<label>User ID</label>
-       				<input type="text" class="form-control" />
-       			</div>
-       			<div class="form-group">
-       				<label>Password</label>
-       				<input type="password" class="form-control" />
-       			</div>
-       			<div class="form-group">
-       				<button type="button" class="btn btn-block loginbtn">Login</button>
-       			</div>
-
-       			<div class="forgotdiv text-center">
-       				<p><Link to="#">Forgot User ID?</Link> <Link to="#">Forgot Password?</Link></p>
-       			</div>
-       			<div class="signup">
-       				<p class="text-center">Don't have an account yet? <Link to="#">Sign Up</Link></p>
-       			</div>
-       		</div>
-       	</div>
-
-       </div>
-      </div>
-      
-    
+              {
+                !isLogin && isForgetUserid && <ForgetUserId onBack={this.onBack} />
+              }    
         </Modal>
         
 
