@@ -341,7 +341,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-12">
                   <div className="view">
-                    <p className="text-center p1"><Link to="#">View All</Link></p>
+                    <p className="text-center p1"><Link to="/companies">View All</Link></p>
                   </div>
                 </div>
               </div>
@@ -482,7 +482,9 @@ const Home = () => {
               <div className="col-md-12 text-center">
                 <h2>Explore our Investing Platform</h2>
                 <p>Excellent plan and very easy and takes less than few <br /> minutes in "Sell" and "Buy" shares</p>
-                <p><Link to="#" className="btn1">Try Our Platform</Link></p>
+                <p><button type="button" className="btn1">
+                    Try Our Platform
+                      </button></p>
               </div>
             </div>
           </div>

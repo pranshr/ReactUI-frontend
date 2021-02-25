@@ -22,34 +22,34 @@ const Footer = () => {
               <div className="col-md-2 col-sm-2">
                 <h4 className="quick">Quick Links</h4>
                 <ul className="ul1">
-                  <li><Link to="#">Home</Link></li>
+                  <li><Link to="/">Home</Link></li>
                   <li><Link to="#">Platform</Link></li>
-                  <li><Link to="/Companies">Companies</Link></li>
+                  <li><Link to="/companies">Companies</Link></li>
                   <li><Link to="#">Blog</Link></li>
-                  <li><Link to="/Services">Services</Link></li>
-                  <li><Link to="/Contact">Contact Us</Link></li>
+                  <li><Link to="/services">Services</Link></li>
+                  <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
               </div>
               <div className="col-md-3 col-sm-3">
                 
                 <ul className="ul2">
-                  <li><Link to="/About">About</Link></li>
+                  <li><Link to="/about">About</Link></li>
                   <li><Link to="#">Types of Unlisted Companies</Link></li>
                   <li><Link to="#">Solutions</Link></li>
-                  <li><Link to="/Why">Why Us</Link></li>
-                  <li><Link to="/Faq">FAQ</Link></li>
+                  <li><Link to="/why-us">Why Us</Link></li>
+                  <li><Link to="/faq">FAQ</Link></li>
                 </ul>
               </div>
               <div className="col-md-2 col-sm-2">
                 <h4 className="legal">Legal</h4>
                 <ul className="ul3">
-                  <li><Link to="/Disclaimers">Disclaimer</Link></li>
-                  <li><Link to="#">Terms of Use</Link></li>
-                  <li><Link to="/Terms">Privacy Policy</Link></li>
-                  <li><Link to="/Scompanies">Solution For Companies</Link></li>
-							    <li><Link to="/Institutions">Institutions</Link></li>
-						    	<li><Link to="/Investors">Investors</Link></li>
-						    	<li><Link to="/Shareholders">Shareholders</Link></li>
+                  <li><Link to="/disclaimers">Disclaimer</Link></li>
+                  <li><Link to="/terms-and-conditions">Terms of Use</Link></li>
+                  <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                  <li><Link to="/scompanies">Solution For Companies</Link></li>
+							    <li><Link to="/institutions">Institutions</Link></li>
+						    	<li><Link to="/investors">Investors</Link></li>
+						    	<li><Link to="/shareholders">Shareholders</Link></li>
                 </ul>
               </div>
               <div className="col-md-2 col-sm-2">

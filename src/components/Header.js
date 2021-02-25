@@ -108,9 +108,9 @@ class Header extends Component {
                     <ul className=" navbar-right">
                       <li className="active"><Link to="/">Home</Link></li>
                       <li><Link to="#">Platform</Link></li>
-                      <li><Link to="/Companies">Companies</Link></li>
-                      <li><Link to="/Services">Services</Link></li>
-                      <li><Link to="/Contact">Contact Us</Link></li>
+                      <li><Link to="/companies">Companies</Link></li>
+                      <li><Link to="/services">Services</Link></li>
+                      <li><Link to="/contact">Contact Us</Link></li>
                       <li>
                       <button type="button" onClick={this.showModal} className="login-btn">
                          Login/Sign Up
