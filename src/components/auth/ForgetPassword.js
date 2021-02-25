@@ -1,5 +1,41 @@
 import React, { Component, Fragment } from 'react'
 class ForgetPassword extends Component {
+  constructor(props){
+		super(props);
+		this.state = {
+			email: '',
+			emailError: '',
+		}
+	 }
+   handleEmailChange = event => {
+    this.setState({ email: event.target.value }, () => {
+      this.validateEmail();
+    });
+  };
+  validateEmail = () => {
+    const { email } = this.state;
+    let formIsValid = true;
+    if(!email.length > 0){
+  this.setState({
+         emailError:'The Email field is required',
+          });
+        formIsValid = false;
+    }else{
+          this.setState({
+            emailError:null,
+          });
+    }
+    return formIsValid;
+  
+  }
+  requestSubmit(e){
+       e.preventDefault();
+      const isValid = this.validateEmail();
+      if(isValid){
+        const { email } = this.state
+        alert(`Your state values: \n User Email: ${email}`)
+       }
+  }
     render(){
         return(
           <Fragment>
@@ -13,13 +49,25 @@ class ForgetPassword extends Component {
                    <p>Enter your email address and we'll send you a link to reset your password.</p>  
                  </div>
                 
+                 <form name="forgetform" className="forgetform" onSubmit= {this.requestSubmit.bind(this)}>
        			<div className="form-group">
-       				<label>Email</label>
-       				<input type="text" class="form-control" />
+       			
+       			<label htmlFor="email">Email</label>
+					   <input
+                     type="text"
+                     name='email'
+                     className={`form-control ${this.state.emailError ? 'is-invalid' : ''}`}
+                     id='email'
+                     value={this.state.email}
+                     onChange={this.handleEmailChange}
+                     onBlur={this.validateEmail}
+                   />
+                   <div className='invalid-feedback'>{this.state.emailError}</div>
        			</div>
        			<div className="form-group">
-       				<button type="button" className="btn btn-block loginbtn">Continue</button>
+       				<button type="submit" className="btn btn-block loginbtn">Continue</button>
        			</div>
+             </form>
                  </div>
                 
            

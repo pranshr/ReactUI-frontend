@@ -1,5 +1,8 @@
 body{font-family: 'Montserrat', sans-serif; font-size: 16px;
 }
+button:focus{
+  outline: none !important;
+}
 .topheader{ background: #731b67; color: #fff; font-size: 16px; padding: 0px 0 5px }
 a{color:#731b67; }
 .topheader p{padding: 0; margin:0;}
@@ -333,6 +336,9 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     #loginModal .modal-body{padding-top:0px; padding-bottom: 0; border: none !important;}
     #loginModal h3{ margin: 40px 0 30px; }
     .loginbtn{ background:#731b67; color:#fff;  }
+    .loginbtn:focus, .loginbtn:active, .loginbtn:hover{
+      color: #fff;
+    }
     .forgotdiv a{color: #333; margin: 0 20px; font-weight: bold; font-size: 13px;}
     .signup{margin-top: 30px; border-top:1px solid #ccc; padding: 30px 0;}
     .modalleft,.modalright{padding: 0 50px;}
@@ -445,6 +451,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     font-weight: 600;
     border: none;
     font-size: 12px;
+    padding: 10px;
   }
   .social-login button:focus{
     outline: 0;
@@ -452,9 +459,12 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   }
   .social-login p{
     font-size: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #333333c4;
-    margin-top: 5px;
+    margin-top: 10px;
+  }
+  .react-tel-input{
+    border-radius: 4px;
   }
   .react-tel-input .form-control{
     width: 100% !important;
@@ -515,7 +525,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  padding: 5px 0px 35px 0px;
+  padding: 0px 0px 35px 0px;
 }
 .password-forms label, .password-forms .form-control{
   font-size: 12px;
@@ -548,7 +558,29 @@ font-size: 13px;
   .forgotdiv button:focus{
     outline: none;
   }
-  
+  .form-control.is-invalid{
+    border: 1px solid red;
+  }
+  .is-invalid-phone{
+    border: 1px solid red;
+  }
+  .is-invalid-phone .form-control{
+    border: none !important;
+  }
+  .invalid-feedback{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .password-validation-list{
+    margin: 15px 0px;
+  }
+  .password-validation-list p{
+    font-size: 12px;
+  }
+  .password-validation-list img{
+    width: 16px;
+  }
 @media screen and max-height 450px {
 .sidenav,.sidenavR{padding-top:15px;}
 .sidenav a,.sidenavR a{font-size:18px;}
