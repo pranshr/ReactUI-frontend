@@ -20,13 +20,13 @@ class Header extends Component {
       isForgetPassword:false,
       isForgetUserid:false,
       }
-      this.OpenSidebar = this.OpenSidebar.bind(this);
+      this.ToogleSidebar = this.ToogleSidebar.bind(this);
       this.showModal = this.showModal.bind(this);
       this.hideModal = this.hideModal.bind(this);
 
    
   }
-   OpenSidebar (){
+  ToogleSidebar (){
     this.setState({
       sidenav:!this.state.sidenav
     })
@@ -111,13 +111,13 @@ class Header extends Component {
                       <li><Link to="/companies">Companies</Link></li>
                       <li><Link to="/services">Services</Link></li>
                       <li><Link to="/contact">Contact Us</Link></li>
-                      <li>
+                      {/* <li>
                       <button type="button" onClick={this.showModal} className="login-btn">
                          Login/Sign Up
                       </button>
-                    </li>
+                    </li> */}
                       <li>
-					          <button className="side-nav-btn"   onClick={this.OpenSidebar}>
+					          <button className="side-nav-btn"   onClick={this.ToogleSidebar}>
 				        	    <i className="fa fa-list" />
                     </button> 
 					         </li>
@@ -133,19 +133,19 @@ class Header extends Component {
 		<div id="mySidenavR" className={sidenav ? "sidenavR skew open": "sidenavR skew "}>
         <div className="skewnav">
 		
-          <button  onClick={this.OpenSidebar} className="closebtn side-nav-btn-closebtn">
+          <button  onClick={this.ToogleSidebar} className="closebtn side-nav-btn-closebtn">
 		Close <i className="fa fa-times" />
               </button> 
-          <h4><Link to="#" className="text-white">About UnlistedAssets.com</Link></h4>
+          <h4><Link to="/about" className="text-white" onClick={this.ToogleSidebar}>About UnlistedAssets.com</Link></h4>
           <p className="text-white">Solutions</p>
           <ul className="sidenav1">
-            <li><Link to="#">For Companies</Link></li>
-            <li><Link to="#">For Institutions</Link></li>
-            <li><Link to="#">For Investors</Link></li>
-            <li><Link to="#">For Shareholders</Link></li>
+            <li><Link to="/scompanies" onClick={this.ToogleSidebar}>For Companies</Link></li>
+            <li><Link to="/institutions" onClick={this.ToogleSidebar}>For Institutions</Link></li>
+            <li><Link to="/investors" onClick={this.ToogleSidebar}>For Investors</Link></li>
+            <li><Link to="/shareholders" onClick={this.ToogleSidebar}>For Shareholders</Link></li>
           </ul>
-          <p><Link to="#">Why Us</Link></p>
-          <p><Link to="#">FAQ</Link></p>
+          <p><Link to="/why-us" onClick={this.ToogleSidebar}>Why Us</Link></p>
+          <p><Link to="/faq" onClick={this.ToogleSidebar}>FAQ</Link></p>
         </div>
       </div>
         <Modal show={this.state.show} handleClose={this.hideModal} headerClass={ !isForgetPassword && !isForgetUserid ? null: "header-hide"}>

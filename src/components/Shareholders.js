@@ -4,7 +4,7 @@ import React from "react";
 const Shareholders = () => {
 	return(
 		<>
-		 <section className="investors-section banner">
+		 <section className="shareholders-section banner">
           <div className="container">
             <div className="row">
               <div className="col-md-7">

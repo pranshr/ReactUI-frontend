@@ -1,0 +1,94 @@
+[
+	{
+		"id": 1,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+	{
+		"id": 2,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+	{
+		"id": 3,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+	{
+		"id": 4,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+	{
+		"id": 5,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+	{
+		"id": 6,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+	{
+		"id": 7,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+    {
+		"id": 8,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	},
+	{
+		"id": 9,
+		"title": "Sun Pharma",
+		"desc": "Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.",
+		"valuation": "2,909.76",
+		"funding": "Series A",
+		"c_category": "Pharmacy",
+		"c_id": "INE044A01036",
+		"img_src" : "../assets/images/sunphar.png"
+	}
+	
+
+]

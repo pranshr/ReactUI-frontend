@@ -13,10 +13,12 @@ const Footer = () => {
                 <p className="mt-30">© 2020 -2020 Unlisted Assets</p>
                 <p className="mb-30">All Rights reserved.</p>
                 <ul className="sociallinks">
-                  <li><Link to="https://twitter.com" target="_blank"><img src={process.env.PUBLIC_URL + "./assets/images/twitter.png"} alt="" /></Link></li>
-                  <li><Link to="https://facebook.com" target="_blank"><img src={process.env.PUBLIC_URL + "./assets/images/fb.png"} alt="" /></Link></li>
-                  <li><Link to="https://instagram.com" target="_blank"><img src={process.env.PUBLIC_URL + "./assets/images/insta.png"} alt="" /></Link></li>
-                  <li><Link to="https://youtube.com" target="_blank"><img src={process.env.PUBLIC_URL + "./assets/images/yt.png"} alt=""/></Link></li>
+                
+                  <li><a href={'https://twitter.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/twitter.png"} alt="" /></a></li> 
+                  <li><a href={'https://facebook.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/fb.png"} alt="" /></a></li> 
+                  <li><a href={'https://instagram.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/insta.png"} alt="" /></a></li> 
+                  <li><a href={'https://youtube.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/yt.png"} alt="" /></a></li> 
+                 
                 </ul>
               </div>
               <div className="col-md-2 col-sm-2">
@@ -27,17 +29,21 @@ const Footer = () => {
                   <li><Link to="/companies">Companies</Link></li>
                   <li><Link to="#">Blog</Link></li>
                   <li><Link to="/services">Services</Link></li>
+                  <li><Link to="/why-us">Why Us</Link></li>
                   <li><Link to="/contact">Contact Us</Link></li>
+                  <li><Link to="/faq">FAQ</Link></li>
                 </ul>
               </div>
-              <div className="col-md-3 col-sm-3">
-                
+              <div className="col-md-2 col-sm-2">
+              <h4 className="quick">Our Solution</h4>
                 <ul className="ul2">
+                  <li><Link to="/scompanies">For Companies</Link></li>
+                  <li><Link to="/institutions">For Institutions</Link></li>
+						    	<li><Link to="/investors">Investors</Link></li>
+                  <li><Link to="/shareholders">Shareholders</Link></li>
                   <li><Link to="/about">About</Link></li>
                   <li><Link to="#">Types of Unlisted Companies</Link></li>
                   <li><Link to="#">Solutions</Link></li>
-                  <li><Link to="/why-us">Why Us</Link></li>
-                  <li><Link to="/faq">FAQ</Link></li>
                 </ul>
               </div>
               <div className="col-md-2 col-sm-2">
@@ -46,13 +52,9 @@ const Footer = () => {
                   <li><Link to="/disclaimers">Disclaimer</Link></li>
                   <li><Link to="/terms-and-conditions">Terms of Use</Link></li>
                   <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-                  <li><Link to="/scompanies">Solution For Companies</Link></li>
-							    <li><Link to="/institutions">Institutions</Link></li>
-						    	<li><Link to="/investors">Investors</Link></li>
-						    	<li><Link to="/shareholders">Shareholders</Link></li>
                 </ul>
               </div>
-              <div className="col-md-2 col-sm-2">
+              <div className="col-md-3 col-sm-3">
                 <h4>Subscribe To Our Newsletter</h4>
                 <div className="form-group">
                   <input type="text" name className="text form-control" placeholder="Email" />

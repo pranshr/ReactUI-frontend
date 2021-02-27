@@ -1,17 +1,30 @@
-body{font-family: 'Montserrat', sans-serif; font-size: 16px;
+body{font-family: 'Montserrat', sans-serif; font-size: 15px;
 }
 button:focus{
   outline: none !important;
 }
-.topheader{ background: #731b67; color: #fff; font-size: 16px; padding: 0px 0 5px }
+.topheader{ background: #731b67; color: #fff; font-size: 15px; padding: 0px 0 5px }
 a{color:#731b67; }
 .topheader p{padding: 0; margin:0;}
 .topheader a{ display: inline-block; }
 .ml-50{margin-left: 50px}
 .btn-white{ background: #fff; padding: 7px 15px; color:#731b67; font-weight: bold; text-decoration: none; }
-.btn1{ background:#731b67; color: #fff; padding:10px 17px; border:2px solid #731b67; font-weight: bold; border-radius: 5px  }
-.addsection h2{color: #0d223c; font-weight: bold;}
-.addsection .col-md-12{ border: 1px solid #eae8ea; border-radius: 20px; padding: 40px 0  }
+.btn1 {
+  background: #731b67;
+  color: #fff;
+  padding: 14px 44px;
+  border: 2px solid #731b67;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.addsection h2{color: #0d223c; font-weight: 600;}
+.addsection .col-md-12 {
+  border: 1px solid #eae8ea;
+  border-radius: 12px;
+  padding: 30px 0;
+  margin: 60px 0;
+  background: #fff;
+}
 .addsection p{ font-size: 16px;margin-bottom: 30px }
 .close1{ color: #fff; margin-left: 50px; font-size: 24px; display: inline-block;margin-top: 2px; cursor: pointer;}
 .close1:hover{ color: #fff;}
@@ -25,9 +38,9 @@ a{color:#731b67; }
 .header ul li a{color: #fff; font-weight: bold;padding: 10px; font-size: 14px}
 .header ul li a:hover{background-color: #fff;color: #95548b;padding: 10px;border-radius: 3px}
 .header ul li a:hover{text-decoration: none;}
-.carousel-indicators li{width: 40px; height: 8px; background: #fff; margin-bottom: 9px;}
+.carousel-indicators li{width: 40px; height: 8px; background: #fff; /*margin-bottom: 9px;*/}
 .carousel-indicators .active{width: 40px; height: 8px; background: #95548b; border-color: #95548b}
-.carousel-indicators{ bottom: 100px; left: 70px; }
+.carousel-indicators{ bottom: 0px; left: 70px; }
 .about2,.about3{color: #0d223c}
 .navbar{margin-bottom: 0}
 .login,.login:hover{border:2px solid #fff; padding: 5px 18px}
@@ -37,6 +50,9 @@ a{color:#731b67; }
 .p2{margin-top: 28px}
 .p1{margin-top: 25px}
 .p4{margin-top: 28px}
+.h4, h4 {
+  font-size: 20px;
+}
 .mt-30{margin-top: 30px}
 .mb-30{margin-bottom: 30px;}
 .footer-back{background-color: #0d223c;padding: 50px 0}
@@ -54,7 +70,8 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .legal{color: #fff;font-weight: bold}
 .ul3{padding: 0}
 .ul3 li{list-style: none; padding: 10px 0}
-.ul3 li a:hover{text-decoration: none;}
+.ul3 li a:hover, .ul1 li a:hover,.ul2 li a:hover{text-decoration: none; color: #c156b3;}
+
 .ul3 li a{color: #fff}
 .footer p{ color: #fff; }
 
@@ -79,24 +96,49 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .p2{margin-top: 0;margin-bottom: 0}
 .pl-0{padding-left:0;}
 .border1{padding: 3px; border: 1px solid #ccc; border-radius: 100px; height: 45px; width: 45px; margin-top: px}
-.box{border: 1px solid #f3f2f3;margin-top: 65px;border-radius: 5px;padding: 1px;box-shadow: 0 0 2px #ccc}
-.box1{background-color: #fcfbff;border-bottom: 1px solid #f3f2f3;padding: 10px 20px}
+.box{ border: 1px solid #d8cfd8;
+  margin-top: 32px;
+  border-radius: 6px;}
+.box1{background-color: #fcfbff;
+  border-bottom: 1px solid #f3f2f3;
+  padding: 10px 20px;
+  border-radius: 6px;}
 .pharmacy{font-size: 10px;margin-bottom: 0}
 .box1 img{ margin-top: 3px }
 .pl-25{padding-left: 25px}
 .box2{border: 1px solid #f3f2f3;margin-top: 30px;border-radius: 5px;padding: 1px;box-shadow: 0 0 2px #ccc}
 .text-bold{font-weight: bold}
 .value{padding: 10px 20px}
-.third-section{background-color: #fcfbff;margin-top: 35px;padding: 30px 0px 93px 0px}
-.third-section h2{margin-bottom: 65px;margin-top: 30px;color: #0d223c}
-.invest img,.invest1 img{ margin-bottom: 10px }
-.invest-p{font-weight: bold;font-size: 16px}
-.invest{border:1px solid #f3f2f3; border-radius: 18px;padding: 30px 25px;height: 275px}
-.invest1{border:1px solid #f3f2f3; border-radius: 18px;padding: 30px 25px;height: 275px;margin-top: 30px}
+.third-section{background-color: #fcfbff;margin-top: 35px;padding: 30px 0 45px;}
+.third-section h2{margin-bottom: 45px;margin-top: 15px;color: #0d223c}
+.invest img,.invest1 img{ margin-bottom: 22px }
+.invest-p{font-weight: 600;font-size: 16px}
+/*.invest{border:1px solid #f3f2f3; border-radius: 18px;padding: 30px 25px;height: 275px}
+.invest1{border:1px solid #f3f2f3; border-radius: 18px;padding: 30px 25px;height: 275px;margin-top: 30px}*/
+.invest, .invest1 {
+  border: 1px solid #eae5ea;
+  border-radius: 8px;
+  padding: 30px 35px;
+  min-height: 222px;
+  background: #fff;
+  margin-bottom: 30px;
+  
+}
+.invest1 {
+  margin-top: 30px;
+}
+
 .forth-section h2{font-weight: bold;margin-bottom: 50px; color: #0d223c}
-.forth-section{margin-top: 70px;padding-bottom: 140px}
+.forth-section {
+  margin-top: 35px;
+  padding-bottom: 35px;
+}
 .listed{font-weight: bold;}
-.last-section{background-color:#fcfbff;padding-top: 83px;padding-bottom: 100px}
+.last-section {
+    background-color: #fcfbff;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
 .last-section h2{font-weight: bold;margin-bottom: 20px; color:#0d223c;}
 .last-section p{margin-top: 30px}
 .space{margin-top: 30px}
@@ -136,12 +178,12 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .solution-section h1::after{content:"" ;background-color: #fff;height: 2px;width: 85px;top: 132px;left:320px;position: absolute;}
 .solution-section p {color: #fff;font-size: 18px}
 .bank{padding: 50px 0 0 50px;}
-.stay{font-size: 20px;font-weight: bold; color:#0d223d;}
+.stay{font-size: 24px;font-weight: 600;}
 .trust p,.integrity p,.analysis p,.get1 p, .get p,.access p,.insights p,.bank1 p,.bank p,.bank2 p,.bank3 p{color:#0d223d;}
 .bank2{padding:50px 0 0 50px}
 .bank1{padding:50px 50px 0 0;}
 .bank3{padding: 50px 50px 0 0;}
-.private{margin-top: 100px}
+.private{margin-top: 60px}
 .solution2{margin-bottom: 100px;}
 .institutions-section{background-color: #0d223d;padding:50px 0 0}
 .institutions-section h1{color: #fff;font-weight: bold;padding: 53px 0 0; margin-bottom: 20px}
@@ -161,7 +203,7 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .shareholders-section{background-color: #0d223d;padding: 50px 0 0; }
 .shareholders-section h1{color: #fff;font-weight: bold;padding: 120px 0 0; margin-bottom: 20px}
 .shareholders-section p{color: #fff;font-size: 18px}
-.shareholders-section h1::after{content:"" ;background-color: #fff;height: 2px;width: 85px;top: 196px;left: 180px;position: absolute;}
+.shareholders-section h1::after{content:"" ;background-color: #fff;height: 2px;width: 85px;top: 196px;left: 350px;position: absolute;}
 .shareholders{ margin-bottom: 100px }
 .trust{padding: 50px 0 0 50px}
 .integrity{padding: 0px 5px}
@@ -308,18 +350,26 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     .know{padding: 10px 45px 10px 120px}
     .company-section{margin-top: 50px;margin-bottom: 50px}
     .sun{border:1px solid #e6e6e6;border-radius: 10px}
-    .moon{border-bottom: 1px solid #e6e6e6;padding:20px;}
-    .earth{padding: 20px}
+    .moon{border-bottom: 1px solid #e6e6e6;}
+   
+    .earth, .moon {
+      padding: 12px 20px;
+  }
+  
     .moon p span{font-size: 12px;}
     .moon p span a{color: #000}
     .panel1 p span{margin-left: 10px}
     .panel1 p{font-size: 13px}
+
     .galaxy h4{font-weight: bold;color: #000}
     .rome a:hover{text-decoration: none;background-color: #f2f2fa;color: #732f67;padding: 5px 10px 5px 10px;
       border:1px solid #732f67;}
       .moon span{margin-top: 3px}
     .rome a{background-color: #732f67;color: #fff;padding: 5px 10px 5px 10px;margin-right: 5px}
-    .galaxy{background-color: #f2f2fa;padding: 20px}
+    .galaxy {
+      background-color: #f7f7fb;
+      padding: 25px;
+  }
     .value1{padding: 10px 20px;background-color: #fff}
     .rome{font-size: 13px}
     .galaxy select{padding: 3px}
@@ -339,6 +389,9 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     .loginbtn:focus, .loginbtn:active, .loginbtn:hover{
       color: #fff;
     }
+    .logo{
+      margin-top: 10px;
+    }
     .forgotdiv a{color: #333; margin: 0 20px; font-weight: bold; font-size: 13px;}
     .signup{margin-top: 30px; border-top:1px solid #ccc; padding: 30px 0;}
     .modalleft,.modalright{padding: 0 50px;}
@@ -349,7 +402,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
 .sidenavR ul li{color:#fff;}
 .sidenav a:hover,.offcanvas a:focus,.sidenavR a:hover,.offcanvas a:focus{color:#f1f1f1;}
 .sidenav .closebtn{font-size:36px;margin-left:50px;position:absolute;right:25px;top:0;}
-.sidenavR .closebtn{font-size:16px;margin-left:50px;position:absolute;right:105px;top:0;}
+.sidenavR .closebtn{font-size:16px;margin-left:50px;position:absolute;right:105px;top:20px;}
 .sidenavR .closebtn span{font-size: 36px;}
 .skew{ background-color: #0d223c;
   transform: skewX(-10deg);
@@ -364,6 +417,9 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   }
   .text-white{color: #fff !important}
   /*********RR**********/
+  .show-panel1{
+    max-height: 324px;
+  }
   .login-btn{
     background: transparent;
     color: #fff;
@@ -383,7 +439,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     color: #fff;
     font-weight: bold;
     padding: 10px;
-    font-size: 14px;
+    font-size: 18px;
     border: none;
     border-radius: 3px;
   }
@@ -581,7 +637,49 @@ font-size: 13px;
   .password-validation-list img{
     width: 16px;
   }
-@media screen and max-height 450px {
+  .content-box{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+.hover-box{
+  background: rgba(255,255,255,0.8);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 400ms ease-in;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;  /* <--- I added this */
+  align-items: center;   
+  opacity: 0;
+}
+
+.hover-box button{
+  padding: 15px 50px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #731b67;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+    max-width:200px;
+    margin-bottom: 15px;
+}
+.hover-box a{
+  font-size: 17px;
+  font-weight: 600;
+  color: #23527c;
+  text-decoration: underline;
+}
+   .content-box:hover .hover-box{ opacity: 1;}
+
+
+  
+@media screen and (max-height:450px) {
 .sidenav,.sidenavR{padding-top:15px;}
 .sidenav a,.sidenavR a{font-size:18px;}
 }

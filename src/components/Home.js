@@ -1,28 +1,13 @@
-import React from "react";
+//import { render } from "@testing-library/react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 //import axios from 'axios';
-
-
-const Home = () => {
-
-	/*
-  useState, useEffect// use in import
-  const [posts, setPosts] = useState([]);
-
-	useEffect(() => {
-		axios.get('http://13.127.179.126:8080/company/findAll')
-			.then(res => {
-				console.log(res)
-				setPosts(res.data)
-				
-			})
-			.catch(err => {
-				console.log(err)
-			})
-	})*/
-
+import TradesGridFour from './company-trade/TradesGridFour'
+class Home extends Component {
+render(){
 	return(
 		<>
+  
 		 <section className="banner">
           <div className="container">
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
@@ -36,32 +21,32 @@ const Home = () => {
               <div className="carousel-inner">
                 <div className="item active">
                   <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-8">
                       <h1>Promoting escrow based safe<br />transactions for buying/selling<br />of unlisted assets</h1>
                       <p><Link to="/Investors">Buyer</Link>
                         <Link to="/Companies">Seller</Link></p>
                     </div>
-                    <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/slider1.png"} className="img-responsive center-block" alt="bannerimage" /></div>
+                    <div className="col-md-4"><img src={process.env.PUBLIC_URL + "./assets/images/slider1.png"} className="img-responsive center-block" alt="bannerimage" /></div>
                   </div>
                 </div>
                 <div className="item">
                   <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-8">
                       <h1>Promoting escrow based safe<br />transactions for buying/selling<br />of unlisted assets</h1>
                       <p><Link to="/Investors">Buyer</Link>
                         <Link to="/Companies">Seller</Link></p>
                     </div>
-                    <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/slider2.png"} className="img-responsive center-block"  alt="bannerimage"/></div>
+                    <div className="col-md-4"><img src={process.env.PUBLIC_URL + "./assets/images/slider2.png"} className="img-responsive center-block"  alt="bannerimage"/></div>
                   </div>
                 </div>
                 <div className="item">
                   <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-8">
                       <h1>Promoting escrow based safe<br />transactions for buying/selling<br />of unlisted assets</h1>
                       <p><Link to="/Investors">Buyer</Link>
                         <Link to="/Companies">Seller</Link></p>
                     </div>
-                    <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/slider3.png"} className="img-responsive center-block"  alt="bannerimage"/></div>
+                    <div className="col-md-4"><img src={process.env.PUBLIC_URL + "./assets/images/slider3.png"} className="img-responsive center-block"  alt="bannerimage"/></div>
                   </div>
                 </div>
               </div>
@@ -86,306 +71,47 @@ const Home = () => {
                   <h2><strong>Companies currently available <br />for trade</strong></h2>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/sunphar.png"} alt="company_logo" className="center-block" />
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25">
-                          <p className="p2" style={{fontWeight: 'bold'}}>Sun Pharma</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/hdfc.png"} alt="company_logo" className="center-block" />
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25">
-                          <p className="p2" style={{fontWeight: 'bold'}}>HDFC Bank</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/logo1.png"} alt="company_logo" className="center-block" />
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25 ">
-                          <p className="p2" style={{fontWeight: 'bold'}}>Sun Pharma</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/adani.png"} alt="company_logo" className="center-block" />
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25">
-                          <p className="p2" style={{fontWeight: 'bold'}}>Sun Pharma</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/sunphar.png"} className="center-block" alt="company_logo" />
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25">
-                          <p className="p2" style={{fontWeight: 'bold'}}>Sun Pharma</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/hdfc.png"} className="center-block" alt="company_logo"/>
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25">
-                          <p className="p2" style={{fontWeight: 'bold'}}>HDFC Bank</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/logo1.png"} className="center-block" alt="company_logo"/>
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25 ">
-                          <p className="p2" style={{fontWeight: 'bold'}}>Sun Pharma</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + "./assets/images/adani.png"} className="center-block" alt="company_logo" />
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25">
-                          <p className="p2" style={{fontWeight: 'bold'}}>Sun Pharma</p>
-                          <p className="pharmacy">Pharmacy</p>
-                          <p className="pharmacy">INE044A01036</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="value">
-                          <p>Valuation<span className="pull-right text-bold">2,909.76</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">Series A</span></p>
-                          <p>Sun Pharmaceutical Industries Limited is an Indian multinational pharmaceutical company headquartered in Mumbai, Maharashtra.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="clearfix" />
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="view">
-                    <p className="text-center p1"><Link to="/companies">View All</Link></p>
-                  </div>
-                </div>
-              </div>
+                <TradesGridFour showModal={ this.showModal }/>
             </div>
           </div>
         </section>
         <section className="third-section">
-          <div className="container">
-            <div className="row">
-              <h2 className="text-center"><strong>Why invest in Unlisted<br /> Shares</strong></h2>
-              <div className="col-md-6">
-                <div className="invest">
-                  <img src={process.env.PUBLIC_URL + "./assets/images/highvalue.png"} alt="icon_share_invest"/>
-                  <p className="invest-p">Several unlisted companies including start-up companies have unique and high growth business models</p>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="invest">
-                  <img src={process.env.PUBLIC_URL + "./assets/images/peace.png"} alt="icon_share_invest"/>
-                  <p className="invest-p">Investment in unlisted shares offers huge potential of returns wherein substantial value unlocking usually happens when they go for IPOs</p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6">
-                <div className="invest1">
-                  <img src={process.env.PUBLIC_URL + "./assets/images/growth.png"} alt="icon_share_invest" />
-                  <p className="invest-p">Absence of leverage makes these investments in unlisted shares as stable investment opportunities</p>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="invest1">
-                  <img src={process.env.PUBLIC_URL + "./assets/images/diver.png"} alt="icon_share_invest"/>
-                  <p className="invest-p">Unexplored growth potential exist in several unlisted securities which are available at substantial discount to their intrinsic value as also to their listed peers</p>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="invest1">
-                  <img src={process.env.PUBLIC_URL + "./assets/images/diver.png"} alt="icon_share_invest"/>
-                  <p className="invest-p">These offer enormous wealth creation opportunity to informed investors having discretionary corpus</p>
-                </div>
-              </div>
-            </div>
+        <div className="container">
+          <div className="row">
+          <h2 className="text-center"><strong>Why invest in Unlisted<br /> Shares</strong></h2>
+          <div className="col-md-6">
+    <div className="invest">
+      <img src={process.env.PUBLIC_URL + "./assets/images/highvalue.png"} alt="icon_share_invest"/>
+      <p className="invest-p">Several unlisted companies including start-up companies have unique and high growth business models</p>
+    </div>
+  </div>
+  <div className="col-md-6">
+    <div className="invest">
+      <img src={process.env.PUBLIC_URL + "./assets/images/peace.png"} alt="icon_share_invest"/>
+      <p className="invest-p">Investment in unlisted shares offers huge potential of returns wherein substantial value unlocking usually happens when they go for IPOs</p>
+    </div>
+  </div>
+  <div className="col-md-6">
+    <div className="invest">
+      <img src={process.env.PUBLIC_URL + "./assets/images/growth.png"} alt="icon_share_invest" />
+      <p className="invest-p">Absence of leverage makes these investments in unlisted shares as stable investment opportunities</p>
+    </div>
+  </div>
+  <div className="col-md-6">
+    <div className="invest">
+      <img src={process.env.PUBLIC_URL + "./assets/images/diver.png"} alt="icon_share_invest"/>
+      <p className="invest-p">Unexplored growth potential exist in several unlisted securities which are available at substantial discount to their intrinsic value as also to their listed peers</p>
+    </div>
+  </div>
+  <div className="col-md-6">
+    <div className="invest">
+      <img src={process.env.PUBLIC_URL + "./assets/images/diver.png"} alt="icon_share_invest"/>
+      <p className="invest-p">These offer enormous wealth creation opportunity to informed investors having discretionary corpus</p>
+    </div>
+  </div>
+     
           </div>
+        </div>
         </section>
         <section className="forth-section">
           <div className="container">
@@ -489,8 +215,13 @@ const Home = () => {
             </div>
           </div>
         </section>
+      
+
+       
+      
 		</>
 	);
+}
 }
 
 export default Home;
