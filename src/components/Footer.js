@@ -14,10 +14,10 @@ const Footer = () => {
                 <p className="mb-30">All Rights reserved.</p>
                 <ul className="sociallinks">
                 
-                  <li><a href={'https://twitter.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/twitter.png"} alt="" /></a></li> 
-                  <li><a href={'https://facebook.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/fb.png"} alt="" /></a></li> 
-                  <li><a href={'https://instagram.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/insta.png"} alt="" /></a></li> 
-                  <li><a href={'https://youtube.com'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/yt.png"} alt="" /></a></li> 
+                  <li><a href={'https://twitter.com/AssetsUnlisted'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/twitter.png"} alt="" /></a></li> 
+                  <li><a href={'https://www.facebook.com/unlistedassets/'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/fb.png"} alt="" /></a></li> 
+                  <li><a href={'https://www.instagram.com/unlistedassets/'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/insta.png"} alt="" /></a></li> 
+                  <li><a href={'https://www.youtube.com/channel/UCdBq98pTcB5VV2SkWZfoFGQ'} target={'_blank'}><img src={process.env.PUBLIC_URL + "./assets/images/yt.png"} alt="" /></a></li> 
                  
                 </ul>
               </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <ul className="ul3">
                   <li><Link to="/disclaimers">Disclaimer</Link></li>
                   <li><Link to="/terms-and-conditions">Terms of Use</Link></li>
-                  <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                  {/* <li><Link to="/privacy-policy">Privacy Policy</Link></li> */}
                 </ul>
               </div>
               <div className="col-md-3 col-sm-3">
