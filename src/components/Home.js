@@ -2,12 +2,22 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 //import axios from 'axios';
-import TradesGridFour from './company-trade/TradesGridFour'
+import TradesGridFour from './company-trade/TradesGridFour';
+
 class Home extends Component {
+  constructor(props) {
+    super(props)
+    this.unlistedCompanies = React.createRef() 
+}
+scrollTounlistedCompanies = () =>  window.scroll({
+  top: this.unlistedCompanies.current.offsetTop,
+  left: 0,
+  behavior: 'smooth'
+});
 render(){
 	return(
 		<>
-  
+     
 		 <section className="banner">
           <div className="container">
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
@@ -22,7 +32,7 @@ render(){
                 <div className="item active">
                   <div className="row">
                     <div className="col-md-8">
-                      <h1>Promoting escrow based safe<br />transactions for buying/selling<br />of unlisted assets</h1>
+                      <h1>Promoting escrow based safe <br />transactions for buying/selling<br />of unlisted assets</h1>
                       <p><Link to="/Investors">Buyer</Link>
                         <Link to="/Companies">Seller</Link></p>
                     </div>
@@ -32,7 +42,7 @@ render(){
                 <div className="item">
                   <div className="row">
                     <div className="col-md-8">
-                      <h1>Promoting escrow based safe<br />transactions for buying/selling<br />of unlisted assets</h1>
+                      <h1> India's first platform to make<br /> transactions of unlisted assets <br/>seamless</h1>
                       <p><Link to="/Investors">Buyer</Link>
                         <Link to="/Companies">Seller</Link></p>
                     </div>
@@ -42,7 +52,7 @@ render(){
                 <div className="item">
                   <div className="row">
                     <div className="col-md-8">
-                      <h1>Promoting escrow based safe<br />transactions for buying/selling<br />of unlisted assets</h1>
+                      <h1> Investing in private equity <br />made easy</h1>
                       <p><Link to="/Investors">Buyer</Link>
                         <Link to="/Companies">Seller</Link></p>
                     </div>
@@ -182,7 +192,7 @@ render(){
             </div>
           </div>
         </section>
-        <section className="last-section">
+        <section ref={this.unlistedCompanies} className="last-section">
           <div className="container">
             <h2>Which companies’ shares <br/>
 			do we work with?</h2>
@@ -215,7 +225,7 @@ render(){
             </div>
           </div>
         </section>
-      
+ 
 
        
       

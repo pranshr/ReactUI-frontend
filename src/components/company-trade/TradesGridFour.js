@@ -1,76 +1,72 @@
-import React, { Component } from 'react';
+import React,{useState} from 'react';
 import { Link } from "react-router-dom";
-import trades from '../../data/trades.json';
 import TradeModal from '../modal/TradeModal';
-class TradesGridFour extends Component{
-  constructor() {
-    super();
-    this.state = {
-        show: false,
-        item_id:''
-    };
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
-}
-
-showModal = (id) => {
-  this.setState({ show: true, item_id:id});
-};
-
-hideModal = () => {
-    this.setState({ show: false });
-
-};
-    render(){
-        return(
-            <>
-             <div className="row">
-              {trades.map(trade => {
-               if(trade.id < 9){
-                  return (
-                    <div className="col-md-3" key={trade.id}>
-                <div className="box">
-                    <div className="box1">
-                      <div className="row">
-                        <div className="col-md-2 col-xs-2">
-                          <div className="border1">
-                            <img src={process.env.PUBLIC_URL + trade.img_src} alt="company_logo" className="center-block" />
-                          </div>
-                        </div>
-                        <div className="col-md-8 col-xs-8 pl-25">
-                          <p className="p2" style={{fontWeight: 'bold'}}> { trade.title }</p>
-                          <p className="pharmacy">{ trade.c_category }</p>
-                          <p className="pharmacy">{ trade.c_id }</p>
-                        </div>
-                        <div className="col-md-2 col-xs-2">
-                          <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
-                        </div>
-                      </div>
-                    </div>
+import useSWR from "swr";
+function TradesGridFour() {
+  const [tradeModal, setModal] = useState(false);
+  const [item_id, setItem_id] = useState(0);
+ 
+  function showModal(event, data) {
+    setModal(true);
+    setItem_id(data);
+  }
+  function hideModal() {
+    setModal(false);
+  }
+  
+  const noOfPost = 8;
+  const apiEndpoint = "https://api.unlistedassets.com/company/findAll";
+  const { data: conpanies } = useSWR(apiEndpoint, {refreshInterval:2});
+  const currentPost = conpanies ? conpanies.slice(0, noOfPost) : null;
+  return (
+    <>
+          <div className="row"> 
+        {
+          currentPost ? (
+            currentPost.map((trade, index) => (
+              <div className="col-md-3" key={index}>
+              <div className="box">
+                  <div className="box1">
                     <div className="row">
-                      <div className="col-md-12">
-                        <div className="value content-box">
-                          <p>Valuation<span className="pull-right text-bold">{ trade.valuation }</span></p>
-                          <p>Series of Funding<span className="pull-right text-bold">{ trade.funding }</span></p>
-                          <p>{ trade.desc }</p>
-                          <div className="hover-box">
-                          <button type="button" onClick={(e) => this.showModal(trade.c_id)}> Trade </button><Link to="#">Explore</Link>
-                         </div>
+                      <div className="col-md-2 col-xs-2">
+                        <div className="border1">
+                          <img src={trade.company_logo} alt="logo" className="center-block" />
                         </div>
                       </div>
+                      <div className="col-md-8 col-xs-8 pl-25">
+                        <p className="p2" style={{fontWeight: 'bold'}}> { trade.company_name }</p>
+                        <p className="pharmacy">{ trade.sector }</p>
+                        <p className="pharmacy">{ trade.company_isin }</p>
+                      </div>
+                      {/* <div className="col-md-2 col-xs-2">
+                        <p className="plus1"><Link to="#" className><img src={process.env.PUBLIC_URL + "./assets/images/add.png"} alt="add" /></Link></p>
+                      </div> */}
                     </div>
-                   
-                    <div className="clearfix" />
                   </div>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="value content-box">
+                        <p>Valuation<span className="pull-right text-bold">{ trade.last_fund_raising_valuation }</span></p>
+                        <p>Series of Funding<span className="pull-right text-bold">{ trade.series_of_funding }</span></p>
+                        <p>{ trade.company_desc.substring(0, 120) }...</p>
+                        <div className="hover-box">
+                        <button type="button" onClick={(event) => showModal(event, trade.company_name)} > Trade </button><Link  to={{pathname: `/company/${trade.companySlug}`}}>Explore</Link>
+                       </div>
+                      </div>
+                    </div>
                   </div>
-                  ); 
-               }else{
-                 return null;
-               }
-                })}
-                
+                 
+                  <div className="clearfix" />
                 </div>
-                { trades.length < 8 ? null :
+               
+                </div>   
+          ))
+         
+        ):"Data Loading...."
+        }
+        
+        </div>
+        { currentPost && currentPost.length < 8 ? null :
                 <div className="row">
                 <div className="col-md-12">
                   <div className="view">
@@ -79,13 +75,12 @@ hideModal = () => {
                 </div>
               </div>
                 }
-                { !this.state.show ? null :
-                
-                <TradeModal show={this.state.show} handleClose={this.hideModal} c_id={ this.state.item_id }/>
-           
-                }
-            </>
-        )
-    }
+
+       { !tradeModal ? null :
+                <TradeModal show={tradeModal} handleClose={hideModal} c_id={item_id }/>
+         }
+    </>
+  )
 }
-export default TradesGridFour;
+
+export default TradesGridFour

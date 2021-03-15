@@ -19,8 +19,9 @@ const About = () => {
             <div className="row">
               <div className="col-md-6">
                 <h3 className="heading pl-67 mt-70">About Unlisted Assets</h3>
-                <p>We facilitate retail and institutions to transact in unlisted equity shares through our platform.</p>
-                <p>We also help start-ups and pre IPO companies in raising primary capital from HNI investors, Family Offices and Funds, both within India and globally. </p>
+                <p><strong>Unlisted Tech Private Limited</strong> is a Fintech company which is empowering secondary equity shareholders of Startups, Delisted companies and Pre IPO companies to Buy/Sell shares in a transparent and safe escrow environment.</p>
+                <p>We help retail and institutions transact in unlisted equity shares.</p>
+                <p>We also help startups and pre IPO companies raise primary capital from HNI investors, Family Offices and Funds (India and International)</p>
               </div>
               <div className="col-md-6"><img src={process.env.PUBLIC_URL + "./assets/images/about1.png"} className="img-responsive center-block" alt="about1"/></div>
             </div>
@@ -35,12 +36,12 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/team1.png"} className="img-responsive center-block" alt="team1"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/Divam.png"} className="img-responsive center-block" alt="team1"/>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
                         <h4><strong>Divam Sharma </strong>(Founding Team)</h4>
-                        <p>Divam is a Member of The Institute of Chartered Accountants of India, MBA (PGDM Finance) from Indian School of Business Hyderabad, Masters in Business Finance (ICAI) and B Com (Honors) from Delhi University. He has worked for over 6 years as Financial Analyst with Banks including Kotak Mahindra Bank, Citibank, and IMGC. He has over 15 years of experience of investment management. He is also a Co-founder at Green Portfolio.</p>
+                        <p>Divam is a Member of The Institute of Chartered Accountants of India, MBA (PGDM Finance) from Indian School of Business Hyderabad, Masters in Business Finance (ICAI) and B Com (Honors) from Delhi University. He has worked for over 6 years as Financial Analyst with Banks including Kotak Mahindra Bank, Citibank, and IMGC. He has over 13 years of experience of investment management in stock markets.</p>
                       </div>
                     </div>
                   </div>
@@ -48,12 +49,12 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/team2.png"} className="img-responsive center-block"  alt="team2"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/Manish-Khanna.png"} className="img-responsive center-block"  alt="team2"/>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
                         <h4><strong>Manish Khanna</strong>(Founding Team)</h4>
-                        <p>Manish is a CA, CS and has more than 15 years of work experience in Corporate Finance and Valuations. He had worked with Ernst &amp; Young for around 3 years in their Transaction Advisory practice. Prior to EY, he was working with Financial Advisory Services Team of PricewaterhouseCoopers (PwC) and with DE Shaw &amp; Co, a Hedge Fund. He is also a partner of Shinewing India, visiting faculty of ICAI. Manish heads the Business Development vertical of the company.</p>
+                        <p>Mr. Manish has more than 15 years of work experience in transaction advisory including valuation, transaction structuring and debt and equity fund raising. He is currently Partner at Shinewing India and has been working majorly in services sector in the domain of valuation and corporate finance. Prior to joining Shinewing, he has worked with Ernst & Young for around 3  years in their Transaction Advisory practice and with PwC in their Valuation advisory practice. He is a CA (India), CS (India) & LLB (India) qualified professional. Manish has been actively participating at various professional forums and Committees on emerging areas of valuation and M&A. Manish is the visiting faculty at ICAI, ICSI and PHD Chamber of Commerce for Valuation and Corporate Restructuring Courses.</p>
                       </div>
                     </div>
                   </div>
@@ -61,12 +62,12 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/team3.png"} className="img-responsive center-block"  alt="team3"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/Shubham.png"} className="img-responsive center-block"  alt="team3"/>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
                         <h4><strong>Shubham Sharma </strong>(Founding Team)</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p>Shubham is a UX designer and an  entrereneure. He started his career as a car designer for various german car manufacturers. He is a lead desiger for various startups like coltello.store, Greenportfolio, Unlisted Assets, and also for Chatbot autmation company LivePerson. He has completed his Masters in Automotive Desing from Turin, Italy and he is currently working as a lead designer in Frankfurt, Germany.</p>
                       </div>
                     </div>
                   </div>
@@ -74,7 +75,7 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/team4.png"} className="img-responsive center-block"  alt="team4"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/Sunil-Jain.png"} className="img-responsive center-block"  alt="team4"/>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
@@ -84,7 +85,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-40">
+                {/* <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
                       <img src={process.env.PUBLIC_URL + "./assets/images/team5.png"} className="img-responsive center-block"  alt="team5"/>
@@ -96,7 +97,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="col-md-1" />
             </div>
@@ -113,8 +114,8 @@ const About = () => {
                   </div>
                   <div className="col-md-6">
                     <h3 className="text-bold heading">Join Our Team</h3>
-                    <p>At unlistedassets.com, we provide opportunities for growth, providing endless possibilities, lifetime experience, flexibility with a great environment.</p>
-                    <p>Reachout to explore the endless opportunities in this interesting and growing space. <a href="mailto:info@unlistedassets.com" className="text-bold">info@unlistedassets.com</a></p>
+                    <p>At UnlistedAssets.com, we provide opportunities for growth, providing endless possibilities, lifetime experience, flexibility with a great environment. </p>
+                    <p>Reach out to explore the endless opportunities in this interesting and growing space. <a href="mailto:info@unlistedassets.com" className="text-bold">info@unlistedassets.com</a></p>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import FaqsData from './FaqsData';
 import FaqList from './FaqList';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 class Faq extends Component {
     render(){
         return(
@@ -12,13 +12,13 @@ class Faq extends Component {
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                 <h1 class="text-center">Hi! How can we help you?</h1>
-                <form>
+                {/* <form>
             <div class="list">
             <div class="form-group">
              <Link to="#" className="icon"><i class="fa fa-search"></i></Link><input type="text"placeholder="Search here..." name="" class="form-control control" />
              </div>
           </div>
-          </form>
+          </form> */}
                  {FaqsData.map((item, index) => {
                   return <FaqList item={item} key={index} />;
                  })}

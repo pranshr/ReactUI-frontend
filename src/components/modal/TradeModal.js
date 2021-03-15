@@ -27,6 +27,9 @@ class TradeModal extends Component {
         return (
             <><div className={showHideClassName}>
             <section className="modal-main trade-modal-main">
+            <div class="modal-header">
+          <button type="button" class="close" onClick={this.props.handleClose}><i class="fa fa-times"></i></button>
+         </div>
             <div class="modal-content">
          
                 <div class="modal-body trade-modal pd-50">
@@ -35,7 +38,7 @@ class TradeModal extends Component {
                         <div className="heading-section">
                             <h3>Let us know about your interest </h3>
                             <p> We are soon launching a transparent and secure plateform for buying and selling of unlisted shares. Till then, We will provide you with a safe and secure offline support for trading unlisted stocks. </p>
-                           <p>Company ID: { this.props.c_id}</p>
+                          
                        </div>
                            
                             <div className="form-wrapper">
@@ -43,10 +46,11 @@ class TradeModal extends Component {
                                     <div className="form-group row">
                                         <div className="col-md-12">
                                             <label htmlFor="company_of_interest">Company of interest *</label>
-                                            <select name="company_interest" value={this.state.company_interest} onChange={this.handleChange} className="form-control">
+                                            {/* <select name="company_interest" value={this.state.company_interest} onChange={this.handleChange} className="form-control">
                                                 <option value="Swiggy">Swiggy</option>
                                                 <option value="Zomato">Zomato</option>
-                                            </select>
+                                            </select> */}
+                                            <p>{ this.props.c_id }</p>
                                         </div>
                                     </div>
                                     <div className="form-group row">

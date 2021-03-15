@@ -6,6 +6,7 @@ import Register from './auth/Register';
 import ForgetPassword from './auth/ForgetPassword';
 import ForgetUserId from './auth/ForgetUserId';
 
+import NewsLatterButton from './modal/NewsLatterButton';
 import AuthLayout from './auth/AuthLayout';
 
 class Header extends Component {
@@ -84,7 +85,7 @@ class Header extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <p className="text-center">Buy/ Sell umlisted shares with us. Join ours planform with easy steps <Link to="#" className="ml-50 btn-white">Join our platform</Link><Link className="close1" onClick={this.CloseTopbar}><i className="fa fa-times" /></Link></p>
+                <p className="text-center">Buy/ sell unlisted shares with us. Subscribe to get an early access to our platform<NewsLatterButton/><Link to="#" className="close1" onClick={this.CloseTopbar}><i className="fa fa-times" /></Link></p>
               </div>
             </div>
           </div>
@@ -94,28 +95,58 @@ class Header extends Component {
           <nav className="navbar">
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-2">
                   <div className="navbar-header">
                     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                       <span className="icon-bar" />
                       <span className="icon-bar" />
                       <span className="icon-bar" />
                     </button>
-                    <Link to="/"><img src={process.env.PUBLIC_URL + "./assets/images/logo.png"} className="logo"  alt=""/></Link>
+                    <Link to="/"><img src={process.env.PUBLIC_URL + "../assets/images/logo.png"} className="logo"  alt=""/></Link>
                   </div></div>
-                <div className="col-md-9">
+                <div className="col-md-10">
                   <div className="collapse navbar-collapse" id="myNavbar">
                     <ul className=" navbar-right">
-                      <li className="active"><Link to="/">Home</Link></li>
-                      <li><Link to="#">Platform</Link></li>
-                      <li><Link to="/companies">Companies</Link></li>
-                      <li><Link to="/services">Services</Link></li>
+                      <li>
+                        <Link to="/companies">Unlisted Stocks</Link>
+                      </li>
+                      <li className="nav-item dropdown">
+        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Our Offerings</Link>
+        <ul className="dropdown-menu">
+          <li><Link className="dropdown-item" href="#">Services </Link></li>
+          <li><Link className="dropdown-item" href="#"> Solutions » </Link>
+            <ul className="submenu dropdown-menu">
+              <li><Link className="dropdown-item" href>For companies</Link></li>
+              <li><Link className="dropdown-item" href>For companies</Link></li>
+              <li><Link className="dropdown-item" href>For investors</Link></li>
+              <li><Link className="dropdown-item" href>For Shareholders</Link></li>
+            </ul>
+          </li>
+         
+          </ul>
+      </li>
+
+      <li className="nav-item dropdown">
+        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  About</Link>
+        <ul className="dropdown-menu">
+          <li><Link className="dropdown-item" href="#">About Us </Link></li>
+          <li><Link className="dropdown-item" href="#">Why Us </Link></li>
+          </ul>
+      </li>
+                      <li><Link to="/platform">Platform</Link></li>
+                      <li className="nav-item dropdown">
+        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Resource</Link>
+        <ul className="dropdown-menu">
+          <li><Link className="dropdown-item" href="#">Blog</Link></li>
+          <li><Link className="dropdown-item" href="#">FAQs </Link></li>
+          </ul>
+      </li>
                       <li><Link to="/contact">Contact Us</Link></li>
-                      {/* <li>
+                      <li>
                       <button type="button" onClick={this.showModal} className="login-btn">
                          Login/Sign Up
                       </button>
-                    </li> */}
+                    </li>
                       <li>
 					          <button className="side-nav-btn"   onClick={this.ToogleSidebar}>
 				        	    <i className="fa fa-list" />
@@ -129,7 +160,7 @@ class Header extends Component {
             </div>
           </nav>
         </header>
-       
+      <div className={sidenav ? "backdrop-body active": "backdrop-body "}></div> 
 		<div id="mySidenavR" className={sidenav ? "sidenavR skew open": "sidenavR skew "}>
         <div className="skewnav">
 		
@@ -170,7 +201,7 @@ class Header extends Component {
               }    
         </Modal>
         
-
+    
 		</>
 	);
 }
