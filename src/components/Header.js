@@ -104,18 +104,18 @@ class Header extends Component {
                   <div className="collapse navbar-collapse" id="myNavbar">
                     <ul className=" navbar-right">
                       <li>
-                        <Link to="/companies">Unlisted Stocks</Link>
+                        <Link to="/unlisted-stocks">Unlisted Stocks</Link>
                       </li>
                       <li className="nav-item dropdown">
         <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Our Offerings</Link>
         <ul className="dropdown-menu">
-          <li><Link className="dropdown-item" href="#">Services </Link></li>
+          <li><Link className="dropdown-item" to="/services">Services </Link></li>
           <li><Link className="dropdown-item" href="#"> Solutions » </Link>
             <ul className="submenu dropdown-menu">
-              <li><Link className="dropdown-item" href>For companies</Link></li>
-              <li><Link className="dropdown-item" href>For companies</Link></li>
-              <li><Link className="dropdown-item" href>For investors</Link></li>
-              <li><Link className="dropdown-item" href>For Shareholders</Link></li>
+              <li><Link className="dropdown-item" to="/solution-for-companies">For companies</Link></li>
+              <li><Link className="dropdown-item" to="/solution-for-institutions">For Institutions</Link></li>
+              <li><Link className="dropdown-item" to="/solution-for-investors">For investors</Link></li>
+              <li><Link className="dropdown-item" to="/solution-for-shareholders">For Shareholders</Link></li>
             </ul>
           </li>
          
@@ -123,10 +123,10 @@ class Header extends Component {
       </li>
 
       <li className="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  About</Link>
+        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> About Company</Link>
         <ul className="dropdown-menu">
-          <li><Link className="dropdown-item" href="#">About Us </Link></li>
-          <li><Link className="dropdown-item" href="#">Why Us </Link></li>
+          <li><Link className="dropdown-item" to="/about-us">About Us </Link></li>
+          <li><Link className="dropdown-item" to="/why-us">Why Us </Link></li>
           </ul>
       </li>
                       <li><Link to="/platform">Platform</Link></li>
@@ -134,7 +134,7 @@ class Header extends Component {
         <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Resource</Link>
         <ul className="dropdown-menu">
           <li><Link className="dropdown-item" href="#">Blog</Link></li>
-          <li><Link className="dropdown-item" href="#">FAQs </Link></li>
+          <li><Link className="dropdown-item" to="/faqs">FAQs </Link></li>
           </ul>
       </li>
                       <li><Link to="/contact">Contact Us</Link></li>

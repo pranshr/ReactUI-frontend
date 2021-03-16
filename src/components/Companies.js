@@ -1,195 +1,200 @@
-import React, { useState } from "react";
+import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import TradesGridThree from './company-trade/TradesGridThree';
-import { SWRConfig } from 'swr';
-import useSWR from "swr";
 import PriceRangeSlider from './PriceRangeSlider';
-//import SectorList from './filter/SectorList';
-//import SeriesOfFundingList from './filter/SeriesOfFundingList';
-const fetcher = (...args) => fetch(...args).then((response) => response.json());
-const Companies = () => {
-  const [panelShow1, setPanel1] = useState(false);
-  const [panelShow3, setPanel3] = useState(false);
-  const [panelShow4, setPanel4] = useState(false);
- // const [dataList, setdataList] = useState([]);
+export default class Companies extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      panelShow1:false,
+      panelShow2:false,
+      panelShow3:false,
+      postPerpage:6,
+      companies:[],
+      filterCompanies:[],
+      filtercompanyLenght:0,
+      companyLenght:0,
+      isLoading:true,
+      currentPage:1,
+      SectorList:[],
+      SeriesOfFundingList:[],
+      maxprice:0,
+      minprice:0,
+      maxpricerange:0,
+      minpricerange:0,
+      sectorOptions:[],
+      fundingOptions:[]
+    };
   
- 
-
-  const showPanel1 = () => setPanel1(!panelShow1);
-  const showPanel3 = () => setPanel3(!panelShow3);
-  const showPanel4 = () => setPanel4(!panelShow4);
-  const [currentFilterProduct, setcurrentFilterProduct] = useState([]);
-  const [checkFilterProduct2, setcheckFilterProduct2] = useState([]);
- const [checkFilterProduct3, setcheckFilterProduct3] = useState([]);
-  const [filterCount, setfilterCount] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [recordsNotFound, setrecordsNotFound] = useState(false);
-
-  const postPerpage = 6;
-
-  function paginate(pageNumber) {
-    setCurrentPage(pageNumber)
-    console.log(pageNumber);
+    this.showPanel1 = this.showPanel1.bind(this);
+    this.showPanel2 = this.showPanel2.bind(this);
+    this.showPanel3 = this.showPanel3.bind(this);
+    this.paginate = this.paginate.bind(this);
+    this.getPrice = this.getPrice.bind(this);
+    this.finalChange = this.finalChange.bind(this); 
+    this.sectorChange = this.sectorChange.bind(this); 
+    this.fundingChange = this.fundingChange.bind(this); 
+    this.filterData = this.filterData.bind(this); 
+    
   }
-  
+  showPanel1() {
+     this.setState({
+      panelShow1:!this.state.panelShow1
+     })
+  }
+  showPanel2() {
+    this.setState({
+      panelShow2:!this.state.panelShow2
+     })
+  }
+  showPanel3() {
+    this.setState({
+      panelShow3:!this.state.panelShow3
+     })
+  }
+  paginate(pageNumber) {
+    this.setState({
+      currentPage:pageNumber
+     })
+  }
 
-  const [sectorOptions, setsSctorOptions] = useState([]);
-  const [fundinOptions, setsFundingOptions] = useState([]);
-
-  //const apiEndpoint = "http://13.232.34.18:8080/company/findAll";
-  const apiEndpoint = "https://api.unlistedassets.com/company/findAll";
-  const sectorApiEndpoint = "https://api.unlistedassets.com/company/sector/findAll";
-  const fundingApiEndpoint = "https://api.unlistedassets.com/company/fundingseries/findAll";
-  const { data: conpanies } = useSWR(apiEndpoint, { refreshInterval: 2 });
-  
-  const { data: SectorList } = useSWR(sectorApiEndpoint, { refreshInterval: 2 });
-  const { data: SeriesOfFundingList } = useSWR(fundingApiEndpoint, { refreshInterval: 2 });
-
-  const indexOfLastpost = currentPage * postPerpage;
-  const indexOfFirstPost = indexOfLastpost - postPerpage;
-
-  var currentPost = conpanies ? conpanies.slice(indexOfFirstPost, indexOfLastpost) : null;
-  const totalPosts = conpanies ? conpanies.length : 0;
-
-
- 
-  // var lastPrice = conpanies ? conpanies[conpanies.length-1].last_fund_raising_valuation : null;
-  // var firstPrice = conpanies ? conpanies[0].last_fund_raising_valuation : null;
-  // console.log(firstPrice);
-  
-//  var arrayInt = [5,3,5,6,9];
-//  var minValue = arrayInt[0];
-//  for (var i=1 ; i<arrayInt.length ; i++) {
-//      if(minValue > arrayInt[i]){
-//       minValue = arrayInt[i];
-//      }
-//  }
-//  console.log(minValue)
-
-
-
-
-
-var maxPrice;
-var minPrice;
-if(conpanies){
-maxPrice = parseInt(conpanies[0].last_fund_raising_valuation)
-for (var x=0 ; x<conpanies.length ; x++) {
-       if(maxPrice < parseInt(conpanies[x].last_fund_raising_valuation)){
-        maxPrice = parseInt(conpanies[x].last_fund_raising_valuation);
-       }   
-}
-}
-
-if(conpanies){
-minPrice = parseInt(conpanies[0].last_fund_raising_valuation)
-for (var y=0 ; y<conpanies.length ; y++) {
-       if(minPrice > parseInt(conpanies[y].last_fund_raising_valuation)){
-        minPrice = parseInt(conpanies[y].last_fund_raising_valuation);
-       }   
-}
-}
-
-
-
-
-
-  const FilterData = (val1, val2) => {
+  filterData(val1, val2){
+    var max = this.state.maxpricerange;
+    var min = this.state.minpricerange;
     var res = [];
     if (val1.length !== 0 && val2.length !== 0) {
-      res = conpanies.filter(conpany => val1.includes(conpany.sector) && val2.includes(conpany.series_of_funding));
-      if (res.length === 0) {
-        setrecordsNotFound(true);
+    res = this.state.companies.filter(conpany => val1.includes(conpany.sector) && val2.includes(conpany.series_of_funding) &&  min <= conpany.last_fund_raising_valuation && max >= conpany.last_fund_raising_valuation);
+    }else if (val1.length !== 0 && val2.length === 0) {
+      res = this.state.companies.filter(conpany => val1.includes(conpany.sector) &&  min <= conpany.last_fund_raising_valuation && max >= conpany.last_fund_raising_valuation);
+    }else if (val1.length === 0 && val2.length !== 0) {
+      res = this.state.companies.filter(conpany => val2.includes(conpany.series_of_funding) &&  min <= conpany.last_fund_raising_valuation && max >= conpany.last_fund_raising_valuation);
+    }else {
+      res = this.state.companies.filter(conpany => min <= conpany.last_fund_raising_valuation && max >= conpany.last_fund_raising_valuation);
+    }
+    this.setState({
+      filterCompanies:res,
+      filtercompanyLenght:res.length
+     })
+    
+    
+
+
+  }
+
+
+  finalChange(val){
+    this.setState({
+      maxpricerange:val.value.max,
+      minpricerange:val.value.min
+     })
+     this.filterData(this.state.sectorOptions, this.state.fundingOptions);
+  }
+  sectorChange(e){
+     const sectorOptions = this.state.sectorOptions
+     let index
+     if (e.target.checked) {
+       sectorOptions.push(e.target.value)
+     } else {
+       index = sectorOptions.indexOf(e.target.value)
+       sectorOptions.splice(index, 1)
+     }
+     this.setState({ sectorOptions: sectorOptions }) 
+     this.filterData(sectorOptions, this.state.fundingOptions);
+  }
+
+  fundingChange(e){
+    const fundingOptions = this.state.fundingOptions
+     let index
+     if (e.target.checked) {
+      fundingOptions.push(e.target.value)
+     } else {
+       index = fundingOptions.indexOf(e.target.value)
+       fundingOptions.splice(index, 1)
+     }
+     this.setState({ fundingOptions: fundingOptions }) 
+     this.filterData(this.state.sectorOptions, fundingOptions);
+  }
+
+  getPrice(){
+    var maxPrice = 0;
+    var minPrice = 0;
+    if(this.state.companies.length !== 0){
+      maxPrice = parseInt(this.state.companies[0].last_fund_raising_valuation)
+      for (var x=0 ; x<this.state.companies.length ; x++) {
+             if(maxPrice < parseInt(this.state.companies[x].last_fund_raising_valuation)){
+              maxPrice = parseInt(this.state.companies[x].last_fund_raising_valuation);
+             }   
       }
-    } else if (val1.length !== 0 && val2.length === 0) {
-      res = conpanies.filter(conpany => val1.includes(conpany.sector));
-      setrecordsNotFound(false);
-    } else if (val1.length === 0 && val2.length !== 0) {
-      res = conpanies.filter(conpany => val2.includes(conpany.series_of_funding));
-      if (res.length === 0) {
-        setrecordsNotFound(true);
-      }else{
-        setrecordsNotFound(false);
+      } 
+      if(this.state.companies !== 0){
+      minPrice = parseInt(this.state.companies[0].last_fund_raising_valuation)
+      for (var y=0 ; y<this.state.companies.length ; y++) {
+             if(minPrice > parseInt(this.state.companies[y].last_fund_raising_valuation)){
+              minPrice = parseInt(this.state.companies[y].last_fund_raising_valuation);
+             }   
       }
-      
-    } else {
-      res = conpanies;
-      setrecordsNotFound(false);
-    }
+      }
+      this.setState({
+        maxprice:maxPrice,
+        minprice:minPrice
+       })
+  }
+
+
+
+
+  componentDidMount(){
+    axios.get(`https://api.unlistedassets.com/company/findAll`)
+    .then(res => {
+       const resData = res.data;
+
+      this.setState({ 
+        companies:resData,
+        companyLenght:res.data.length,
+        isLoading:false
+       });
+       this.getPrice();
+       this.setState({
+        maxpricerange:this.state.maxprice,
+        minpricerange:this.state.minprice
+       })
+
+    }).catch((error) => {
+      console.log(error)
+  });
+  axios.get(`https://api.unlistedassets.com/company/sector/findAll`)
+    .then(res => {
+       const resData = res.data;
+
+      this.setState({ 
+        SectorList:resData,
+       });
+    }).catch((error) => {
+      console.log(error)
+  });
+  axios.get(`https://api.unlistedassets.com/company/fundingseries/findAll`)
+  .then(res => {
+     const resData = res.data;
+
+    this.setState({ 
+      SeriesOfFundingList:resData,
+     });
+  }).catch((error) => {
+    console.log(error)
+});
+  }
+  render() {
+    const{panelShow1, panelShow2, panelShow3, isLoading, postPerpage, companies, companyLenght, currentPage, SectorList, SeriesOfFundingList, maxprice, minprice, filterCompanies, filtercompanyLenght } = this.state;
+    const indexOfLastpost = currentPage * postPerpage;
+    const indexOfFirstPost = indexOfLastpost - this.state.postPerpage;
+    const currentPost = companies.slice(indexOfFirstPost, indexOfLastpost);
+    const filteredcurrentPost = filterCompanies.length !== 0 ? filterCompanies.slice(indexOfFirstPost, indexOfLastpost): [];
     
-    
-    setcurrentFilterProduct(res);
-    
-    setcheckFilterProduct2(res);
-    setfilterCount(res.length);
-    //console.log(checkFilterProduct2);
-
-
-  }
-
-  const sectorChange = (e) => {
-    let index
-    // check if the check box is checked or unchecked
-    if (e.target.checked) {
-      // add the numerical value of the checkbox to options array
-      sectorOptions.push(e.target.value)
-    } else {
-      // or remove the value from the unchecked checkbox from the array
-      index = sectorOptions.indexOf(e.target.value)
-      sectorOptions.splice(index, 1)
-    }
-
-    // update the state with the new array of options
-    setsSctorOptions(sectorOptions);
-    FilterData(sectorOptions, fundinOptions);
-  }
-
-
-  const FundingChange = (e) => {
-    let index
-    // check if the check box is checked or unchecked
-    if (e.target.checked) {
-      // add the numerical value of the checkbox to options array
-      fundinOptions.push(e.target.value)
-    } else {
-      // or remove the value from the unchecked checkbox from the array
-      index = fundinOptions.indexOf(e.target.value)
-      fundinOptions.splice(index, 1)
-    }
-
-    // update the state with the new array of options
-    setsFundingOptions(fundinOptions);
-    FilterData(sectorOptions, fundinOptions);
-    console.log(fundinOptions);
-  }
-
-  function finalChange(val){
-    var miniumValue = val.value.min;
-    var maximumvalue = val.value.max;
-    var res;
-    if(checkFilterProduct2.length !== 0){
-      res =  checkFilterProduct2.filter(conpany => miniumValue <= conpany.last_fund_raising_valuation && maximumvalue >= conpany.last_fund_raising_valuation);
-    }else{
-      res =  conpanies.filter(conpany => miniumValue <= conpany.last_fund_raising_valuation && maximumvalue >= conpany.last_fund_raising_valuation);
-    }
-
-  // currentPost = res;
-  setcurrentFilterProduct(res);
-  setcheckFilterProduct3(res);
-  setfilterCount(res.length);
-  if (res.length === 0) {
-    setrecordsNotFound(true);
-  }else{
-    setrecordsNotFound(false);
-  }
-   };
-
-
-
-  return (
-    <>
-
-      <section className="company-section">
+  // console.log(this.state.fundingOptions);
+    return (
+     <>
+         <section className="company-section">
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -198,33 +203,29 @@ for (var y=0 ; y<conpanies.length ; y++) {
                   <p>Filter<span className="pull-right"><Link to="#">Clear All</Link></span></p>
                 </div>
                 <div className="earth">
-                  <button className={panelShow1 ? "accor active1" : "accor"} onClick={showPanel1}>Sector</button>
+                  <button className={panelShow1 ? "accor active1" : "accor"} onClick={this.showPanel1}>Sector</button>
                   <div className={panelShow1 ? "panel1 show-panel1" : "panel1"} >
-                    {SectorList && SectorList.map((item, index) => {
+                  {SectorList && SectorList.map((item, index) => {
                       return <div className="form-group" key={index}>
-                        <p>  <input type="checkbox" name="sector_value" value={item.value} onChange={sectorChange} /> <span>{item.label}</span></p>
+                        <p>  <input type="checkbox" name="sector_value" value={item.value} onChange={this.sectorChange}/> <span>{item.label}</span></p>
                       </div>;
-
                     })}
 
 
                   </div>
-                  <button className={panelShow3 ? "accor active1" : "accor"} onClick={showPanel3}>Series of Funding</button>
+                  <button className={panelShow2 ? "accor active1" : "accor"} onClick={this.showPanel2}>Series of Funding</button>
+                  <div className={panelShow2 ? "panel1 show-panel1" : "panel1"}>
+                  {SeriesOfFundingList && SeriesOfFundingList.map((item, index) => {
+                      return <div className="form-group" key={index}>
+                        <p>  <input type="checkbox" name="company_series_of_funding" value={item.value} onChange={this.fundingChange}/> <span>{item.label}</span></p>
+                      </div>;
+                    })}
+                  </div>
+                  <button className={panelShow3 ? "accor active1" : "accor"} onClick={this.showPanel3}>Valuation</button>
                   <div className={panelShow3 ? "panel1 show-panel1" : "panel1"}>
-                    {SeriesOfFundingList && SeriesOfFundingList.map((item, index) => {
-                      return <div className="form-group" key={index}>
-                        <p>  <input type="checkbox" name="company_series_of_funding" value={item.value} onChange={FundingChange} /> <span>{item.label}</span></p>
-                      </div>;
-                    })}
-                  </div>
-                  <button className={panelShow4 ? "accor active1" : "accor"} onClick={showPanel4}>Valuation</button>
-                  <div className={panelShow4 ? "panel1 show-panel1" : "panel1"}>
                   {
-                    minPrice && maxPrice ? <PriceRangeSlider minVal={minPrice} maxVal={maxPrice} finalChange={finalChange}/> : null
+                    minprice && maxprice ? <PriceRangeSlider minVal={minprice} maxVal={maxprice} finalChange={this.finalChange}/> : null
                   }
-                  
-                  
-                   
                   </div>
                 </div>
               </div>
@@ -238,17 +239,15 @@ for (var y=0 ; y<conpanies.length ; y++) {
                 </div>
               </form> */}
               <div className="galaxy">
-          
+               {
+                !isLoading ? 
+                filteredcurrentPost.length === 0 ?
+                <TradesGridThree postPerpage={postPerpage} currentPost={currentPost} totalPosts={companyLenght} paginate={this.paginate} />
+                :<TradesGridThree postPerpage={postPerpage} currentPost={filteredcurrentPost} totalPosts={filtercompanyLenght} paginate={this.paginate} />
+                 :"Data Loading..."
+               }
                
-                {
-                  currentFilterProduct.length === 0 ?
-                    recordsNotFound ? "Record not found !" :
-                      <SWRConfig value={{ fetcher }}>
-                        <TradesGridThree postPerpage={postPerpage} currentPost={currentPost} totalPosts={totalPosts} paginate={paginate} />
-                      </SWRConfig>
-                    :
-                    <TradesGridThree postPerpage={postPerpage} currentPost={currentFilterProduct} totalPosts={filterCount} paginate={paginate} />
-                }
+              
 
               </div>
             </div>
@@ -256,8 +255,7 @@ for (var y=0 ; y<conpanies.length ; y++) {
         </div>
 
       </section>
-    </>
-  );
+     </>
+    )
+  }
 }
-
-export default Companies;

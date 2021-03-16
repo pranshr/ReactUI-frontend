@@ -27,19 +27,19 @@ function App() {
         <Header />
         <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/companies" component={Companies}/>
+        <Route path="/unlisted-stocks" component={Companies}/>
         <Route path="/company/:cslug" component={CompDetails}/>
         <Route path="/services" component={Services}/>
         <Route path="/contact" component={Contact}/>
-        <Route path="/about" component={About}/>
+        <Route path="/about-us" component={About}/>
         <Route path="/disclaimers" component={Disclaimers}/>
-        <Route path="/faq" component={Faq}/>
+        <Route path="/faqs" component={Faq}/>
         <Route path="/terms-and-conditions" component={Terms}/>
         <Route path="/privacy-policy" component={PrivacyPolicy}/>
-        <Route path="/scompanies" component={Scompanies}/>
-        <Route path="/institutions" component={Institutions}/>
-        <Route path="/investors" component={Investors}/>
-        <Route path="/shareholders" component={Shareholders}/>
+        <Route path="/solution-for-companies" component={Scompanies}/>
+        <Route path="/solution-for-institutions" component={Institutions}/>
+        <Route path="/solution-for-investors" component={Investors}/>
+        <Route path="/solution-for-shareholders" component={Shareholders}/>
         <Route path="/cdetail/:id" component={Cdetail}/>
         <Route path="/why-us" component={Why}/>
         <Route path="/platform" component={PlateForm}/>

@@ -23,26 +23,22 @@ const Footer = () => {
               <div className="col-md-2 col-sm-2">
                 <h4 className="quick">Quick Links</h4>
                 <ul className="ul1">
-                  <li><Link to="/">Home</Link></li>
                   <li><Link to="/plateform">Platform</Link></li>
-                  <li><Link to="/companies">Companies</Link></li>
-                  <li><Link to="#">Blog</Link></li>
-                  <li><Link to="/services">Services</Link></li>
+                  <li><Link to="/companies">Unlisted stocks</Link></li>
+                  <li><Link to="/about-us">About Us</Link></li>
                   <li><Link to="/why-us">Why Us</Link></li>
-                  <li><Link to="/contact">Contact Us</Link></li>
-                  <li><Link to="/faq">FAQ</Link></li>
+                  <li><Link to="/faqs">FAQs</Link></li>
                 </ul>
               </div>
               <div className="col-md-2 col-sm-2">
-              <h4 className="quick">Our Solution</h4>
+              <h4 className="quick">Our offerings</h4>
                 <ul className="ul2">
-                  <li><Link to="/scompanies">For Companies</Link></li>
-                  <li><Link to="/institutions">For Institutions</Link></li>
-						    	<li><Link to="/investors">Investors</Link></li>
-                  <li><Link to="/shareholders">Shareholders</Link></li>
-                  <li><Link to="/about">About</Link></li>
+                  <li><Link to="/services">Services</Link></li>
+                  <li><Link to="/solution-for-companies">Solution For companies</Link></li>
+                  <li><Link to="/solution-for-institutions">Solution For Institutions</Link></li>
+						    	<li><Link to="/solution-for-investors">Solution For Investors</Link></li>
+                  <li><Link to="/solution-for-shareholders">Solution For Shareholders</Link></li>
                   <li><Link to="#">Types of Unlisted Companies</Link></li>
-                  <li><Link to="#">Solutions</Link></li>
                 </ul>
               </div>
               <div className="col-md-2 col-sm-2">

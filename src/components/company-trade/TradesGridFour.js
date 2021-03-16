@@ -70,7 +70,7 @@ function TradesGridFour() {
                 <div className="row">
                 <div className="col-md-12">
                   <div className="view">
-                    <p className="text-center p1"><Link to="/companies">View All</Link></p>
+                    <p className="text-center p1"><Link to="/unlisted-stocks">View All</Link></p>
                   </div>
                 </div>
               </div>
