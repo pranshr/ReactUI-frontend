@@ -151,7 +151,8 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .contact-call{border:1px solid #731b65;}
 .contact-section1{padding: 50px 0}
 .mt-50{margin-top: 50px;}
-.call{padding: 152px}
+.mt-15{margin-top: 15px;}
+.call{padding: 105px 20px}
 .pl-67{padding-left: 67px}
 .call p{font-size: 15px;color: #000;font-weight: bold}
 .main-contact h1::after{content:"" ;background-color: #fff;height: 2px;width: 85px;top: 126px;right: 177px;position: absolute;}
@@ -418,6 +419,31 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   .text-white{color: #fff !important}
 
   /*********RR**********/
+  .profile_list .customRadio label{
+    font-size: 12px;
+  }
+  .profile_list{
+    padding-left: 0;
+    list-style: none;
+  }
+  .profile_list li{
+    display: inline-block;
+    width: 121px;
+    margin-right: 5px;
+  }
+  .dp-flex{
+     display: flex;
+     justify-content: flex-end;
+  }
+  .mobile-login-btn{
+    display: none;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+  .desktop-login-btn{
+    display: block;
+  }
   .dropdown-menu {
     background-color: #112d4f;
   }
@@ -436,6 +462,40 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   
   
   
+  @media (max-width: 768px){
+    .profile_list li {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+    .navbar-toggle { 
+      padding: 8px;
+      margin-top: 5px;
+      margin-right: 0;
+      margin-bottom: 8px;
+  }
+ 
+  .login-btn{
+    padding: 6px !important;
+    font-size: 12px !important;
+  }
+  .logo {
+    margin-top: 8px;
+    max-width: 144px;
+}
+.header ul li{
+  padding: 10px 5px;
+}
+    .desktop-login-btn{
+      display: none;
+    }
+    .mobile-login-btn{
+      display: inline-block;
+     
+    }
+    .navbar-collapse{
+      width: 100%;
+    }
+  }
   @media (min-width: 992px){
 		.dropdown-menu .dropdown-toggle:after{
 			border-top: .3em solid transparent;

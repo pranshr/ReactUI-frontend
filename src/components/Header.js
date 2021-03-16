@@ -13,26 +13,18 @@ class Header extends Component {
   constructor(props){
     super(props);
     this.state  = {
-      sidenav:false,
-      show: false,
       topbar:true,
       isLogin:true,
       isRegister:false,
       isForgetPassword:false,
       isForgetUserid:false,
       }
-      this.ToogleSidebar = this.ToogleSidebar.bind(this);
       this.showModal = this.showModal.bind(this);
       this.hideModal = this.hideModal.bind(this);
 
    
   }
-  ToogleSidebar (){
-    this.setState({
-      sidenav:!this.state.sidenav
-    })
-		
-	};
+ 
    CloseTopbar= () =>{
     this.setState({
       topbar:false
@@ -77,7 +69,7 @@ class Header extends Component {
     });
   }
   render(){
-    const { sidenav, topbar, isRegister, isForgetPassword, isLogin, isForgetUserid  } = this.state;
+    const { topbar, isRegister, isForgetPassword, isLogin, isForgetUserid  } = this.state;
 	return(
 		<>
     {
@@ -97,14 +89,18 @@ class Header extends Component {
               <div className="row">
                 <div className="col-md-2">
                   <div className="navbar-header">
+                
                     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                       <span className="icon-bar" />
                       <span className="icon-bar" />
                       <span className="icon-bar" />
                     </button>
+                    <button type="button" onClick={this.showModal} className="login-btn mobile-login-btn">
+                         Login/Sign Up
+                      </button>
                     <Link to="/"><img src={process.env.PUBLIC_URL + "../assets/images/logo.png"} className="logo"  alt=""/></Link>
                   </div></div>
-                <div className="col-md-10">
+                <div className="col-md-10 dp-flex">
                   <div className="collapse navbar-collapse" id="myNavbar">
                     <ul className=" navbar-right">
                       <li>
@@ -142,43 +138,20 @@ class Header extends Component {
           </ul>
       </li>
                       <li><Link to="/contact">Contact Us</Link></li>
-                      <li>
-                      <button type="button" onClick={this.showModal} className="login-btn">
-                         Login/Sign Up
-                      </button>
-                    </li>
-                      <li>
-					          <button className="side-nav-btn"   onClick={this.ToogleSidebar}>
-				        	    <i className="fa fa-list" />
-                    </button> 
-					         </li>
+                    
                     </ul>
                   </div>
-                  <div className="clearfix" />
+                 
+                  <button type="button" onClick={this.showModal} className="login-btn desktop-login-btn">
+                         Login/Sign Up
+                      </button>
                 </div>
               </div>
             </div>
           </nav>
+
         </header>
-      <div className={sidenav ? "backdrop-body active": "backdrop-body "}></div> 
-		<div id="mySidenavR" className={sidenav ? "sidenavR skew open": "sidenavR skew "}>
-        <div className="skewnav">
-		
-          <button  onClick={this.ToogleSidebar} className="closebtn side-nav-btn-closebtn">
-		Close <i className="fa fa-times" />
-              </button> 
-          <h4><Link to="/about" className="text-white" onClick={this.ToogleSidebar}>About UnlistedAssets.com</Link></h4>
-          <p className="text-white">Solutions</p>
-          <ul className="sidenav1">
-            <li><Link to="/scompanies" onClick={this.ToogleSidebar}>For Companies</Link></li>
-            <li><Link to="/institutions" onClick={this.ToogleSidebar}>For Institutions</Link></li>
-            <li><Link to="/investors" onClick={this.ToogleSidebar}>For Investors</Link></li>
-            <li><Link to="/shareholders" onClick={this.ToogleSidebar}>For Shareholders</Link></li>
-          </ul>
-          <p><Link to="/why-us" onClick={this.ToogleSidebar}>Why Us</Link></p>
-          <p><Link to="/faq" onClick={this.ToogleSidebar}>FAQ</Link></p>
-        </div>
-      </div>
+
         <Modal show={this.state.show} handleClose={this.hideModal} headerClass={ !isForgetPassword && !isForgetUserid ? null: "header-hide"}>
         {  isLogin || isRegister ? 
             <AuthLayout>

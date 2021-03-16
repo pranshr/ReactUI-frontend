@@ -23,7 +23,7 @@ export default class NewsLatterButton extends Component {
     componentDidMount(){
         setTimeout(function(){
             this.setState({show: true});
-       }.bind(this),5000);  // wait 20 seconds, then reset to false
+       }.bind(this),20000);  // wait 20 seconds, then reset to false
     }
     render() {
         return (
