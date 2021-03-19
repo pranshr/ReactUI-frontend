@@ -37,8 +37,9 @@ export default function TradesGridThree(props) {
   // const totalPosts = conpanies ? conpanies.length : 0;
   return (
     <>
+     <h4>Companies<span>({ props.totalPosts })</span> </h4>
       <div className="row"> 
-        <h4>Companies<span>({ props.totalPosts })</span> </h4>
+       
         {
           props.currentPost ? (
             props.currentPost.map((trade, index) => (
@@ -52,7 +53,7 @@ export default function TradesGridThree(props) {
                           <img src={trade.company_logo} alt="logo" className="center-block" />
                         </div>
                       </div>
-                      <div className="col-md-8 col-xs-8 pl-25">
+                      <div className="col-md-10 col-xs-10 pl-25">
                         <p className="p2" style={{fontWeight: 'bold'}}> { trade.company_name }</p>
                         <p className="pharmacy">{ trade.sector }</p>
                         <p className="pharmacy">{ trade.company_isin }</p>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import CommingSoon from './CommingSoon';
-
 export default class PlateForm extends Component {
+
     render() {
+
         return (
             <>
                   <section className="underconstruction">
@@ -14,8 +15,11 @@ export default class PlateForm extends Component {
               <CommingSoon/>
             </div>
             <div className="col-md-1" />
-          </div>			
+            
+          </div>	
+         
         </div>
+      
       </section>
             </>
         )

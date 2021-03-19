@@ -1,11 +1,21 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom";
+import TradeModal from '../modal/TradeModal'
 import useSWR from "swr";
 const fetcher = (...args) => fetch(...args).then((response) => response.json());
 function CompDetails(props) {
   const [showMore, setShowMore] = useState(false);
+  const [tradeModal, setModal] = useState(false);
+  const [item_id, setItem_id] = useState(0);
+  function showModal(event, data) {
+    setModal(true);
+    setItem_id(data);
+  }
+  function hideModal(e) {
+    setModal(false);
+  }
   const c_slug = props.match.params.cslug;
-  const apiEndpoint = "http://13.232.34.18:8080/company/"+c_slug;
+  const apiEndpoint = "https://api.unlistedassets.com/company/"+c_slug;
   const { data, error} = useSWR(apiEndpoint, fetcher, {refreshInterval:2});
 
   function ShowMore() {
@@ -24,9 +34,9 @@ function CompDetails(props) {
             <div className="col-md-12 p0">
               <div className="top">
                 <ul className="company-ul">
-                  <li><Link to="#"><img src={process.env.PUBLIC_URL + "../assets/images/home.png"} alt="home" /></Link></li>
+                  <li><Link to="/"><img src={process.env.PUBLIC_URL + "../assets/images/home.png"} alt="home" /></Link></li>
                   <li><i className="fa fa-angle-double-right" /></li>
-                  <li><Link to="#" className="com">Companies</Link></li>
+                  <li><Link to="/unlisted-stocks" className="com">Unlisted Stocks</Link></li>
                   <li><i className="fa fa-angle-double-right" /></li>
                   <li><Link to="#" className="hdfc">{data.company_name}</Link></li>
                 </ul>
@@ -140,7 +150,8 @@ function CompDetails(props) {
               <div className="code">
                 <img src={process.env.PUBLIC_URL + "../assets/images/c2.png"} alt="c2" className="center-block" />
                 <p className="text-center mt-30">Directly reach out to place Buy/Sell orders</p>
-                <p className="reach text-center"><Link to="#" className="btn btn-trade btn-block btn-lg">Trade</Link></p>
+                <p className="reach text-center"><button type="button" className="btn btn-trade btn-block btn-lg page-trade-btn" onClick={(event) => showModal(event, data.company_name)} > Trade </button></p>
+                
                 {/*<p class="reach text-center"><Link to="#" class="btn btn-watchlist  btn-block btn-lg">Add to Watchlist</Link></p>-*/}
               </div>
               {/*<h4 class="text-center text-bold mt-30">People Also Viewed</h4>-*/}
@@ -153,6 +164,9 @@ function CompDetails(props) {
         </div>
       </section> : null
      }
+     { !tradeModal ? null :
+                <TradeModal show={tradeModal} handleClose={hideModal} c_id={item_id }/>
+         }
      </>
   )
 }
