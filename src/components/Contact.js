@@ -1,23 +1,48 @@
 import React, { Component } from 'react'
-import ContactForm from './contact/ContactForm'
+import ContactForm from './contact/ContactForm';
+import axios from 'axios';
 export default class Contact extends Component {
   constructor(){
     super();
     this.state={
-      name:'',
-      email:'',
-      message:'',
-      recaptchaVal:''
+      success:false,
+      error:false,
+      respMessage:'',
+
     }
-    this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-  onSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state);
+ 
+  onSubmit(data) {
+    const json = JSON.stringify(data);
+    axios.post('https://api.unlistedassets.com/contact/submit', json, {
+      headers: {
+        // Overwrite Axios's automatically set Content-Type
+        'Content-Type': 'application/json'
+      }
+    }).then(res => {
+      const resData = res.data;
+      if(resData === true){
+        this.setState({
+          success:true,
+          respMessage:"You have Successfully submitted your request."
+        });
+      }else{
+        this.setState({
+          success:false,
+          error:true,
+          respMessage:"Something went wrong!"
+        });
+      }
+      
+   }).catch(error => {
+         this.setState({
+           success:false,
+           error:true,
+           respMessage:"Something went wrong!"
+          });
+            console.error('There was an error!', error);
+        });
   }
   render() {
     return (
@@ -42,6 +67,23 @@ export default class Contact extends Component {
                 <div className="talk">
                   <h3>Let's Connect!</h3>
                   <p classname="con" />
+                  {
+                    this.state.error ? <div class="alert alert-danger alert-dismissible fade show" role="alert">
+   {this.state.respMessage }
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> : null
+                  }
+                  {
+                    this.state.success ? <div class="alert alert-success alert-dismissible show" role="alert">
+  <strong>Thank You</strong> {this.state.respMessage }
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> : null
+                  }
+                  
                    <ContactForm handleChange={ this.handleChange } onSubmit={ this.onSubmit }/>
                 </div>
               </div>
