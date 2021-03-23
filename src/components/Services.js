@@ -1,21 +1,14 @@
 import React from "react";
-
+import InnerBanner from './common/InnerBanner'
 
 
 const Services = () => {
+  const bannerImage = "1c.png";
+  const headingtxt = "Our Services";
+  const subHeadingtxt = "We serve the best services for our customers.";
 	return(
 		<>
-            <section className="services-section banner">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-7">
-                <h1>Our Services</h1>
-                <p>We serve the best services for our customers.</p>
-              </div>
-              <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/1c.png"} className="img-responsive center-block" alt="1c"/></div>
-            </div>
-          </div>
-        </section>
+           <InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
         <section className="services">
           <div className="container">
             <div className="row">

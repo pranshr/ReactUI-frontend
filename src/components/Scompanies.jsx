@@ -1,22 +1,13 @@
 import React from "react";
 
-
+import InnerBanner from './common/InnerBanner'
 const Scompanies = () => {
+	const bannerImage = "company-banner.png";
+	const headingtxt = "For Companies";
+	const subHeadingtxt = "We tailor unique programs to match your need to raise capital, provide liquidity to investors, provide professional consultancy and insights. We work hand in hand to ensure that we provide a customized solution to ensure your needs are taken care of.";
 	return(
 		<>
-			<section class="solution-section banner">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7">
-					<h1>For Companies</h1>
-					<p>We tailor unique programs to match your need to raise capital, provide liquidity to investors, provide professional consultancy and insights. We work hand in hand to ensure that we provide a customized solution to ensure your needs are taken care of.</p>
-				</div>
-				<div class="col-md-5"><img src={`${process.env.PUBLIC_URL}/assets/images/company-banner.png`} class="img-responsive center-block"  alt="company-banner"/></div>
-			</div>
-		</div>
-	</section>
-			
-
+			<InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
 				<section class="solution2">
 		<div class="container">
 			<div class="row">

@@ -1,20 +1,13 @@
 import React from "react";
-
+import InnerBanner from './common/InnerBanner'
 
 const Shareholders = () => {
+  const bannerImage = "inv-banner.png";
+	const headingtxt = "For Shareholders";
+	const subHeadingtxt = "Start selling your unlisted company shares without waiting to encash after IPO/ exit as you might have to wait for the event much longer than expected. You can take the first step by exploring and assessing the worth of your assets through our guidance and help.";
 	return(
 		<>
-		 <section className="shareholders-section banner">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-7">
-                <h1>For Shareholders</h1>
-                <p>Start selling your unlisted company shares without waiting to encash after IPO/ exit as you might have to wait for the event much longer than expected. You can take the first step by exploring and assessing the worth of your assets through our guidance and help.</p>
-              </div>
-              <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/inv-banner.png"} className="img-responsive center-block" alt="inv-banner" /></div>
-            </div>
-          </div>
-        </section>
+		<InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
         <section className="investors">
           <div className="container">
             <div className="row">

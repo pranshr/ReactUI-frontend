@@ -29,8 +29,12 @@ a{color:#731b67; }
 .close1{ color: #fff; margin-left: 50px; font-size: 24px; display: inline-block;margin-top: 2px; cursor: pointer;}
 .close1:hover{ color: #fff;}
 .banner{background: url('banner.png'); padding-top: 70px}
-.banner h1{color: #fff;font-weight: bold; line-height:1.5; margin-top: 50px; margin-bottom: 70px}
-.banner a{border:1px solid #fff; padding: 11px 43px;font-weight: bold; color: #fff; text-decoration: none}
+.banner h1{color: #fff;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 50px;
+  margin-bottom: 70px;}
+.banner a{border:1px solid #fff; margin-right: 10px; padding: 11px 43px;font-weight: bold; color: #fff; text-decoration: none}
 .banner a:hover{border:1px solid #fff; padding: 11px 43px;font-weight: bold; color: #fff; text-decoration: none; color: #001632; background: #fff}
 .header{background-color: #0d223c; padding: 8px 0 8px}
 .header ul{margin-top: 10px}
@@ -40,7 +44,8 @@ a{color:#731b67; }
 .header ul li a:hover{text-decoration: none;}
 .carousel-indicators li{width: 40px; height: 8px; background: #fff; /*margin-bottom: 9px;*/}
 .carousel-indicators .active{width: 40px; height: 8px; background: #95548b; border-color: #95548b}
-.carousel-indicators{ bottom: 0px; left: 70px; z-index: 1 !important; }
+.carousel-indicators{ bottom: 100px;
+  left: 70px; }
 .about2,.about3{color: #0d223c}
 .navbar{margin-bottom: 0}
 .login,.login:hover{border:2px solid #fff; padding: 5px 18px}
@@ -208,10 +213,15 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .access{padding:50px 50px 0 0}
 .insights{padding: 50px 0 0 50px}
 .shareholders-section{background-color: #0d223d;padding: 50px 0 0; }
-.shareholders-section h1{color: #fff;font-weight: bold;padding: 120px 0 0; margin-bottom: 20px}
+.shareholders-section h1{color: #fff;font-weight: bold;}
 .shareholders-section p{color: #fff;font-size: 18px}
-.shareholders-section h1::after{content:"" ;background-color: #fff;height: 2px;width: 85px;top: 196px;left: 350px;position: absolute;}
-.shareholders{ margin-bottom: 100px }
+.shareholders-section h1::after{content: "";
+  background-color: #fff;
+  height: 2px;
+  top: 61px;
+  margin-left: 5px;
+  width: 85px;
+  position: absolute;}
 .trust{padding: 50px 0 0 50px}
 .integrity{padding: 0px 5px}
 .analysis{padding: 2px 0px 0 50px}
@@ -425,6 +435,85 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   .text-white{color: #fff !important}
 
   /*********RR**********/
+  .d-flex{
+    display: flex;
+  }
+  .align-item{
+    align-items: center;
+  }
+  .inner-banner{
+    height: calc(100vh - 175px);
+    background: url('banner.png');
+    background-color: #0d223d;
+    padding: 30px 0px;
+  }
+  .inner-banner .banner-text h1 {
+    color: #fff;
+    font-weight: bold;
+    margin: 0px 0px 15px;
+}
+.inner-banner .banner-text h3 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.inner-banner .banner-text h1::after{content: "";
+  background-color: #fff;
+  height: 2px;
+  margin-top: 31px;
+  width: 38px;
+  position: absolute;
+  margin-left: 6px;}
+.inner-banner .banner-text p {
+  color: #fff;
+  font-size: 18px;
+}
+.inner-banner img{
+  max-height: 480px;
+  width: auto;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(0,0,0,0.1);
+}
+
+.inner-page-content{
+  padding: 50px;
+  width: 100%;
+  max-width:1024px;
+  height: auto;
+  margin: 0 auto;
+}
+.main-title h1{
+  font-weight: 700;
+  color: #0d223c;
+}
+.bottom-box{
+  background: #f0f2ff;
+  padding: 70px 100px 80px;
+  margin: 50px 0px 0px;
+  border-radius: 20px;
+}
+.bottom-box a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+.bottom-box p{
+  margin-bottom: 30px;
+}
+.box-img img{
+  border: 1px solid #bdc4e0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #bdc4e0;
+}
+/* .box-img img{
+  width: 140px;
+  height: 140px;
+  box-shadow: 0px 2px 22px rgb(0 0 0 / 20%);
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+} */
+
   .error-help{
     color: red;
     font-size: 12px;
@@ -679,11 +768,33 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   }
   
   @media (max-width: 768px){
+    .d-flex{
+      display: block;
+    }
+    .inner-banner img{
+      display: none;
+    }
+    .inner-banner {
+      height: auto;
+    }
     #menu{
       margin: 50px 0px;
     }
-   
-    
+    .box-content{
+      text-align: center;
+      padding: 20px 0px;
+    }
+    .main-title h1 {
+      font-size: 23px;
+  }
+  .stay {
+    font-size: 20px;
+}
+.bottom-box {
+  padding: 15px 15px 30px;
+  margin: 30px 0px;
+}
+
     .custom-navbar{
       position: fixed;
     background: #0d223c;

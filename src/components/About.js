@@ -1,19 +1,13 @@
 import React from "react";
+import InnerBanner from './common/InnerBanner'
 const About = () => {
+  const bannerImage = "about.png";
+  const headingtxt = "About Us";
+  const subHeadingtxt = "Unlisted Tech Private Limited is a Fintech company which is empowering secondary equity transactions for various stakeholders of unlisted companies including Start-ups, Delisted companies and Pre IPO companies to Buy/Sell shares in a transparent and safe escrow environment.";
 	return(
 		<>
 				
-  <section className="about-section banner">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-7">
-                <h1>About Us</h1>
-                <p>Unlisted Tech Private Limited is a Fintech company which is empowering secondary equity transactions for various stakeholders of unlisted companies including Start-ups, Delisted companies and Pre IPO companies to Buy/Sell shares in a transparent and safe escrow environment.</p>
-              </div>
-              <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/about.png"} className="img-responsive" alt="about"/></div>
-            </div>
-          </div>
-        </section>
+        <InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
         <section className="about2">
           <div className="container">
             <div className="row">

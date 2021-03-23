@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ContactForm from './contact/ContactForm';
+import InnerBanner from './common/InnerBanner'
 import axios from 'axios';
 export default class Contact extends Component {
   constructor(){
@@ -45,21 +46,12 @@ export default class Contact extends Component {
         });
   }
   render() {
+    const bannerImage = "contact.png";
+    const headingtxt = "Want to know more!";
+    const subHeadingtxt = "Please drop us an email or send us a text message . Our team will reach our to you shortly and help you understand our offering and our process better.";
     return (
      <>
-         <section className="main-contact banner">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-7">
-                <h1>Want to know more!!</h1>
-                <p>Please drop us an email or send us a text message . Our <br/>team will reach our to you shortly and help you <br/> understand our offering and our process better.</p>
-              </div> 
-              <div className="col-md-5">
-                <img src={process.env.PUBLIC_URL + "./assets/images/contact.png"} className="img-responsive center-block" alt="contact" />
-              </div>
-            </div>
-          </div>
-        </section>
+        	<InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
         <section className="contact-section1">
           <div className="container">
             <div className="row">
