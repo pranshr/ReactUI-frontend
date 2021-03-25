@@ -20,6 +20,7 @@ function TradesGridFour() {
   const currentPost = conpanies ? conpanies.slice(0, noOfPost) : null;
   return (
     <>
+    <div className="container"> 
           <div className="row"> 
         {
           currentPost ? (
@@ -66,11 +67,12 @@ function TradesGridFour() {
         }
         
         </div>
+        </div>
         { currentPost && currentPost.length < 8 ? null :
                 <div className="row">
                 <div className="col-md-12">
                   <div className="view">
-                    <p className="text-center p1"><Link to="/unlisted-stocks" className="btn2">View All</Link></p>
+                    <p className="text-center p1"><Link to="/companies" className="btn2">View All</Link></p>
                   </div>
                 </div>
               </div>

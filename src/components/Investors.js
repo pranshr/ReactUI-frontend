@@ -19,8 +19,8 @@ const Investors = () => {
                     <div className="col-md-3">
                       <img src={process.env.PUBLIC_URL + "./assets/images/inv1.png"} className="img-responsive center-block" alt="inv1"/>
                     </div>
-                    <div className="col-md-9">
-                      <div className="insights">
+                    <div className="col-md-9 d-flex align-item minHeight214">
+                      <div className="get">
                         <h4 className="stay">Get insights to Unlisted Companies</h4>
                         <p>We provide you with all the information on companies, their regulatory filings, price trends and our assessment notes.</p>
                       </div>
@@ -29,8 +29,8 @@ const Investors = () => {
                 </div>
                 <div className="private">
                   <div className="row">
-                    <div className="col-md-9">
-                      <div className="access">
+                    <div className="col-md-9 d-flex align-item minHeight214">
+                      <div className="get">
                         <h4 className="stay">Get access to high growth and high potential Private Companies</h4>
                         <p>You get opportunities to companies which you dream of owning. These are companies who's services you use frequently and want to become a part of their growth stories.</p>
                       </div>

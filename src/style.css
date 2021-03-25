@@ -1,4 +1,4 @@
-body{font-family: 'Montserrat', sans-serif; font-size: 15px;
+body{font-family: 'Montserrat', sans-serif; font-size: 15px;user-select:none
 }
 button:focus{
   outline: none !important;
@@ -39,7 +39,7 @@ a{color:#731b67; }
 .header{background-color: #0d223c; padding: 8px 0 8px}
 .header ul{margin-top: 10px}
 .header ul li{list-style: none; display: inline; padding:2px;}
-.header ul li a{color: #fff; font-weight: bold;padding: 10px; font-size: 14px; text-decoration: none;}
+.header ul li a{color: #fff; font-weight: 500;padding: 10px; font-size: 14px; text-decoration: none;}
 .header ul li a:hover{background-color: #fff;color: #95548b;padding: 10px;border-radius: 3px}
 .header ul li a:hover{text-decoration: none;}
 .carousel-indicators li{width: 40px; height: 8px; background: #fff; /*margin-bottom: 9px;*/}
@@ -82,7 +82,7 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 
 .sociallinks{ list-style: none; padding-left: 0 }
 .sociallinks li{display: inline;}
-.text{background-color: #263850; height: 50px; border-color:#263850;}
+.text{background-color: #263850; height: 50px; border-color:#263850; color:#fff}
 .button{background-color: #000;color: #47724d;padding: 7px 27px}
 .footer-back h1{margin-top: 40px}
 .main-section{background-color: #0d223d;margin-bottom: 40px}
@@ -202,9 +202,11 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .institutions-section p{color: #fff;font-size: 18px}
 .institutions-section h1::after{content:"" ;background-color: #fff;height: 2px;width: 85px;top: 132px;left:320px;position: absolute;}
 .institutions{margin-bottom: 100px}
-.get{padding: 75px 0}
-.get1{padding:50px 0 0 50px;}
-
+/* .get{padding: 75px 0} */
+/* .get1{padding:50px 0 0 50px;} */
+.minHeight214{
+   min-height: 214px;
+}
 .investors-section{background-color: #0d223d;padding: 50px 0 0}
 .investors-section h1{color: #fff;font-weight: bold;padding: 53px 0 0; margin-bottom: 20px}
 .investors-section p{color: #fff;font-size: 18px}
@@ -308,7 +310,7 @@ padding: 0 21px
   color:#0d223d;
 }
 .panel.open{
-   max-height: 300px;
+   max-height: 570px;
 }
 .panel1 {
   background-color: #fff;
@@ -329,21 +331,28 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
 .buy h4,.sell h4,.see h4,.limit h4,.escrow h4,.growth h4{font-weight: bold;}
 .buy p,.sell p,.limit p,.escrow p,.growth p{font-size: 16px; line-height: 1.5}
 .see p{font-size: 16px;line-height: 1.5}
-.services{margin-top: 100px;margin-bottom: 85px}
 .sell{background-color: #fff;padding: 43px 35px 55px 30px;box-shadow: 0 0 10px #ccc;position: absolute;z-index: 1;top: 165px;right:-164px;}
 .see{background-color: #fff;padding: 71px 19px 71px 20px;box-shadow: 0 0 10px #ccc;position: absolute;z-index: 1;top: 141px;left:-136px;}
 .limit{background-color: #fff;padding: 43px 30px 51px 30px;box-shadow: 0 0 10px #ccc;position: absolute;z-index: 1;top: 182px;right:-165px;}
 .last-services{margin-top: 20px;margin-bottom: 130px}
 .last-services h3{font-weight: bold;}
-.img1{margin-top: 75px}
-.i1{font-weight: bold;position: absolute;top: 135px;
-    left: 30px;
+.img1{margin-top: 75px; display: flex;}
+.i1{font-weight: bold;
+  position: relative;
+  margin-right: 15px;
 }
-.i2{font-weight: bold;position: absolute;top: 306px;left: 29px}
+.i1 span{
+  display: block;
+    position: absolute;
+    width: 43px;
+    text-align: center;
+    line-height: 50px;
+}
+/* .i2{font-weight: bold;position: absolute;top: 306px;left: 29px}
 .i3{font-weight: bold;position: absolute;top:475px;left: 27px }
 .i4{font-weight: bold;position: absolute;bottom: 382px;left: 27px}
 .i5{font-weight: bold;position: absolute;bottom: 215px;left: 27px}
-.i6{font-weight: bold;position: absolute;bottom: 58px;left: 27px}
+.i6{font-weight: bold;position: absolute;bottom: 58px;left: 27px} */
 .company-ul li{list-style: none;display: inline;padding: 10px}
 .company-ul li a:hover{text-decoration: none;}
 .com{color: #000;font-weight: bold;}
@@ -435,6 +444,14 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   .text-white{color: #fff !important}
 
   /*********RR**********/
+  /* .react-tabs__tab-list{
+    background: #731b67;
+    color: #fff;
+  } */
+  .react-tabs__tab--selected{
+    background: #0d223c !important;
+    color: #fff !important;
+  }
   .d-flex{
     display: flex;
   }
@@ -456,14 +473,18 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     color: #fff;
     font-size: 20px;
 }
+.wh100{
+  width: 100%;
+}
 
-.inner-banner .banner-text h1::after{content: "";
+
+/* .inner-banner .banner-text h1::after{content: "";
   background-color: #fff;
   height: 2px;
   margin-top: 31px;
   width: 38px;
   position: absolute;
-  margin-left: 6px;}
+  margin-left: 6px;} */
 .inner-banner .banner-text p {
   color: #fff;
   font-size: 18px;
@@ -817,6 +838,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     .profile_list li {
       width: 100%;
       margin-bottom: 10px;
+
   }
     .navbar-toggle { 
       padding: 8px;
@@ -849,10 +871,50 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     .header ul li a{
       color: unset !important;
     }
-    .dropdown-menu{
-  
-    
-    }
+    .banner {
+      padding-top: 40px;
+  }
+    .banner h1 {
+      margin-top: 0px;
+      margin-bottom: 25px;
+      font-size: 20px;
+  }
+  .banner a {
+    padding: 8px 30px;
+}
+  .sectiontitle {
+    font-size: 22px !important;
+}
+.offlineprocess h3{
+  font-weight: 500 !important;
+  font-size: 20px;
+}
+.offlineprocess h4, .onlineprocess h3, .onlineprocess h4{
+  font-weight: 500 !important;
+  font-size: 17px;
+}
+.btn2 {
+  padding: 6px 20px !important;
+}
+.found h4 {
+  margin-top: 10px;
+  font-size: 17px;
+  text-align: center;
+}
+.talk {
+
+  padding: 0px;
+}
+.call {
+  padding: 50px 0px 0px;
+
+}
+.galaxy {
+  padding: 10px;
+}
+.code {
+  margin-top: 40px !important;
+}
   }
   @media (min-width: 992px){
 		.dropdown-menu .dropdown-toggle:after{
@@ -936,6 +998,9 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   }
 
    	.mt-20{margin-top: 20px}
+     .mb-30{
+       margin-bottom: 30px;
+    }
  	.single-block h4{ margin-top: 0; font-weight: bold }
  	.single-block p{ line-height: 1.5;  }
  	.single-block{ margin-bottom: 20px }
@@ -1298,7 +1363,6 @@ font-size: 13px;
 	.header ul li { display: block; }
 	.item img{ margin-top: 30px }
 	.carousel-indicators{display: none; z-index: 1 !important; }
-	.call{ padding: 100px 50px }
 	.about2 h3,.about2 p{padding-left: 0}
 	.found{margin-left: 0; padding-left: 15px}
 	.trust,.integrity,.analysis,.get1, .get,.access,.insights,.bank1,.bank,.bank2,.bank3{padding: 20px 0;}
@@ -1321,14 +1385,12 @@ font-size: 13px;
     position: relative;z-index: 1;top: 22px;left:0px;
   }
   .growth{background-color: #fff;padding: 80px 29px 80px 29px;box-shadow: 0 0 10px #ccc;position: relative;z-index: 1;top: 35px;right:0;}
-  .i1{font-weight: bold;position: relative;top: 47px;
-    left: 14px;
-}
-.i2{font-weight: bold;position: relative;top: 48px;left: 15px}
+  
+/* .i2{font-weight: bold;position: relative;top: 48px;left: 15px}
 .i3{font-weight: bold;position: relative;top:48px;left: 14px }
 .i4{font-weight: bold;position: relative;top: 50px;left: 15px}
 .i5{font-weight: bold;position: relative;top: 48px;left: 15px}
-.i6{font-weight: bold;position: relative;top: 48px;left: 15px}
+.i6{font-weight: bold;position: relative;top: 48px;left: 15px} */
 .rome{margin-top:20px;}
 .rome select{margin-top: 15px;}
 .modalleft,.modalright{ padding: 0; }

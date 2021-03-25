@@ -88,74 +88,7 @@ class Header extends Component {
           </div>
         </section>
     }
-        {/* <header className="header">
-          <nav className="navbar">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-2">
-                  <div className="navbar-header">
-                
-                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                      <span className="icon-bar" />
-                      <span className="icon-bar" />
-                      <span className="icon-bar" />
-                    </button>
-                    <button type="button" onClick={this.showModal} className="login-btn mobile-login-btn">
-                         Login/Sign Up
-                      </button>
-                    <Link to="/"><img src={process.env.PUBLIC_URL + "../assets/images/logo.png"} className="logo"  alt=""/></Link>
-                  </div></div>
-                <div className="col-md-10 dp-flex">
-                  <div className="collapse navbar-collapse" id="myNavbar">
-                    <ul className=" navbar-right">
-                      <li>
-                        <Link to="/unlisted-stocks">Unlisted Stocks</Link>
-                      </li>
-                      <li className="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Our Offerings</Link>
-        <ul className="dropdown-menu">
-          <li><Link className="dropdown-item" to="/services">Services </Link></li>
-          <li><Link className="dropdown-item" href="#"> Solutions » </Link>
-            <ul className="submenu dropdown-menu">
-              <li><Link className="dropdown-item" to="/solution-for-companies">For companies</Link></li>
-              <li><Link className="dropdown-item" to="/solution-for-institutions">For Institutions</Link></li>
-              <li><Link className="dropdown-item" to="/solution-for-investors">For investors</Link></li>
-              <li><Link className="dropdown-item" to="/solution-for-shareholders">For Shareholders</Link></li>
-            </ul>
-          </li>
-         
-          </ul>
-      </li>
-
-      <li className="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> About Company</Link>
-        <ul className="dropdown-menu">
-          <li><Link className="dropdown-item" to="/about-us">About Us </Link></li>
-          <li><Link className="dropdown-item" to="/why-us">Why Us </Link></li>
-          </ul>
-      </li>
-                      <li><Link to="/platform">Platform</Link></li>
-                      <li className="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Resource</Link>
-        <ul className="dropdown-menu">
-          <li><Link className="dropdown-item" href="#">Blog</Link></li>
-          <li><Link className="dropdown-item" to="/faqs">FAQs </Link></li>
-          </ul>
-      </li>
-                      <li><Link to="/contact">Contact Us</Link></li>
-                    
-                    </ul>
-                  </div>
-                 
-                  <button type="button" onClick={this.showModal} className="login-btn desktop-login-btn">
-                         Login/Sign Up
-                      </button>
-                </div>
-              </div>
-            </div>
-          </nav>
-
-        </header> */}
+      
         <header className="header">
         <div className="container">
 <div className="custom-header">
@@ -169,7 +102,7 @@ class Header extends Component {
   <nav id="menu">
  
         <ul className="main-menu clearfix">
-        <li><NavLink activeClassName='is-active' to="/unlisted-stocks">Unlisted Stocks</NavLink></li>
+        <li><NavLink activeClassName='is-active' to="/companies">Explore Companies</NavLink></li>
           <li><a href="/">Our Offerings
               <span className="drop-icon">▾</span>
               <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm1">▾</label>
@@ -210,7 +143,7 @@ class Header extends Component {
             </a>
             <input type="checkbox" id="sm4" />
             <ul className="sub-menu">
-            {/* <li><NavLink activeClassName='is-active' to="/about-us">Blog</NavLink></li> */}
+            <li><a href={'http://blog.unlistedassets.com'} target={'_blank'} rel="noreferrer">Blog</a></li> 
              <li><NavLink activeClassName='is-active' to="/faqs">FAQs </NavLink></li>
             </ul>
           </li>
@@ -219,9 +152,9 @@ class Header extends Component {
         </ul>
       </nav>
   </div>
-  <div className="login_btn">
+  {/* <div className="login_btn">
      <button type="button" onClick={this.showModal} className="login-btn desktop-login-btn">Login/Sign Up</button>
-  </div>
+  </div> */}
   <button type="button" className="navbar-toggle" onClick={ this.toogleNav }>
                       <span className="icon-bar" />
                       <span className="icon-bar" />

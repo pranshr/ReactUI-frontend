@@ -86,7 +86,7 @@ export default class Contact extends Component {
                   <p><a href="!#" className="text-bold">+91 9971133005</a>, <a href="!#" className="text-bold">+91 9711149200</a></p>
                   <img src={process.env.PUBLIC_URL + "./assets/images/phone.png"} alt="phone" className="mt-15"/>
                   <p>Call Us</p>
-                  <p><a href="tel:+91 9971133005" className="text-bold">+91 9971133005</a>, <a href="tel:+91 9711149200" className="text-bold">+91 9711149200</a></p>
+                  <p><a href="tel:+91 9971133005" className="text-bold">+91 9971133005</a>, <a href="tel:+91 9711149200" className="text-bold">+91 9711149200</a> <a href="tel:+91 7011306533" className="text-bold">+91 7011306533</a></p>
                   <img src={process.env.PUBLIC_URL + "./assets/images/email.png"} className="mt-15" alt="email"/>
                   <p>Mail Us</p>
                   <p><a href="mailto:hello@unlistedassets.com" className="text-bold">hello@unlistedassets.com</a></p>

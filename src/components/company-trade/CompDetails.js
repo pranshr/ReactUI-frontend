@@ -36,7 +36,7 @@ function CompDetails(props) {
                 <ul className="company-ul">
                   <li><Link to="/"><img src={process.env.PUBLIC_URL + "../assets/images/home.png"} alt="home" /></Link></li>
                   <li><i className="fa fa-angle-double-right" /></li>
-                  <li><Link to="/unlisted-stocks" className="com">Unlisted Stocks</Link></li>
+                  <li><Link to="/companies" className="com">Explore Companies</Link></li>
                   <li><i className="fa fa-angle-double-right" /></li>
                   <li><Link to="#" className="hdfc">{data.company_name}</Link></li>
                 </ul>

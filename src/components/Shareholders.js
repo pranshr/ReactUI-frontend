@@ -18,40 +18,15 @@ const Shareholders = () => {
                     <div className="col-md-3">
                       <img src={process.env.PUBLIC_URL + "./assets/images/inv1.png"} className="img-responsive center-block" alt="inv-banner" />
                     </div>
-                    <div className="col-md-9">
-                      <div className="insights">
-                        <h4 className="stay">Get liquidity by selling your shares</h4>
-                        <p>You can realize what your shares are worth. You can quickly realize cash against your shares rather than wait for a long time to get an exit.</p>
+                    <div className="col-md-9 d-flex align-item minHeight214">
+                      <div className="get">
+                        <h4 className="stay">Get liquidity by selling your ESOP/shares</h4>
+                        <p>You can assess what your shares are worth in the market at any particular time using our price discovery mechanism along with updated information on the platform and decide the appropriate time for liquidating your holding(s). You can quickly realize cash against your shares/ESOP rather than wait for a long time to get an exit.</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="private">
-                  <div className="row">
-                    <div className="col-md-9">
-                      <div className="access">
-                        <h4 className="stay">Pay your tax liabilities for conversion of stock options</h4>
-                        <p>You can liquidate part holdings as you convert your stock options to shares.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/inv2.png"} className="img-responsive center-block" alt="inv2" />
-                    </div>
-                  </div>
-                </div>
-                <div className="private">
-                  <div className="row">
-                    <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/inv1.png"} className="img-responsive center-block" alt="inv1" />
-                    </div>
-                    <div className="col-md-9">
-                      <div className="insights">
-                        <h4 className="stay">Transact in a transparent and safe process</h4>
-                        <p>Interact directly with buyers. Get money in escrow before transferring your shares.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
               </div>
               <div className="col-md-2" />
             </div>

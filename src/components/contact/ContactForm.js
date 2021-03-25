@@ -3,7 +3,7 @@ import Recaptcha from "react-recaptcha";
 const profileChoices = [
 
     {  id:1, el_id: 'pickup-1', value: 'Investor', label:"Investor" },
-    {  id:2, el_id: 'pickup-2', value: 'Partner', label:"Partner" },
+    {  id:2, el_id: 'pickup-2', value: 'Company', label:"Company" },
     {  id:3, el_id: 'pickup-3', value: 'Institution', label:"Institution" },
     {  id:4, el_id: 'pickup-4', value: 'Shareholder', label:"Shareholder" },
     {  id:5, el_id: 'pickup-5', value: 'Employee', label:"Employee" }
@@ -15,6 +15,7 @@ export default class ContactForm extends Component {
     this.state={
       name:'',
       email:'',
+      phone:'',
       message:'',
       profile:'Investor',
       recaptchaVal:'',
@@ -25,6 +26,7 @@ export default class ContactForm extends Component {
     }
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
+    this.handleChangePhone = this.handleChangePhone.bind(this);
     this.handleChangeProfile = this.handleChangeProfile.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
     this.verifyCallback = this.verifyCallback.bind(this);
@@ -38,6 +40,7 @@ export default class ContactForm extends Component {
   verifyCallback(responce){
    console.log(responce);
   }
+ 
   handleNameValidation = () => {
     const { name } = this.state;
     let formIsValid = true;
@@ -121,6 +124,10 @@ export default class ContactForm extends Component {
     this.setState({ email: e.target.value });
     this.handleEmailValidation();
   };
+
+  handleChangePhone = (e) =>{
+    this.setState({ phone: e.target.value });
+  }
   handleChangeProfile = (e) => {
     this.setState({ profile: e.target.value });
   };
@@ -137,6 +144,7 @@ export default class ContactForm extends Component {
    
     
     if(nameValid && emailValid && messageValid){
+        // console.log(this.state);
       this.props.onSubmit(this.state);
     }else{
       console.log('not valid name');
@@ -163,6 +171,12 @@ export default class ContactForm extends Component {
     <div className="form-group">
       <input type="email" className="form-control" name="email"  onChange={this.handleChangeEmail} onBlur={this.handleEmailValidation}/>
       <span className="error-help">{emailError}</span>
+    </div>
+  </div>
+  <div className="col-md-6">
+    <p>Phone</p>
+    <div className="form-group">
+      <input type="tel" className="form-control" name="phone"  onChange={this.handleChangePhone}/>
     </div>
   </div>
 </div>
@@ -197,7 +211,7 @@ export default class ContactForm extends Component {
     </div>
   </div>
 </div>
-  <div className="form-group">
+  <div className="form-group recap">
   <Recaptcha
     sitekey="xxxxxxxxxxxxxxxxxxxx"
     render="explicit"
@@ -205,7 +219,9 @@ export default class ContactForm extends Component {
     onloadCallback={this.recaptchaLoaded}
   />
   </div>
-<button className="button1">Submit</button>
+  <div className="sbt">
+    <button className="button1">Submit</button>
+</div>
 </form>
             </>
         )

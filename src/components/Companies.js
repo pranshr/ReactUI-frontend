@@ -231,14 +231,15 @@ export default class Companies extends Component {
               </div>
             </div>
             <div className="col-md-9">
-              {/* <form>
+              
+              <div className="galaxy">
+              <form>
                 <div className>
                   <div className="form-group">
-                    <a href="#" className="icon"><i className="fa fa-search" /></a><input type="text" placeholder="Search here..." name className="form-control control" />
+                    <a href="!#" className="icon"><i className="fa fa-search" /></a><input type="text" placeholder="Search here..." name className="form-control control" />
                   </div>
                 </div>
-              </form> */}
-              <div className="galaxy">
+              </form>
                {
                 !isLoading ? 
                 filteredcurrentPost.length === 0 ?

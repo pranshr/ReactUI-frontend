@@ -3,7 +3,8 @@ import InnerBanner from './common/InnerBanner'
 const About = () => {
   const bannerImage = "about.png";
   const headingtxt = "About Us";
-  const subHeadingtxt = "Unlisted Tech Private Limited is a Fintech company which is empowering secondary equity transactions for various stakeholders of unlisted companies including Start-ups, Delisted companies and Pre IPO companies to Buy/Sell shares in a transparent and safe escrow environment.";
+  // const subHeadingtxt = "Unlisted Tech Private Limited is a Fintech company which is empowering secondary equity transactions for various stakeholders of unlisted companies including Start-ups, Delisted companies and Pre IPO companies to Buy/Sell shares in a transparent and safe escrow environment.";
+  const subHeadingtxt = "Creating a facilitation platform for buying and selling of unlisted shares in an automated, secure,transparent and time efficient process";
 	return(
 		<>
 				
@@ -11,11 +12,12 @@ const About = () => {
         <section className="about2">
           <div className="container">
             <div className="row">
-              <div className="col-md-6">
-                <h3 className="heading pl-67 mt-70">About Unlisted Assets</h3>
-                <p><strong>Unlisted Tech Private Limited</strong> is a Fintech company which is empowering secondary equity shareholders of Startups, Delisted companies and Pre IPO companies to Buy/Sell shares in a transparent and safe escrow environment.</p>
-                <p>We help retail and institutions transact in unlisted equity shares.</p>
-                <p>We also help startups and pre IPO companies raise primary capital from HNI investors, Family Offices and Funds (India and International)</p>
+              <div className="col-md-6 mt-30">
+                {/* <h3 className="heading pl-67 mt-70">About Unlisted Assets</h3> */}
+                
+                <p>Unlisted Tech Private Limited is offering a tech based platform which is empowering variousstakeholders of unlisted companies (including Startups, Delisted companies and Pre IPO companies) toBuy/Sell shares in a transparent and safe escrow environment.</p>
+                <p>We, through our automated platform, help retail and institutional investors  to transact in equity sharesor ESOP of various unlisted companies through a time efficient and secured process and enabling pricediscovery as well. We offer an end to end automated process for transfer of shares or ESOP In safe andsecured manner through an escrow mechanism provided through our Banking partner and by way oftransaction approved by SEBI registered Trustee.</p>
+                <p>We also help startups and pre-IPO companies raise primary capital from HNI investors, Family Officesand Institutional Funds, both domestic and international  through our associate entity.</p>
               </div>
               <div className="col-md-6"><img src={process.env.PUBLIC_URL + "./assets/images/about1.png"} className="img-responsive center-block" alt="about1"/></div>
             </div>
@@ -74,24 +76,24 @@ const About = () => {
                     <div className="col-md-9">
                       <div className="found">
                         <h4><strong>Sunil Jain </strong>(Founding Team)</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <p>An experienced financial services professional with 20 years of experience across Risk, CreditPolicy, Operations, IT, Process Excellence and Audit with global leading financial servicesorganisations & BPO. Exposure across retail financial products - Mortgages, Business Loans,Personal Loans, Sales Finance and Mortgage Guarantee business</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* <div className="mt-40">
+                <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/team5.png"} className="img-responsive center-block"  alt="team5"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/AnkushGorav.png"} className="img-responsive center-block"  alt="team4"/>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
-                        <h4><strong>Anirudh</strong>(Founding Team)</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <h4><strong>Ankush Gorav </strong>(Founding Team)</h4>
+                        <p>A seasoned technology professional with 14 years of experience in architecting and managingdevelopment and delivery of enterprise level e-commerce applications, Revenue ManagementSystems and Supply Chain Management systems for fortune 500 customers</p>
                       </div>
                     </div>
                   </div>
-                </div> */}
+                </div>
               </div>
               <div className="col-md-1" />
             </div>

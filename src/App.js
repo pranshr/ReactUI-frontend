@@ -11,7 +11,7 @@ import PortfolioFun from './components/PortfolioFun'
 import CompDetails from './components/company-trade/CompDetails';
 import {Footer, Home, Companies, Services, About, Disclaimers, Terms, Scompanies, Institutions, Investors, Shareholders, Cdetail, Why } from "./components";
 import ReactGA from 'react-ga';
-
+import ScrollToTop from './components/ScrollToTop'
 import "./style.css";
 
 function initilizeAnalystic(){
@@ -21,13 +21,17 @@ function initilizeAnalystic(){
 
 function App() {
   initilizeAnalystic();
+  // document.addEventListener("contextmenu", (event) => {
+  //   event.preventDefault();
+  // });
   return (
     <div className="App">
       <Router>
+          <ScrollToTop />
         <Header />
         <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/unlisted-stocks" component={Companies}/>
+        <Route path="/companies" component={Companies}/>
         <Route path="/company/:cslug" component={CompDetails}/>
         <Route path="/services" component={Services}/>
         <Route path="/contact" component={Contact}/>

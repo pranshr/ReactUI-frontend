@@ -80,15 +80,36 @@ render(){
               <div className="row">
                 <div className="col-md-5 pr0 mrm-20">
                   <div className="offlineprocess">
-                    <h3 className="text-center">Our Offline Process</h3>
-                    <h4>Register</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
-                    <h4>Contact our repsentative</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
-                    <h4>Review unlisted stocks</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
-                    <h4>Watch your money grow</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
+                    <h3 className="text-align-right">Our Offline Process</h3>
+                    <h4>Buy/Sell Form</h4>
+                    <p> Fill the form with your buy/sell requirements and basic contact information</p>
+                    <h4>Reachout</h4>
+                    <p>Our team matches our information database of buyers and sellers to get the best suggested deals basis your requirements</p>
+                    <h4>Finalise terms of Buy/Sell</h4>
+                    <p>You can also talk to our investment advisors to discuss the deal details. </p>
+                    <h4>Buyer/Seller Agreement</h4>
+                    <p>Sign buyer/seller agreement in physical copy. Scan it/Courier it back to us. </p>
+
+                    <h4>Trustee Escrow</h4>
+                    <p>A SEBI registered trustee facilitates a safe and secure transaction for you. </p>
+
+                    <h4>Buyer payment</h4>
+                    <p>Buyer payment is secured in a bank escrow. </p>
+
+
+                    <h4>Seller transfer</h4>
+                    <p>Seller transfers the shares to the buyers demat account. </p>
+
+                    <h4>Trustee approves</h4>
+                    <p>Trustee approves transaction closure </p>
+
+                    <h4>Our facilitation fee </h4>
+                    <p>Our facilitation fee is deducted and debited from the escrow funds.  </p>
+
+                    <h4>Trustee releases</h4>
+                    <p>Trustee releases balance funds to the Seller </p>
+
+
                     <p className="mt-50"><Link to="/contact" className="btn2">Consult Us</Link></p>
                   </div>
                 </div>
@@ -101,18 +122,46 @@ render(){
                   <p />
                   <h4 className="mt-30">04</h4>
                   <p />
+                  <h4 className="mt-30">05</h4>
+                  <p />
+                  <h4 className="mt-30">06</h4>
+                  <p />
+                  <h4 className="mt-30">07</h4>
+                  <p />
+                  <h4 className="mt-30">08</h4>
+                  <p />
+                  <h4 className="mt-30">09</h4>
+                  <p />
+                  <h4 className="mt-30">10</h4>
+                  <p />
                 </div>
                 <div className="col-md-5 pl0 mlm-20">
                   <div className="onlineprocess">
-                    <h3 className="text-center">Our Offline Process</h3>
+                    <h3 className="text-align-left">Our Online Process</h3>
                     <h4>Register</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
-                    <h4>Review unlisted stocks</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
-                    <h4>Buy unlisted stocks</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
-                    <h4>Watch your money grow</h4>
-                    <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the time</p>
+                    <p>Register on our platform by following a simple sign-up process and get access to unlisted shares listings of all our users</p>
+                    <h4>Trade Ready</h4>
+                    <p>Provide your profile, bank account, demat account and KYC verification details to be trade ready</p>
+                    <h4>Seller Dashboard</h4>
+                    <p>List all your shares/esops (unlisted assets) holdings.</p>
+                    <h4>Listings</h4>
+                    <p>Create listings of stocks that you want to sell from your holdings on your dashboard</p>
+                    <h4>Negotiations</h4>
+                    <p>Buyers can look at the listings on the platform and can initiate negotiations with the sellers for the unlisted shares they want to buy</p>
+                    <h4>Transaction</h4>
+                    <p>Once the negotiation completes between the buyers and sellers, a buyer-seller agreement gets generated for e-signing.</p>
+                    <h4>Buyer payment</h4>
+                    <p>Buyer makes payment in his secured escrow (virtual account)</p>
+                    <h4>Seller transfer</h4>
+                    <p>Seller transfers the shares to the buyers demat account</p>
+                    <h4>Trustee approves </h4>
+                    <p>Trustee approves transaction closure </p>
+                    <h4>Our facilitation fee</h4>
+                    <p>Our facilitation fee deducted and debited from the escrow account </p>
+                    <h4>Trustee releases </h4>
+                    <p>Trustee releases balance funds to Seller</p>
+
+
                     <p className="mt-50"><Link to="/" className="btn2">Signup Now</Link></p>
                   </div>
                 </div>
@@ -246,29 +295,35 @@ render(){
               <div className="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval={3000}>
                 {/* Carousel indicators */}
                 <ol className="carousel-indicators hometestimonial">
-                  <li className="active" data-target="#fade-quote-carousel" data-slide-to={1} />
-                  <li data-target="#fade-quote-carousel" data-slide-to={2} />
-                  <li data-target="#fade-quote-carousel" data-slide-to={3} />
+                  <li className="active" data-target="#fade-quote-carousel" data-slide-to={1}>
+                    <img src={process.env.PUBLIC_URL + "./assets/images/c3.png"} alt=""/>
+                  </li>
+                  <li data-target="#fade-quote-carousel" data-slide-to={2}>
+                  <img src={process.env.PUBLIC_URL + "./assets/images/c3.png"} alt=""/>
+                  </li>
+                  <li data-target="#fade-quote-carousel" data-slide-to={3} >
+                  <img src={process.env.PUBLIC_URL + "./assets/images/c3.png"} alt=""/>
+                  </li>
                 </ol>
                 {/* Carousel items */}
                 <div className="carousel-inner">
                   <div className="item active">
                     <blockquote>
-                      Lorem Ipsum is simply dummy text. This is placeholder content. Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text.
+                    Unlisted Assets provided me with support to sell my converted ESOPS toa list of buyers. I am very happy with their prompt, transparent and efficient process.
                     </blockquote>	
-                    <h4 className="text-center">Rewat Patil - CEO, Company name</h4>
+                    <h4 className="text-center">Ravi Varma Datla, Hyderabad</h4>
                   </div>
                   <div className="item">
                     <blockquote>
-                      Lorem Ipsum is simply dummy text. This is placeholder content. Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text.
+                    Unlisted Assets provided me with the investment opportunities toparticipate in the high growth tech companies in India. I have been dealing with the team for over 3years now and am highly satisfied with the experience.
                     </blockquote>	
-                    <h4 className="text-center">Rewat Patil - CEO, Company name</h4>
+                    <h4 className="text-center">Dr Deepankar Sharma-USA</h4>
                   </div>
                   <div className="item">
                     <blockquote>
-                      Lorem Ipsum is simply dummy text. This is placeholder content. Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text.
+                    I was able to invest in the shares of Paytm, NSE and Nazara through UnlistedAssets. They provide me with frequent opportunities to create wealth through pre-IPO share investmentideas. Highly recommend their professional and transparent services.
                     </blockquote>	
-                    <h4 className="text-center">Rewat Patil - CEO, Company name</h4>
+                    <h4 className="text-center">Manu Handa, Canada</h4>
                   </div> 
                 </div>
               </div>
