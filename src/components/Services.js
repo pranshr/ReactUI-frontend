@@ -19,7 +19,7 @@ const Services = () => {
                 <div className="private">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/2a.jpg"} className="img-respnsive center-block wh100" alt="ins1"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/buy-sell-unlisted-shares.png"} className="img-respnsive center-block wh100" alt="ins1"/>
                     </div>
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
@@ -38,14 +38,14 @@ const Services = () => {
                       </div>
                     </div>
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/3a.jpg"} className="img-respnsive center-block wh100" alt="ins2"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/primary-placement.png"} className="img-respnsive center-block wh100" alt="ins2"/>
                     </div>
                   </div>
                 </div>
                 <div className="private">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/4.jpg"} className="img-respnsive center-block wh100" alt="ins3"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/pre-ipo-placements.png"} className="img-respnsive center-block wh100" alt="ins3"/>
                     </div>
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
@@ -65,14 +65,14 @@ const Services = () => {
                       </div>
                     </div>
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/5.jpg"} className="img-respnsive center-block wh100" alt="ins2"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/esop-transaction-management.png"} className="img-respnsive center-block wh100" alt="ins2"/>
                     </div>
                   </div>
                 </div>
                 <div className="private">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/6.jpg"} className="img-respnsive center-block wh100" alt="ins3"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/transaction-support-services.png"} className="img-respnsive center-block wh100" alt="ins3"/>
                     </div>
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
@@ -93,14 +93,14 @@ const Services = () => {
                       </div>
                     </div>
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/7.jpg"} className="img-respnsive center-block wh100" alt="ins2"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/fund-management-services.png"} className="img-respnsive center-block wh100" alt="ins2"/>
                     </div>
                   </div>
                 </div>
                 <div className="private">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/6.jpg"} className="img-respnsive center-block wh100" alt="ins3"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/sr5.png"} className="img-respnsive center-block wh100" alt="ins3"/>
                     </div>
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
@@ -121,7 +121,7 @@ const Services = () => {
                       </div>
                     </div>
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/7.jpg"} className="img-respnsive center-block wh100" alt="ins2"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/sr3.png"} className="img-respnsive center-block wh100" alt="ins2"/>
                     </div>
                   </div>
                 </div>

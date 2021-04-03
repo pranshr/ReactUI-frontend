@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import TradesGridThree from './company-trade/TradesGridThree';
 import PriceRangeSlider from './PriceRangeSlider';
+import loadingImg from '../images/loading.gif'
 export default class Companies extends Component {
   constructor(props){
     super(props);
@@ -24,7 +25,10 @@ export default class Companies extends Component {
       maxpricerange:0,
       minpricerange:0,
       sectorOptions:[],
-      fundingOptions:[]
+      fundingOptions:[],
+      searchTxt:'',
+  
+     
     };
   
     this.showPanel1 = this.showPanel1.bind(this);
@@ -36,6 +40,8 @@ export default class Companies extends Component {
     this.sectorChange = this.sectorChange.bind(this); 
     this.fundingChange = this.fundingChange.bind(this); 
     this.filterData = this.filterData.bind(this); 
+    this.searchChange = this.searchChange.bind(this); 
+    
     
   }
   showPanel1() {
@@ -58,7 +64,23 @@ export default class Companies extends Component {
       currentPage:pageNumber
      })
   }
+  searchChange(e){
+   var searchText = e.target.value.toLowerCase();
+   const items = this.state.companies.filter((data)=>{
+    if(searchText === ''){
+      return data
+    }
+    else if(data.company_name.toLowerCase().includes(searchText)){
+        return data
+    }
+  });
 
+  this.setState({
+    filterCompanies:items,
+    filtercompanyLenght:items.length
+   })
+
+  }
   filterData(val1, val2){
     var max = this.state.maxpricerange;
     var min = this.state.minpricerange;
@@ -77,9 +99,6 @@ export default class Companies extends Component {
       filtercompanyLenght:res.length
      })
     
-    
-
-
   }
 
 
@@ -190,12 +209,13 @@ export default class Companies extends Component {
     const indexOfFirstPost = indexOfLastpost - this.state.postPerpage;
     const currentPost = companies.slice(indexOfFirstPost, indexOfLastpost);
     const filteredcurrentPost = filterCompanies.length !== 0 ? filterCompanies.slice(indexOfFirstPost, indexOfLastpost): [];
-    
-  // console.log(this.state.fundingOptions);
+  
+ 
     return (
      <>
          <section className="company-section">
         <div className="container">
+        
           <div className="row">
             <div className="col-md-3">
               <div className="sun">
@@ -236,16 +256,19 @@ export default class Companies extends Component {
               <form>
                 <div className>
                   <div className="form-group">
-                    <a href="!#" className="icon"><i className="fa fa-search" /></a><input type="text" placeholder="Search here..." name className="form-control control" />
+                  <Link onClick={ (event) => event.preventDefault() } class="icon"><i className="fa fa-search" /></Link><input type="text" placeholder="Search here..." name="search_text" className="form-control control" onChange={this.searchChange} />
                   </div>
                 </div>
               </form>
+
+               
+              
                {
                 !isLoading ? 
-                filteredcurrentPost.length === 0 ?
+                filteredcurrentPost.length === 0 ? 
                 <TradesGridThree postPerpage={postPerpage} currentPost={currentPost} totalPosts={companyLenght} paginate={this.paginate} />
-                :<TradesGridThree postPerpage={postPerpage} currentPost={filteredcurrentPost} totalPosts={filtercompanyLenght} paginate={this.paginate} />
-                 :"Data Loading..."
+                :<TradesGridThree postPerpage={postPerpage} currentPost={filteredcurrentPost} totalPosts={filtercompanyLenght} paginate={this.paginate}/>
+                :<div className="product-loader"><img src={loadingImg}  alt=""/></div>
                }
                
               

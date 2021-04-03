@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { Link } from "react-router-dom";
 import TradeModal from '../modal/TradeModal';
+import loadingImg from '../../images/loading.gif'
 import useSWR from "swr";
 function TradesGridFour() {
   const [tradeModal, setModal] = useState(false);
@@ -21,6 +22,7 @@ function TradesGridFour() {
   return (
     <>
     <div className="container"> 
+    
           <div className="row"> 
         {
           currentPost ? (
@@ -63,11 +65,11 @@ function TradesGridFour() {
                 </div>   
           ))
          
-        ):"Data Loading...."
+        ):<div className="product-loader"><img src={loadingImg}  alt=""/></div>
         }
         
         </div>
-        </div>
+        
         { currentPost && currentPost.length < 8 ? null :
                 <div className="row">
                 <div className="col-md-12">
@@ -77,7 +79,7 @@ function TradesGridFour() {
                 </div>
               </div>
                 }
-
+        </div>
        { !tradeModal ? null :
                 <TradeModal show={tradeModal} handleClose={hideModal} c_id={item_id }/>
          }

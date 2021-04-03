@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 //import axios from 'axios';
 import TradesGridFour from './company-trade/TradesGridFour';
 
-class HomeTwo extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.unlistedCompanies = React.createRef() 
@@ -18,167 +18,136 @@ scrollTounlistedCompanies = () =>  window.scroll({
 render(){
 	return(
 		<>
-     
-	
-
-        <section className="banner">
-        <div className="container">
-          <div id="myCarousel" className="carousel slide" data-ride="carousel">
-            {/* Indicators */}
-            <ol className="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to={0} className="active" />
-              <li data-target="#myCarousel" data-slide-to={1} />
-              <li data-target="#myCarousel" data-slide-to={2} />
-            </ol>
-            {/* Wrapper for slides */}
-            <div className="carousel-inner">
-              <div className="item active">
-                <div className="row">
-                  <div className="col-md-7">
-                    <h1>Promoting escrow based safe<br />transactions for buying/selling<br />of unlisted assets</h1>
-                    <p><Link to="#">Buyer</Link>
-                      <Link to="#">Seller</Link></p>
-                  </div>
-                  <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/slider1.png"} className="img-responsive center-block" alt="bannerimage" /></div>
+       <section className="home-banner">
+          <div className="container">
+            <div className="row d-flex align-item">
+                <div className="col-md-7 col-sm-12">
+                <div className="banner-text">
+                <h3>A smartest way to</h3>
+                <h1>Buy or Sell Unlisted Share,<br/> Pre IPO Share, ESOP Share</h1>
+                <p>Unlisted assets is india's leading plateform to facilititate the buying or selling process of company's unlisted, ESOP or Pre-IPO shares. </p>
+                <Link class="home-banner-btn" to="/contact">Proceed</Link>
                 </div>
-              </div>
-              <div className="item">
-                <div className="row">
-                  <div className="col-md-7">
-                    <h1>India's first platform to make<br />transactions of unlisted assets<br />seamless</h1>
-                    <p><Link to="#">Buyer</Link>
-                      <Link to="#">Seller</Link></p>
-                  </div>
-                  <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/slider2.png"} className="img-responsive center-block" alt="bannerimage" /></div>
                 </div>
-              </div>
-              <div className="item">
-                <div className="row">
-                  <div className="col-md-7">
-                    <h1>Investing in private equity<br />made easy</h1>
-                    <p><Link to="#">Buyer</Link>
-                      <Link to="#">Seller</Link></p>
-                  </div>
-                  <div className="col-md-5"><img src={process.env.PUBLIC_URL + "./assets/images/slider3.png"} className="img-responsive center-block" alt="bannerimage" /></div>
+                <div className="col-md-5 col-sm-12">
+                <div className="slider-image">
+                <img src={process.env.PUBLIC_URL + "./assets/images/home-slider.jpg"} className="home-banner-img" alt="bannerimage" />
                 </div>
-              </div>
+                </div>
             </div>
-            {/* Left and right controls */}
-          </div>
-        </div>
+            </div>
       </section>
-
-
       <section className="newsection1">
         <div className="container">
-          <div className="row">
-            <div className="col-md-offset-1 col-md-10">
-              <div className="col-md-12">
-                <h2 className="text-center sectiontitle"><strong>Start investment in few easy steps</strong></h2>
-                <p className="hline" />
-              </div>
-              <div className="row">
-                <div className="col-md-5 pr0 mrm-20">
-                  <div className="offlineprocess">
-                    <h3 className="text-align-right">Our Offline Process</h3>
-                    <h4>Buy/Sell Form</h4>
-                    <p> Fill the form with your buy/sell requirements and basic contact information</p>
-                    <h4>Reachout</h4>
-                    <p>Our team matches our information database of buyers and sellers to get the best suggested deals basis your requirements</p>
-                    <h4>Finalise terms of Buy/Sell</h4>
-                    <p>You can also talk to our investment advisors to discuss the deal details. </p>
-                    <h4>Buyer/Seller Agreement</h4>
-                    <p>Sign buyer/seller agreement in physical copy. Scan it/Courier it back to us. </p>
-
-                    <h4>Trustee Escrow</h4>
-                    <p>A SEBI registered trustee facilitates a safe and secure transaction for you. </p>
-
-                    <h4>Buyer payment</h4>
-                    <p>Buyer payment is secured in a bank escrow. </p>
-
-
-                    <h4>Seller transfer</h4>
-                    <p>Seller transfers the shares to the buyers demat account. </p>
-
-                    <h4>Trustee approves</h4>
-                    <p>Trustee approves transaction closure </p>
-
-                    <h4>Our facilitation fee </h4>
-                    <p>Our facilitation fee is deducted and debited from the escrow funds.  </p>
-
-                    <h4>Trustee releases</h4>
-                    <p>Trustee releases balance funds to the Seller </p>
-
-
-                    <p className="mt-50"><Link to="/contact" className="btn2">Consult Us</Link></p>
-                  </div>
+      <div className="process_title">
+        <h2 className="text-center sectiontitle"><strong>Start investment in few easy steps</strong></h2>
+        <p className="hline" />
+      </div>
+     
+      <div className="my-row">
+                <div className="col-one text-right">
+                <h3 className="text-align-right">Our Offline Process</h3>
+                    
                 </div>
-                <div className="col-md-2 text-center number hidden-xs p0">
-                  <h4 className="mt77">01</h4>
-                  <p />
-                  <h4 className="mt-30">02</h4>
-                  <p />
-                  <h4 className="mt-30">03</h4>
-                  <p />
-                  <h4 className="mt-30">04</h4>
-                  <p />
-                  <h4 className="mt-30">05</h4>
-                  <p />
-                  <h4 className="mt-30">06</h4>
-                  <p />
-                  <h4 className="mt-30">07</h4>
-                  <p />
-                  <h4 className="mt-30">08</h4>
-                  <p />
-                  <h4 className="mt-30">09</h4>
-                  <p />
-                  <h4 className="mt-30">10</h4>
-                  <p />
+                <div className="width120">
+                   
                 </div>
-                <div className="col-md-5 pl0 mlm-20">
-                  <div className="onlineprocess">
-                    <h3 className="text-align-left">Our Online Process</h3>
-                    <h4>Register</h4>
-                    <p>Register on our platform by following a simple sign-up process and get access to unlisted shares listings of all our users</p>
-                    <h4>Trade Ready</h4>
-                    <p>Provide your profile, bank account, demat account and KYC verification details to be trade ready</p>
-                    <h4>Seller Dashboard</h4>
-                    <p>List all your shares/esops (unlisted assets) holdings.</p>
-                    <h4>Listings</h4>
-                    <p>Create listings of stocks that you want to sell from your holdings on your dashboard</p>
-                    <h4>Negotiations</h4>
-                    <p>Buyers can look at the listings on the platform and can initiate negotiations with the sellers for the unlisted shares they want to buy</p>
-                    <h4>Transaction</h4>
-                    <p>Once the negotiation completes between the buyers and sellers, a buyer-seller agreement gets generated for e-signing.</p>
-                    <h4>Buyer payment</h4>
-                    <p>Buyer makes payment in his secured escrow (virtual account)</p>
-                    <h4>Seller transfer</h4>
-                    <p>Seller transfers the shares to the buyers demat account</p>
-                    <h4>Trustee approves </h4>
-                    <p>Trustee approves transaction closure </p>
-                    <h4>Our facilitation fee</h4>
-                    <p>Our facilitation fee deducted and debited from the escrow account </p>
-                    <h4>Trustee releases </h4>
-                    <p>Trustee releases balance funds to Seller</p>
-
-
-                    <p className="mt-50"><Link to="/" className="btn2">Signup Now</Link></p>
-                  </div>
+                <div className="col-three text-left">
+                <h3 className="text-align-left">Our Online Process</h3>
                 </div>
               </div>
-            </div>
-          </div>
+              <div className="my-row">
+                <div className="col-one text-right">
+                     <h4>Explore companies</h4>
+                    <p> Choose from the available companies and fill out our Buy/Sell form. Our team suggests the best available deals for you.</p>
+                </div>
+                <div className="col-two text-center">
+                    <span>01</span>
+                </div>
+                <div className="col-three text-left">
+                <h4>Join our platform</h4>
+                    <p>Signup to unlistedassets.com and fill out the necessary details. KYC and Bank details are verified for one time. (Platform Launching soon)</p>
+                </div>
+              </div>
+              <div className="my-row">
+                <div className="col-one text-right">
+                     <h4>Sign Agreement</h4>
+                    <p>Both buyer and seller sign agreements to avoid any malpractices.</p>
+                </div>
+                <div className="col-two text-center">
+                    <span>02</span>
+                </div>
+                <div className="col-three text-left">
+                <h4>List shares to Marketplace</h4>
+                    <p> List your shares for sale on our marketplace/ Bid on shares you want to buy.</p>
+                </div>
+              </div>
+              <div className="my-row">
+                <div className="col-one text-right">
+                     <h4>Secure money in Escrow</h4>
+                    <p> Payment of buyer is secured in an escrow bank account of a SEBI regd. Trustee.</p>
+                </div>
+                <div className="col-two text-center">
+                    <span>03</span>
+                </div>
+                <div className="col-three text-left">
+                <h4>Negotiate prices for verified Shares/ESOP’s</h4>
+                    <p>Explore the best available listings in the market and negotiate prices directly with buyer / seller.</p>
+                </div>
+              </div>
+              <div className="my-row">
+                <div className="col-one text-right">
+                     <h4>Transfer of shares</h4>
+                    <p>Seller transfers shares to the buyers demat account.</p>
+                </div>
+                <div className="col-two text-center">
+                    <span>04</span>
+                </div>
+                <div className="col-three text-left">
+                <h4>Escrow Transfer of payment</h4>
+                    <p>Payment of buyer is secured in an escrow bank account of a SEBI regd. Trustee. Similarly, the seller transfers shares to the buyer’s demat account.</p>
+                </div>
+              </div>
+              <div className="my-row">
+                <div className="col-one text-right">
+                     <h4>Transaction is complete</h4>
+                    <p> Trustee approves the transaction, our fee is debited and payment is credited to the seller.</p>
+                    
+                </div>
+                <div className="col-two text-center">
+                    <span>05</span>
+                </div>
+                <div className="col-three text-left">
+                <h4>Transaction is complete</h4>
+                    <p>Trustee approves the transaction, our fee is debited and payment is credited to the seller.</p>
+                </div>
+              </div>
+              <div className="my-row">
+                <div className="col-one text-right">
+                <Link to="/contact" className="btn2">Consult Us</Link>
+                    
+                </div>
+                <div className="width120">
+                   
+                </div>
+                <div className="col-three text-left">
+                <Link to="/platform" className="btn2">Signup Now</Link>
+                </div>
+              </div>
+
+
+
         </div></section>
 
         <section className="second-section">
         <div className="container">
           <div className="row">
-            <div className="row">
+         
               <div className="col-md-12">
                 <h2 className="text-center sectiontitle"><strong>Explore potential fund oppurtunities</strong></h2>
               </div>
-            </div>
-            <TradesGridFour showModal={ this.showModal }/>
+              <TradesGridFour showModal={ this.showModal }/>
+            
             
           </div>
         </div>
@@ -188,8 +157,9 @@ render(){
           <div className="row">
             <div className="col-md-12 text-center">
               <h2 className="sectiontitle">Know more about an unlisted equity <br />before it goes public </h2>
-              <p>Lorem Ipsum is simply dummy text. This is placeholder content. Lorem Ipsum is<br /> simply dummy text. Lorem Ipsum is simply dummy text. </p>
-              <p><Link to="#" className="btn2">how it works?</Link></p>
+              {/* <p>Lorem Ipsum is simply dummy text. This is placeholder content. Lorem Ipsum is<br /> simply dummy text. Lorem Ipsum is simply dummy text. </p> */}
+              <br/>
+              <p><Link to="/platform" className="btn2">how it works?</Link></p>
             </div>
           </div>
         </div>
@@ -282,7 +252,7 @@ render(){
                   <div className="col-md-1" />
                 </div>
               </div>
-              <p className="mt-50 text-center"><Link to="#" className="btn2">Learn More</Link></p>
+              <p className="mt-50 text-center"><Link to="/why-us" className="btn2">Learn More</Link></p>
             </div>
           </div>
         </div>
@@ -294,17 +264,18 @@ render(){
               <h2 className="text-center text-blue text-bold sectiontitle">What people say</h2>
               <div className="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval={3000}>
                 {/* Carousel indicators */}
-                <ol className="carousel-indicators hometestimonial">
-                  <li className="active" data-target="#fade-quote-carousel" data-slide-to={1}>
-                    <img src={process.env.PUBLIC_URL + "./assets/images/c3.png"} alt=""/>
-                  </li>
-                  <li data-target="#fade-quote-carousel" data-slide-to={2}>
-                  <img src={process.env.PUBLIC_URL + "./assets/images/c3.png"} alt=""/>
-                  </li>
-                  <li data-target="#fade-quote-carousel" data-slide-to={3} >
-                  <img src={process.env.PUBLIC_URL + "./assets/images/c3.png"} alt=""/>
-                  </li>
-                </ol>
+                 {/* Indicators */}
+      <ol className="carousel-indicators">
+        <li data-target="#fade-quote-carousel" data-slide-to={0} className="active">
+        <img src={process.env.PUBLIC_URL + "./assets/images/RaviVarmaDatla.jpeg"} alt=""/>
+        </li>
+        <li data-target="#fade-quote-carousel" data-slide-to={1}>
+        <img src={process.env.PUBLIC_URL + "./assets/images/DeepankerSharma.jpeg"} alt=""/>
+        </li>
+        <li data-target="#fade-quote-carousel" data-slide-to={2}>
+        <img src={process.env.PUBLIC_URL + "./assets/images/ManuHanda.jpg"} alt=""/>
+        </li>
+      </ol>
                 {/* Carousel items */}
                 <div className="carousel-inner">
                   <div className="item active">
@@ -336,4 +307,4 @@ render(){
 }
 }
 
-export default HomeTwo;
+export default Home;

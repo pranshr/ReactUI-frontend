@@ -11,7 +11,7 @@ export default class PlateForm extends Component {
           <div className="row">
             <div className="col-md-1" />
             <div className="col-md-10">
-              <h1 className="text-center text-bold">Platform</h1>
+              {/* <h1 className="text-center text-bold">Platform</h1> */}
               <CommingSoon/>
             </div>
             <div className="col-md-1" />

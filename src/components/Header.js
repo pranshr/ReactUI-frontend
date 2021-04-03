@@ -103,17 +103,15 @@ class Header extends Component {
  
         <ul className="main-menu clearfix">
         <li><NavLink activeClassName='is-active' to="/companies">Explore Companies</NavLink></li>
-          <li><a href="/">Our Offerings
+          <li className="dropdown-menu-link">Our Offerings
               <span className="drop-icon">▾</span>
               <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm1">▾</label>
-            </a>
             <input type="checkbox" id="sm1" />
             <ul className="sub-menu">
               <li><NavLink activeClassName='is-active' to="/services">Services </NavLink></li>
-              <li><a href="!#">Solutions
+              <li className="dropdown-menu-link">Solutions
                   <span className="drop-icon">▾</span>
                   <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm2">▾</label>
-                </a>
                 <input type="checkbox" id="sm2" />
                 <ul className="sub-menu">
                   <li><NavLink activeClassName='is-active' to="/solution-for-companies">For companies</NavLink></li>
@@ -125,10 +123,10 @@ class Header extends Component {
             </ul>
           </li>
           
-          <li><a href="!#">About Company
+          <li className="dropdown-menu-link">About Company
               <span className="drop-icon">▾</span>
               <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm3">▾</label>
-            </a>
+            
             <input type="checkbox" id="sm3" />
             <ul className="sub-menu">
              <li><NavLink activeClassName='is-active' to="/about-us">About Us </NavLink></li>
@@ -137,10 +135,10 @@ class Header extends Component {
           </li>
 
           <li><Link to="/platform">Platform</Link></li>
-          <li><a href="!#">Resource
+          <li className="dropdown-menu-link">Resource
               <span className="drop-icon">▾</span>
               <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm4">▾</label>
-            </a>
+        
             <input type="checkbox" id="sm4" />
             <ul className="sub-menu">
             <li><a href={'http://blog.unlistedassets.com'} target={'_blank'} rel="noreferrer">Blog</a></li> 

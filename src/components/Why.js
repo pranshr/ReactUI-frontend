@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import InnerBanner from './common/InnerBanner'
 const Why = () => {
   const bannerImage = "shareholder-banner.png";
-  const firsttxt = "A Smart Line";
+  const firsttxt = "";
   const headingtxt = "Why Us";
   const subHeadingtxt = "End to end integrated tech platform for facilitating buy/sell of unlisted assets and endeavor to create automated process for any kind of asset (i.e., shares, ESOP’s) buying or selling in unlisted space";
 	return(

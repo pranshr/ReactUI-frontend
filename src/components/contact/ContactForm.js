@@ -22,7 +22,8 @@ export default class ContactForm extends Component {
       errors: {},
       nameError:'',
       emailError:'',
-      messageError:''
+      messageError:'',
+      captchVerified:false
     }
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -38,7 +39,9 @@ export default class ContactForm extends Component {
     console.log('Google recaptcha loaded successfully.')
   }
   verifyCallback(responce){
-   console.log(responce);
+    this.setState({
+      captchVerified:true
+    });
   }
  
   handleNameValidation = () => {
@@ -50,16 +53,11 @@ export default class ContactForm extends Component {
         nameError:'Name field is required.'
       });
     }else if(typeof name !== "undefined"){
-      if(!name.match(/^[a-zA-Z]+$/)){
-         formIsValid = false;
-         this.setState({
-          nameError:'Please enter only latter.'
-        });
-      }else{
+    
         this.setState({
           nameError:''
         });
-      }        
+           
    }
     return formIsValid; 
   }
@@ -145,7 +143,11 @@ export default class ContactForm extends Component {
     
     if(nameValid && emailValid && messageValid){
         // console.log(this.state);
-      this.props.onSubmit(this.state);
+        if(this.state.captchVerified){
+          this.props.onSubmit(this.state);
+        }else{
+          alert('Please verify captcha.');
+        }
     }else{
       console.log('not valid name');
     }
@@ -173,13 +175,17 @@ export default class ContactForm extends Component {
       <span className="error-help">{emailError}</span>
     </div>
   </div>
-  <div className="col-md-6">
+
+</div>
+ <div className="row">
+ <div className="col-md-6">
     <p>Phone</p>
     <div className="form-group">
       <input type="tel" className="form-control" name="phone"  onChange={this.handleChangePhone}/>
     </div>
   </div>
-</div>
+ </div>
+
  <div className="row">
   <div className="col-md-12">
  
@@ -213,7 +219,7 @@ export default class ContactForm extends Component {
 </div>
   <div className="form-group recap">
   <Recaptcha
-    sitekey="xxxxxxxxxxxxxxxxxxxx"
+    sitekey="6LcCIZgaAAAAALArkX6mk3CD2sZp5FCWborqB-5n"
     render="explicit"
     verifyCallback={this.verifyCallback}
     onloadCallback={this.recaptchaLoaded}

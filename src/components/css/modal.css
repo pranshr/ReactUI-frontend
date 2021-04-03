@@ -179,22 +179,62 @@ transform: rotate(45deg);}
 .checkbox input:checked ~ label .check{ background-color: #44ba2e;}
 .checkbox input:checked ~ label .check::after{border: 2px solid #fff;
 border-top: 0px; border-left: 0px;}
+.newslatter-modal{
+  background-image: url('../../images/formandtextRe.jpg');
+  height: 459px;
+  background-position: 74% 43%;
+  padding: 15px;
+}
 .trade-modal-main .modal-content, .newslatter-modal-main .modal-content{
   border: none;
   box-shadow: none;
 }
+.newslatter-modal .heading-section h2{
+  text-align: left;
+  color: #312d5f;
+  font-weight: 600;
+  font-size: 38px;
+}
+.newslatter-modal button{
+  display: block;
+    width: 100%;
+    background: #fff;
+    color: #312d5f;
+    border: none;
+    font-weight: 600;
+}
 .newslatter-modal-main{
-  max-width: 500px;
+  max-width: 560px;
 }
 .newslatter-modal-main .heading-section h3{
   color: #333;
   margin-bottom: 25px;
 }
 .newlatter-control{
-  background-color: #fff;
+  background-color: #7b84e1;
   height: 40px;
   font-size: 14px;
+  color: #fff;
+  border: 1px solid #fff;
 }
+.newlatter-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+
+.newlatter-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+
+.newlatter-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+}
+.newslatter-modal-main .modal-header {
+  background: #e8eaff;
+}
+
   @keyframes fade_in_show {
     0% {
          opacity: 0;
@@ -205,4 +245,67 @@ border-top: 0px; border-left: 0px;}
          opacity: 1;
          transform:translateY(0%)
     }
+}
+@media (max-width: 768px){
+  .mb-mgb-60{
+    margin-bottom: 60px;
+  }
+  .newslatter-modal-main {
+    width: 89% !important;
+  }
+  .newslatter-modal .row::after{
+    display: none !important;
+  }
+  .newslatter-modal button {
+    background: #731b65;
+    color: #fff;
+   
+}
+  .newslatter-modal {
+    height: 345px;
+}
+.mobile-row{
+  position: relative;
+    height: 100%;
+    display: block;
+}
+.mobile-row .heading-section{
+  position: absolute;
+  top: 151px;
+  bottom: 0;
+}
+.newslatter-modal .heading-section h2 {
+  font-size: 23px;
+  line-height: 27px;
+}
+  .pd-30 {
+    padding: 6px 12px;
+}
+.pd-50 {
+  padding: 20px 5px;
+}
+.customRadio label {
+  margin-bottom: 10px;
+}
+.btn-trade-section button {
+  padding: 10px 34px;
+}
+.heading-section p, .note-section {
+  text-align: center;
+}
+.check {
+  display: block;
+  height: 17px;
+  width: 17px;
+  top: 6px;
+}
+.box{
+  min-height: auto;
+}
+.check::after {
+  width: 6px;
+  height: 11px;
+  left: 5px;
+  top: 1px;
+}
 }

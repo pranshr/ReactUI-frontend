@@ -1,21 +1,19 @@
 import React, { Component } from 'react'
-
+import Subscribe from './subscribe/Subscribe'
 export default class CommingSoon extends Component {
     render() {
         return (
             <>
-              <h2 className="text-center text-bold">This Page is under construction</h2>
-              <p className="text-center">Please subscribe to our mailing list. We will notify you as soon as the page is live
-              </p>
-              <div className="row">
-                <div className="col-sm-offset-2 col-sm-5">
-                  <input type="text" placeholder="Enter your email" className="form-control custom-field" />
-                </div>
-                <div className="col-sm-4 m-xs">
-                  <button type="submit" className="btn btn-lg btn-mail">Join our mailing list</button>
-                </div>
+              <h2 className="text-center text-bold">Don’t miss the launch!</h2>
+              <p className="text-center">We are in the process of creating transparent and secure escrow based technology platform for buying and selling of unlisted shares in order to provide liquidity and monetisation window for various stakeholders of unlisted companies including start-up companies</p>
+              <div className="subscribe-form">
+              <Subscribe inputClass={"text form-control"} buttonClass={"btn btn-white"}/>
+              </div>
+              <div className="bottom-img">
+              <img src={process.env.PUBLIC_URL + "./assets/images/commingSoon.png"} alt=""/>
               </div>
             </>
+            
         )
     }
 }

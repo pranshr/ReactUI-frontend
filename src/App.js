@@ -15,7 +15,7 @@ import ScrollToTop from './components/ScrollToTop'
 import "./style.css";
 
 function initilizeAnalystic(){
-  ReactGA.initialize('G-6TEVYNRLLY');
+  ReactGA.initialize('262497254');
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
 

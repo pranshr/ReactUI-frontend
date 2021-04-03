@@ -2,7 +2,7 @@ import React from "react";
 import InnerBanner from './common/InnerBanner'
 
 const Shareholders = () => {
-  const bannerImage = "inv-banner.png";
+  const bannerImage = "shaerholder.png";
 	const headingtxt = "For Shareholders";
 	const subHeadingtxt = "Start selling your unlisted company shares without waiting to encash after IPO/ exit as you might have to wait for the event much longer than expected. You can take the first step by exploring and assessing the worth of your assets through our guidance and help.";
 	return(

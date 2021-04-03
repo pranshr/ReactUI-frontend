@@ -3,7 +3,7 @@ import TradeModal from '../modal/TradeModal';
 //import useSWR from "swr";
 import { Link } from "react-router-dom";
 import CompanyPagination from './CompanyPagination';
-
+import TradeImage from './TradeImage';
 export default function TradesGridThree(props) {
   const [tradeModal, setModal] = useState(false);
   // const [currentPage, setCurrentPage] = useState(1);
@@ -35,6 +35,8 @@ export default function TradesGridThree(props) {
   // const indexOfFirstPost = indexOfLastpost - postPerpage;
   // const currentPost = conpanies ? conpanies.slice(indexOfFirstPost, indexOfLastpost) : null;
   // const totalPosts = conpanies ? conpanies.length : 0;
+
+  console.log(props.totalPosts);
   return (
     <>
      <h4>Companies<span>({ props.totalPosts })</span> </h4>
@@ -50,7 +52,7 @@ export default function TradesGridThree(props) {
                     <div className="row">
                       <div className="col-md-2 col-xs-2">
                         <div className="border1">
-                          <img src={trade.company_logo} alt="logo" className="center-block" />
+                          <TradeImage imgSrc={trade.company_logo}/>
                         </div>
                       </div>
                       <div className="col-md-10 col-xs-10 pl-25">

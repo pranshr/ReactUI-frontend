@@ -23,7 +23,7 @@ const Footer = () => {
               <div className="col-md-2 col-sm-2">
                 <h4 className="quick">Quick Links</h4>
                 <ul className="ul1">
-                  <li><Link to="/plateform">Platform</Link></li>
+                  <li><Link to="/platform">Platform</Link></li>
                   <li><Link to="/companies">Unlisted stocks</Link></li>
                   <li><Link to="/about-us">About Us</Link></li>
                   <li><Link to="/why-us">Why Us</Link></li>
@@ -38,7 +38,6 @@ const Footer = () => {
                   <li><Link to="/solution-for-institutions">Solution For Institutions</Link></li>
 						    	<li><Link to="/solution-for-investors">Solution For Investors</Link></li>
                   <li><Link to="/solution-for-shareholders">Solution For Shareholders</Link></li>
-                  <li><Link to="#">Types of Unlisted Companies</Link></li>
                 </ul>
               </div>
               <div className="col-md-2 col-sm-2">
