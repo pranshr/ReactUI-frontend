@@ -21,19 +21,24 @@ export default class NewsLatterButton extends Component {
     
     };
     componentDidMount(){
-        setTimeout(function(){
-            this.setState({show: true});
-       }.bind(this),20000);  // wait 20 seconds, then reset to false
+        let sessionData = localStorage.getItem('subscribedUser');
+        console.log(sessionData);
+        if(sessionData !=='subscribed'){
+            setTimeout(function(){
+                this.setState({show: true});
+           }.bind(this),20000);  // wait 20 seconds, then reset to false
+        }
+        
     }
     render() {
+     
         return (
             <>
-                 <Link to="#" className="ml-50 btn-white" onClick={this.showModal}>Join our platform</Link>
-                 { !this.state.show ? null :
-                
-                <NewsLatterModal show={this.state.show} handleClose={this.hideModal}/>
-           
-                }
+            
+               <Link to="#" className="ml-50 btn-white" onClick={this.showModal}>Join our platform</Link>
+            
+                 
+                 { !this.state.show ? null :<NewsLatterModal show={this.state.show} handleClose={this.hideModal}/>}
             </>
         )
     }

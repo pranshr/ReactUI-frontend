@@ -16,18 +16,23 @@ const CustomForm = ({ status, message, inputClass, buttonClass, onValidated }) =
 
   return (
     <div>
-      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+      {status === "sending" && <div className="infoMessage">sending...</div>}
       {status === "error" && (
         <div
-          style={{ color: "red" }}
+          className="errorMessage"
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
       {status === "success" && (
         <div
-          style={{ color: "green" }}
+           className="successMessage"
           dangerouslySetInnerHTML={{ __html: message }}
-        />
+        >
+          { 
+            localStorage.setItem('subscribedUser', "subscribed"),
+            window.location.reload()
+           }
+        </div>
       )}
     
                  
@@ -53,7 +58,7 @@ class Subscribe extends Component {
     const url =
       "https://unlistedassets.us1.list-manage.com/subscribe/post?u=44a3d42cc4dfacaced1cf1dc8&amp;id=e075a39da2";
     return (
-      <div>
+      <div className="form-margin">
         <MailchimpSubscribe
           url={url}
           render={({ subscribe, status, message }) => (

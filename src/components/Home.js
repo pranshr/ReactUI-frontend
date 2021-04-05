@@ -24,8 +24,8 @@ render(){
                 <div className="col-md-7 col-sm-12">
                 <div className="banner-text">
                 <h3>A smartest way to</h3>
-                <h1>Buy or Sell Unlisted Share,<br/> Pre IPO Share, ESOP Share</h1>
-                <p>Unlisted assets is india's leading plateform to facilititate the buying or selling process of company's unlisted, ESOP or Pre-IPO shares. </p>
+                <h1>Buy or Sell Unlisted Shares / ESOP's,</h1>
+                <p>India's first platform providing you a transparent buyer-seller negotiation, a safe bank escrow-based transaction and an automated transaction flow of buying / selling Unlisted Shares and ESOP's. </p>
                 <Link class="home-banner-btn" to="/contact">Proceed</Link>
                 </div>
                 </div>
@@ -92,26 +92,26 @@ render(){
                 </div>
                 <div className="col-three text-left">
                 <h4>Negotiate prices for verified Shares/ESOP’s</h4>
-                    <p>Explore the best available listings in the market and negotiate prices directly with buyer / seller.</p>
+                    <p>Explore the best available listings in the market and negotiate prices directly with buyer/seller.</p>
                 </div>
               </div>
               <div className="my-row">
                 <div className="col-one text-right">
                      <h4>Transfer of shares</h4>
-                    <p>Seller transfers shares to the buyers demat account.</p>
+                    <p>Seller transfers shares to the buyer's Demat account.</p>
                 </div>
                 <div className="col-two text-center">
                     <span>04</span>
                 </div>
                 <div className="col-three text-left">
                 <h4>Escrow Transfer of payment</h4>
-                    <p>Payment of buyer is secured in an escrow bank account of a SEBI regd. Trustee. Similarly, the seller transfers shares to the buyer’s demat account.</p>
+                    <p>Payment of buyer is secured in an escrow bank account of a SEBI regd. Trustee. Similarly, the seller transfers shares to the buyer’s Demat account.</p>
                 </div>
               </div>
               <div className="my-row">
                 <div className="col-one text-right">
                      <h4>Transaction is complete</h4>
-                    <p> Trustee approves the transaction, our fee is debited and payment is credited to the seller.</p>
+                    <p> The trustee approves the transaction, our fee is debited and payment is credited to the seller.</p>
                     
                 </div>
                 <div className="col-two text-center">
@@ -119,7 +119,7 @@ render(){
                 </div>
                 <div className="col-three text-left">
                 <h4>Transaction is complete</h4>
-                    <p>Trustee approves the transaction, our fee is debited and payment is credited to the seller.</p>
+                    <p>The trustee approves the transaction, our fee is debited and payment is credited to the seller.</p>
                 </div>
               </div>
               <div className="my-row">
@@ -144,7 +144,7 @@ render(){
           <div className="row">
          
               <div className="col-md-12">
-                <h2 className="text-center sectiontitle"><strong>Explore potential fund oppurtunities</strong></h2>
+                <h2 className="text-center sectiontitle"><strong>Explore potential fund opportunities</strong></h2>
               </div>
               <TradesGridFour showModal={ this.showModal }/>
             
@@ -201,7 +201,7 @@ render(){
             </div>
             <div className="col-md-2 text-center">
               <div className="th-single">
-              <img src={process.env.PUBLIC_URL + "./assets/images/diver.png"} alt="icon_share_invest"/>
+              <img src={process.env.PUBLIC_URL + "./assets/images/wealth.png"} alt="icon_share_invest"/>
                 <p>These offer enormous wealth creation opportunity to informed investors having discretionary corpus</p>
               </div>
             </div>
@@ -252,7 +252,7 @@ render(){
                   <div className="col-md-1" />
                 </div>
               </div>
-              <p className="mt-50 text-center"><Link to="/why-us" className="btn2">Learn More</Link></p>
+              <p className="mt-50 text-center"><Link to="/why-us" className="btn2">Why UnlistedAssets.com</Link></p>
             </div>
           </div>
         </div>

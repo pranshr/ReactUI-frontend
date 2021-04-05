@@ -68,7 +68,65 @@ const Scompanies = () => {
 					</div>
 				</div>
 
-              <div className="mt-50">
+
+
+				<div class="private">
+					  <div class="row">
+						<div class="col-md-3">
+							<img src={`${process.env.PUBLIC_URL}/assets/images/sr-5.jpg`} class="img-responsive center-block" alt="company1"/>
+						</div>
+						 <div className="col-md-9 d-flex align-item minHeight214">
+							<div class="get">
+					           <h4 class="stay">For Institutions, UHNI’s and Family Offices</h4>
+					           <p>We work with all institution players, Family Offices to help them get the unlisted stocks, through our platform, which are otherwise difficult to source from the market in large quantities. We have relations with institutions across the world and to help them in making investment in unlisted stocks by way of primary and secondary placement and also help them liquidate their investments in unlisted stocks through the platform or offline.</p>
+					        </div>
+					    </div>
+					</div>
+				  </div>
+				  <div class="private">
+					<div class="row">
+						 <div className="col-md-9 d-flex align-item minHeight214">
+							<div class="get">
+					           <h4 class="stay">Get access to your target companies</h4>
+					           <p>We work closely with the management of various Unlisted companies through our associate consulting arm. We help them access a pool of inventory of unlisted shares of employees, early investors, ex-co-founders in the unlisted space.</p>
+                               <p>You can access our Bulk Deals window to view and execute high ticket transactions.</p>
+					        </div>
+					    </div>
+					    <div class="col-md-3">
+							<img src={`${process.env.PUBLIC_URL}/assets/images/sr-6.jpg`} class="img-responsive center-block" alt="company2"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="private">
+					  <div class="row">
+						<div class="col-md-3">
+							<img src={`${process.env.PUBLIC_URL}/assets/images/sr-7.jpg`} class="img-responsive center-block" alt="company1"/>
+						</div>
+						 <div className="col-md-9 d-flex align-item minHeight214">
+							<div class="get">
+					           <h4 class="stay">Stay informed on opportunities</h4>
+					           <p>We can provide you premium services through our platform to get first-hand information on various opportunities in an unlisted space basis your investment criteria and ticket size.</p>
+					        </div>
+					    </div>
+					</div>
+				  </div>
+				  <div class="private">
+					<div class="row">
+						 <div className="col-md-9 d-flex align-item minHeight214">
+							<div class="get">
+					           <h4 class="stay">Get professional services</h4>
+					           <p>We can provide the relevant transaction support services including due diligence, valuations, documentation in relation to transaction in unlisted shares through our consulting arm. Our professional experience comes handy in providing you with end to end solutions.</p>
+					        </div>
+					    </div>
+					    <div class="col-md-3">
+							<img src={`${process.env.PUBLIC_URL}/assets/images/sr-8.jpg`} class="img-responsive center-block" alt="company2"/>
+						</div>
+					</div>
+				</div>
+    
+
+              {/* <div className="mt-50">
 				<h4 class="stay">For Institutions, UHNI’s and Family Offices</h4>
 <p className="mb-30">We work with all institution players, Family Offices to help them get the unlisted stocks, through our platform, which are otherwise difficult to source from the market in large quantities. We have relations with institutions across the world and to help them in making investment in unlisted stocks by way of primary and secondary placement and also help them liquidate their investments in unlisted stocks through the platform or offline. </p>
  
@@ -81,7 +139,7 @@ const Scompanies = () => {
  
 <h4 class="stay">Get professional services</h4>
 <p>We can provide the relevant transaction support services including due diligence, valuations, documentation in relation to transaction in unlisted shares through our consulting arm. Our professional experience comes handy in providing you with end to end solutions. </p>
-</div>
+</div> */}
 
 				</div>
 				<div class="col-md-2"></div>

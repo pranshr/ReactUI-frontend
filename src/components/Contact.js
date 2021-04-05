@@ -48,7 +48,7 @@ export default class Contact extends Component {
   render() {
     const bannerImage = "contact.png";
     const headingtxt = "Want to know more!";
-    const subHeadingtxt = "Please drop us an email or send us a text message . Our team will reach our to you shortly and help you understand our offering and our process better.";
+    const subHeadingtxt = "Please drop us an email or send us a text message . Our team will reach out to you shortly and help you understand our offering and our process better.";
     return (
      <>
         	<InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
@@ -90,6 +90,9 @@ export default class Contact extends Component {
                   <img src={process.env.PUBLIC_URL + "./assets/images/email.png"} className="mt-15" alt="email"/>
                   <p>Mail Us</p>
                   <p><a href="mailto:hello@unlistedassets.com" className="text-bold">hello@unlistedassets.com</a></p>
+                  <img src={process.env.PUBLIC_URL + "./assets/images/address.png"} className="mt-15" alt="email"/>
+                  <p>Address</p>
+                  <p className="text-bold color-theme">Plot No. 242, I Floor, AIHP Palms, 243, Udyog Vihar, Gurugram, Haryana 122015</p>
                 </div>
               </div>
             </div>

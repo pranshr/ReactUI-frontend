@@ -179,12 +179,57 @@ transform: rotate(45deg);}
 .checkbox input:checked ~ label .check{ background-color: #44ba2e;}
 .checkbox input:checked ~ label .check::after{border: 2px solid #fff;
 border-top: 0px; border-left: 0px;}
-.newslatter-modal{
+
+.bgImages img{
+  max-width: 560px;
+  width: 100%;
+}
+.newslatter-modal {
+  position: absolute;
+  top: 0;
+  padding-left: 50px;
+  width: 100%;
+  height: 100%;
+}
+.heading-pop{text-align: left;}
+.heading-pop h2{
+  text-align: left;
+  color: #312d5f;
+  font-weight: 600;
+  font-size: 38px;
+}
+.subscribe-form{width: 100%;
+  margin-bottom: 50px;  margin: inherit;
+  max-width: 260px;
+}
+
+.newlatter-popup{
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.modal-body.newslatter-modal button.close{position: absolute;
+  background-color: transparent;
+  right: 10px;
+  width: 50px;}
+
+  .form-margin{margin-bottom: 70px;}
+
+  .subscribe-form input{background-color: #7b84e1;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid #fff;}
+
+/* .newslatter-modal{
   background-image: url('../../images/formandtextRe.jpg');
   height: 459px;
   background-position: 74% 43%;
   padding: 15px;
-}
+} */
 .trade-modal-main .modal-content, .newslatter-modal-main .modal-content{
   border: none;
   box-shadow: none;
@@ -256,14 +301,9 @@ border-top: 0px; border-left: 0px;}
   .newslatter-modal .row::after{
     display: none !important;
   }
-  .newslatter-modal button {
-    background: #731b65;
-    color: #fff;
-   
-}
-  .newslatter-modal {
-    height: 345px;
-}
+
+
+
 .mobile-row{
   position: relative;
     height: 100%;
@@ -308,4 +348,21 @@ border-top: 0px; border-left: 0px;}
   left: 5px;
   top: 1px;
 }
+}
+@media (max-width: 575px){
+  .form-margin {
+    margin-bottom: 0px;
+    width: 61%;
+}
+.heading-pop h2 {
+  text-align: left;
+  color: #312d5f;
+  font-size: 23px;
+  margin-top: 9px;
+}
+
+.newslatter-modal {
+  padding-left: 28px;
+}
+
 }

@@ -6,7 +6,7 @@ const Services = () => {
   const bannerImage = "1c.png";
   const headingtxt = "Our Services";
   // const subHeadingtxt = "We serve the best services for our customers.";
-  const subHeadingtxt = "We endeavor to provide the best in-class service to our clients through our technology driven processesand ensure the time efficient, and transparent completion of transactions.";
+  const subHeadingtxt = "We endeavor to provide the best in-class service to our clients through our technology driven processes and ensure the time efficient, and transparent completion of transactions.";
 	return(
 		<>
            <InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
@@ -24,7 +24,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
                         <h4 className="stay">Buy/Sell Unlisted shares/ESOP</h4>
-                        <p>We, through our technology enabled platform,  provide a transparent and secure mechanism to transactin shares/ESOP of unlisted companies including start up-companies, and hence providing liquiditythrough our offerings. We help retail investors, institutions and corporations with various solutions tosuit their requirements in relation to transactions in unlisted shares/ESOP. Unlisted shares includeshares/ESOP of startups companies, Pre IPO companies, and delisted companies</p>
+                        <p>We, through our technology enabled platform,  provide a transparent and secure mechanism to transact in shares/ESOP of unlisted companies including start up-companies, and hence providing liquidity through our offerings. We help retail investors, institutions and corporations with various solutions to suit their requirements in relation to transactions in unlisted shares/ESOP. Unlisted shares include shares/ESOP of startups companies, Pre IPO companies, and delisted companies</p>
                       </div>
                     </div>
                   </div>
@@ -34,7 +34,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get">
                         <h4 className="stay">Primary Placement</h4>
-                        <p>Our team has relevant experience in fund management, transaction advisory and transaction supportservices in the past. We help companies raise primary capital from various funds/institutions/familyoffices having domestic and global presence.</p>
+                        <p>Our team has relevant experience in fund management, transaction advisory and transaction support services in the past. We help companies raise primary capital from various funds/institutions/family offices having domestic and global presence.</p>
                       </div>
                     </div>
                     <div className="col-md-3">
@@ -50,7 +50,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
                         <h4 className="stay">Pre-IPO Placement</h4>
-                        <p>We help unlisted companies do primary and secondary placement of their equity shares to domestic andglobal funds through our platform before they are planning to come out with an Initial Public offerwhether in domestic or international capital markets.</p>
+                        <p>We help unlisted companies do primary and secondary placement of their equity shares to domestic and global funds through our platform before they are planning to come out with an Initial Public offer whether in domestic or international capital markets.</p>
                       </div>
                     </div>
                   </div>
@@ -61,7 +61,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get">
                         <h4 className="stay">ESOP Transaction Management</h4>
-                        <p>We provide end to end ESOP transaction management solutions through our technology enabledplatform  to enable the corporation to manage the transaction in ESOP given to its employees in a timeefficient manner and help in getting the right price for ESOP. Our background of transaction advisorythrough consulting practice comes in handy for ensuring solutions that suits you the best.</p>
+                        <p>We provide end to end ESOP transaction management solutions through our technology enabled platform  to enable the corporation to manage the transaction in ESOP given to its employees in a time-efficient manner and help in getting the right price for ESOP. Our background of transaction advisory through consulting practice comes in handy for ensuring solutions that suits you the best.</p>
                       </div>
                     </div>
                     <div className="col-md-3">
@@ -77,7 +77,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
                         <h4 className="stay">Transaction support services</h4>
-                        <p>We provide the transaction support services including valuation advisory through our associate entitywhich is one of the leading firms in transaction advisory services in India.</p>
+                        <p>We provide the transaction support services including valuation advisory through our associate entity which is one of the leading firms in transaction advisory services in India.</p>
                       </div>
                     </div>
                   </div>
@@ -89,7 +89,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get">
                         <h4 className="stay">Fund Management Services</h4>
-                        <p>Our team has relevant credentials for fund management and research advisory servicesfor listed and unlisted companies in India. We offer these services to our clients to helpthem optimize their return on investment.</p>
+                        <p>Our team has relevant credentials for fund management and research advisory services for listed and unlisted companies in India. We offer these services to our clients to help them optimize their return on investment.</p>
                       </div>
                     </div>
                     <div className="col-md-3">
@@ -105,7 +105,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
                         <h4 className="stay">Consulting</h4>
-                        <p>We have close association with a global consulting firm. We help our clients with complete solutionspertaining to secondary transactions of equity shares/ESOP be it pertaining to finance, tax, regulatorycompliance, or other services.</p>
+                        <p>We have close association with a global consulting firm. We help our clients with complete solutions pertaining to secondary transactions of equity shares/ESOP be it pertaining to finance, tax, regulatory compliance, or other services.</p>
                       </div>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ const Services = () => {
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get">
                         <h4 className="stay">Valuation Services</h4>
-                        <p>Our associate company which is one of the leading brands invaluations practice in India is working with us for providing valuation advisory or support services to our clients on a need basis.</p>
+                        <p>Our associate company which is one of the leading brands in valuations practice in India is working with us for providing valuation advisory or support services to our clients on a need basis.</p>
                       </div>
                     </div>
                     <div className="col-md-3">

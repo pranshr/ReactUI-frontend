@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="col-md-3">
                 <img src={process.env.PUBLIC_URL + "../assets/images/logo.png"} className="footer-logo" alt="" />
                 <p className="mt-30">© 2020 -2020 Unlisted Assets</p>
-                <p className="mb-30">All Rights reserved.</p>
+                <p className="mb-30">All Rights Reserved.</p>
                 <ul className="sociallinks">
                   <li><a href={'https://twitter.com/AssetsUnlisted'} target={'_blank'} rel="noreferrer"><img src={process.env.PUBLIC_URL + "./assets/images/twitter.png"} alt="" /></a></li> 
                   <li><a href={'https://www.facebook.com/unlistedassets/'} target={'_blank'} rel="noreferrer"><img src={process.env.PUBLIC_URL + "./assets/images/fb.png"} alt="" /></a></li> 

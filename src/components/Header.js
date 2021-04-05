@@ -73,11 +73,15 @@ class Header extends Component {
       isForgetUserid:false
     });
   }
+  
   render(){
     const { topbar, isRegister, isForgetPassword, isLogin, isForgetUserid, sidenav  } = this.state;
+    let sessionData2 = localStorage.getItem('subscribedUser');
 	return(
 		<>
+    
     {
+      sessionData2 ==='subscribed' ? null : 
       !topbar ? null :  <section className="topheader">
           <div className="container">
             <div className="row">
@@ -102,22 +106,22 @@ class Header extends Component {
   <nav id="menu">
  
         <ul className="main-menu clearfix">
-        <li><NavLink activeClassName='is-active' to="/companies">Explore Companies</NavLink></li>
+        <li><NavLink activeClassName='is-active' to="/companies" onClick={ sidenav ? this.toogleNav:null }>Explore Companies</NavLink></li>
           <li className="dropdown-menu-link">Our Offerings
               <span className="drop-icon">▾</span>
               <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm1">▾</label>
             <input type="checkbox" id="sm1" />
             <ul className="sub-menu">
-              <li><NavLink activeClassName='is-active' to="/services">Services </NavLink></li>
+              <li><NavLink activeClassName='is-active' to="/services" onClick={ sidenav ? this.toogleNav:null }>Services </NavLink></li>
               <li className="dropdown-menu-link">Solutions
                   <span className="drop-icon">▾</span>
                   <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm2">▾</label>
                 <input type="checkbox" id="sm2" />
                 <ul className="sub-menu">
-                  <li><NavLink activeClassName='is-active' to="/solution-for-companies">For companies</NavLink></li>
-                  <li><NavLink activeClassName='is-active' to="/solution-for-institutions">For Institutions</NavLink></li>
-                  <li><NavLink activeClassName='is-active' to="/solution-for-investors">For investors</NavLink></li>
-                  <li><NavLink activeClassName='is-active' to="/solution-for-shareholders">For Shareholders</NavLink></li>
+                  <li><NavLink activeClassName='is-active' to="/solution-for-companies" onClick={ sidenav ? this.toogleNav:null }>For companies</NavLink></li>
+                  <li><NavLink activeClassName='is-active' to="/solution-for-institutions" onClick={ sidenav ? this.toogleNav:null }>For Institutions</NavLink></li>
+                  <li><NavLink activeClassName='is-active' to="/solution-for-investors" onClick={ sidenav ? this.toogleNav:null }>For investors</NavLink></li>
+                  <li><NavLink activeClassName='is-active' to="/solution-for-shareholders" onClick={ sidenav ? this.toogleNav:null }>For Shareholders</NavLink></li>
                 </ul>
               </li>
             </ul>
@@ -129,12 +133,12 @@ class Header extends Component {
             
             <input type="checkbox" id="sm3" />
             <ul className="sub-menu">
-             <li><NavLink activeClassName='is-active' to="/about-us">About Us </NavLink></li>
-             <li><NavLink activeClassName='is-active' to="/why-us">Why Us </NavLink></li>
+             <li><NavLink activeClassName='is-active' to="/about-us" onClick={ sidenav ? this.toogleNav:null }>About Us </NavLink></li>
+             <li><NavLink activeClassName='is-active' to="/why-us" onClick={ sidenav ? this.toogleNav:null }>Why Us </NavLink></li>
             </ul>
           </li>
 
-          <li><Link to="/platform">Platform</Link></li>
+          <li><Link to="/platform" onClick={ sidenav ? this.toogleNav:null }>Platform</Link></li>
           <li className="dropdown-menu-link">Resource
               <span className="drop-icon">▾</span>
               <label title="Toggle Drop-down" className="drop-icon" htmlFor="sm4">▾</label>
@@ -142,13 +146,19 @@ class Header extends Component {
             <input type="checkbox" id="sm4" />
             <ul className="sub-menu">
             <li><a href={'http://blog.unlistedassets.com'} target={'_blank'} rel="noreferrer">Blog</a></li> 
-             <li><NavLink activeClassName='is-active' to="/faqs">FAQs </NavLink></li>
+             <li><NavLink activeClassName='is-active' to="/faqs" onClick={ sidenav ? this.toogleNav:null }>FAQs </NavLink></li>
             </ul>
           </li>
 
-          <li><NavLink activeClassName='is-active' to="/contact">Contact Us</NavLink></li>
+          <li><NavLink activeClassName='is-active' to="/contact" onClick={ sidenav ? this.toogleNav:null }>Contact Us</NavLink></li>
         </ul>
       </nav>
+
+
+
+
+
+      
   </div>
   {/* <div className="login_btn">
      <button type="button" onClick={this.showModal} className="login-btn desktop-login-btn">Login/Sign Up</button>
