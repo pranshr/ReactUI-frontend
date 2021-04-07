@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import Recaptcha from "react-recaptcha";
+//import Recaptcha from "react-recaptcha";
+import {GoogleReCaptchaProvider,GoogleReCaptcha} from 'react-google-recaptcha-v3';
+
 const profileChoices = [
 
     {  id:1, el_id: 'pickup-1', value: 'Investor', label:"Investor" },
@@ -31,13 +33,13 @@ export default class ContactForm extends Component {
     this.handleChangeProfile = this.handleChangeProfile.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
     this.verifyCallback = this.verifyCallback.bind(this);
-    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    //this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
   }
-  recaptchaLoaded(){
-    console.log('Google recaptcha loaded successfully.')
-  }
+  // recaptchaLoaded(){
+  //   console.log('Google recaptcha loaded successfully.')
+  // }
   verifyCallback(responce){
     this.setState({
       captchVerified:true
@@ -218,12 +220,15 @@ export default class ContactForm extends Component {
   </div>
 </div>
   <div className="form-group recap">
-  <Recaptcha
-    sitekey="6LcCIZgaAAAAALArkX6mk3CD2sZp5FCWborqB-5n"
+  {/* <Recaptcha
+    sitekey="6Lcc_Z8aAAAAADWd3rScf0rA1y2qWVtLraRLIy3z"
     render="explicit"
     verifyCallback={this.verifyCallback}
     onloadCallback={this.recaptchaLoaded}
-  />
+  /> */}
+  <GoogleReCaptchaProvider reCaptchaKey="[6LcCIZgaAAAAALArkX6mk3CD2sZp5FCWborqB-5n]">
+    <GoogleReCaptcha onVerify={this.verifyCallback} />
+  </GoogleReCaptchaProvider>
   </div>
   <div className="sbt">
     <button className="button1">Submit</button>

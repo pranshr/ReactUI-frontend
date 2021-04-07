@@ -26,7 +26,7 @@ render(){
                 <h3>A smartest way to</h3>
                 <h1>Buy or Sell Unlisted Shares / ESOP's,</h1>
                 <p>India's first platform providing you a transparent buyer-seller negotiation, a safe bank escrow-based transaction and an automated transaction flow of buying / selling Unlisted Shares and ESOP's. </p>
-                <Link class="home-banner-btn" to="/contact">Proceed</Link>
+                {/* <Link class="home-banner-btn" to="/contact">Proceed</Link> */}
                 </div>
                 </div>
                 <div className="col-md-5 col-sm-12">

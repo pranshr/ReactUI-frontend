@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import FaqsData from './FaqsData';
 import GeneralFaqData from './Data/GeneralFaqData';
+import ShareTransferProcessData from './Data/ShareTransferProcessData';
 import FaqList from './FaqList';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -41,7 +42,9 @@ class Faq extends Component {
                  })}
     </TabPanel>
     <TabPanel>
-      <h2>Content Not Available</h2>
+    {ShareTransferProcessData.map((item, index) => {
+                  return <FaqList item={item} key={index} />;
+                 })}
     </TabPanel>
    
 

@@ -81,17 +81,26 @@ export default class Contact extends Component {
               </div>
               <div className="col-md-4">
                 <div className="call">
-                <img src={process.env.PUBLIC_URL + "./assets/images/whatsapp-icon.png"} alt="phone"/>
-                  <p>WhatsApp</p>
+                  <div className="section-contact-address mt-30">
+                    <img src={process.env.PUBLIC_URL + "./assets/images/whatsapp-icon.png"} alt="phone"/>
+                     <p>WhatsApp</p>
+                  </div>
+                  
                   <p><a href="!#" className="text-bold">+91 9971133005</a>, <a href="!#" className="text-bold">+91 9711149200</a></p>
-                  <img src={process.env.PUBLIC_URL + "./assets/images/phone.png"} alt="phone" className="mt-15"/>
+                  <div className="section-contact-address mt-30">
+                  <img src={process.env.PUBLIC_URL + "./assets/images/phone.png"} alt="phone"/>
                   <p>Call Us</p>
+                  </div>
                   <p><a href="tel:+91 9971133005" className="text-bold">+91 9971133005</a>, <a href="tel:+91 9711149200" className="text-bold">+91 9711149200</a> <a href="tel:+91 7011306533" className="text-bold">+91 7011306533</a></p>
-                  <img src={process.env.PUBLIC_URL + "./assets/images/email.png"} className="mt-15" alt="email"/>
+                  <div className="section-contact-address mt-30">
+                  <img src={process.env.PUBLIC_URL + "./assets/images/email.png"} alt="email"/>
                   <p>Mail Us</p>
+                  </div>
                   <p><a href="mailto:hello@unlistedassets.com" className="text-bold">hello@unlistedassets.com</a></p>
-                  <img src={process.env.PUBLIC_URL + "./assets/images/address.png"} className="mt-15" alt="email"/>
+                  <div className="section-contact-address mt-30">
+                  <img src={process.env.PUBLIC_URL + "./assets/images/address.png"} alt="email"/>
                   <p>Address</p>
+                  </div>
                   <p className="text-bold color-theme">Plot No. 242, I Floor, AIHP Palms, 243, Udyog Vihar, Gurugram, Haryana 122015</p>
                 </div>
               </div>

@@ -131,6 +131,7 @@ function CompDetails(props) {
                 <div className="angle">
                   <div className="row">
                     <div className="col-md-12">
+                      <p>This information is subject to change</p>
                       <p className="text-bold">
                       <a href={ data.crunchbase_link } target={'_blank'} rel="noreferrer">Read more on crunchbase</a>
                       </p>

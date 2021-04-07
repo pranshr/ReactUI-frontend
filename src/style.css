@@ -8,6 +8,7 @@ button:focus{
 a{color:#731b67; }
 .topheader p{padding: 0; margin:0;}
 .topheader a{ display: inline-block; }
+
 .ml-50{margin-left: 50px}
 .btn-white{ background: #fff; padding: 7px 15px; color:#731b67; font-weight: bold; text-decoration: none; }
 .btn1 {
@@ -27,7 +28,7 @@ a{color:#731b67; }
   background: #fff;
 }
 .addsection p{ font-size: 16px;margin-bottom: 30px }
-.close1{ color: #fff; margin-left: 50px; font-size: 24px; display: inline-block;margin-top: 2px; cursor: pointer;}
+.close1{ color: #fff; margin-left: 20px; font-size: 24px; display: inline-block;margin-top: 2px; cursor: pointer;}
 .close1:hover{ color: #fff;}
 .banner{background: url('banner.png'); padding-top: 10px}
 .banner h1{color: #fff;
@@ -94,7 +95,7 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .second-section{background-color: #fff;}
 .p1 a:hover{text-decoration:none; color: #fff; background-color: #925088;border-radius: 3px; border:2px solid #fff; padding: 12px 50px}
 .p1 a{text-decoration: none;color:#925088;background-color: #fff;border-radius: 3px; border:2px solid #925088;padding: 12px 50px }
-.view p{margin-top: 50px}
+
 .heading{font-size: 30px; color:#0d223c; font-weight: bold; }
 .terms{color:#0d223c}
 .second-section h2{margin-top: 0}
@@ -103,9 +104,13 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .pl-0{padding-left:0;}
 .border1{padding: 3px; border: 1px solid #ccc; border-radius: 100px; height: 45px; width: 45px; margin-top: px}
 .box{ border: 1px solid #d8cfd8;
-  margin-top: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   border-radius: 6px;
   min-height: 332px;
+}
+.contact-section1 textarea{
+  min-height: 120px;
 }
 .box1{background-color: #fcfbff;
   border-bottom: 1px solid #f3f2f3;
@@ -204,7 +209,7 @@ footer h4{ margin-top: 0; color: #fff;font-weight: bold; margin-bottom: 20px }
 .institutions-section h1::after{content:"" ;background-color: #fff;height: 2px;width: 85px;top: 132px;left:320px;position: absolute;}
 .institutions{margin-bottom: 100px}
 /* .get{padding: 75px 0} */
-/* .get1{padding:50px 0 0 50px;} */
+.get1, .get{font-size: 14px;} 
 .minHeight214{
    min-height: 168px;
 }
@@ -253,7 +258,7 @@ padding: 0 21px
   border: none;
   text-align: left;
   outline: none;
-  font-size: 19px;
+  font-size: 16px;
   transition: 0.4s;
   background-color: #fff;
   color: #0d223c;
@@ -277,6 +282,7 @@ padding: 0 21px
 .accor::after{content: '\002B';
   color: #000;
   font-weight: bold;
+  display: block;
   margin-right: 10px;float: right}
   .active1::after{
     content: "\2212";
@@ -311,7 +317,7 @@ padding: 0 21px
   color:#0d223d;
 }
 .panel.open{
-   max-height: 570px;
+   max-height: 900px;
 }
 .panel1 {
   background-color: #fff;
@@ -336,6 +342,9 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
 .see{background-color: #fff;padding: 71px 19px 71px 20px;box-shadow: 0 0 10px #ccc;position: absolute;z-index: 1;top: 141px;left:-136px;}
 .limit{background-color: #fff;padding: 43px 30px 51px 30px;box-shadow: 0 0 10px #ccc;position: absolute;z-index: 1;top: 182px;right:-165px;}
 .last-services{margin-top: 20px;margin-bottom: 130px}
+.last-services p{
+  font-size: 14px;
+}
 .last-services h3{font-weight: bold;}
 .img1{margin-top: 75px; display: flex;}
 .i1{font-weight: bold;
@@ -356,7 +365,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
 .i6{font-weight: bold;position: absolute;bottom: 58px;left: 27px} */
 .company-ul li{list-style: none;display: inline;padding: 10px}
 .company-ul li a:hover{text-decoration: none;}
-.com{color: #000;font-weight: bold;}
+.com{color: #333;font-weight: bold;}
 .hdfc{color: #731b65;font-weight: bold;}
 .top{margin-top: 15px}
 .angle{
@@ -382,16 +391,26 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     .earth, .moon {
       padding: 12px 20px;
   }
-  
+  .moon h4{
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
     .moon p span{font-size: 12px;}
     .moon p span a{color: #000}
     .panel1 p span{margin-left: 10px}
     .panel1 p{font-size: 13px}
 
-    .galaxy h4{font-weight: bold;color: #000}
+    .galaxy h4{font-weight: bold;
+      color: #333;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      margin-top: 25px;}
     .rome a:hover{text-decoration: none;background-color: #f2f2fa;color: #732f67;padding: 5px 10px 5px 10px;
       border:1px solid #732f67;}
-      .moon span{margin-top: 3px}
+      .moon span{margin-top: 2px;
+        font-size: 14px;}
     .rome a{background-color: #732f67;color: #fff;padding: 5px 10px 5px 10px;margin-right: 5px}
     .galaxy {
       background-color: #f7f7fb;
@@ -449,6 +468,23 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     background: #731b67;
     color: #fff;
   } */
+  .team-image{
+    width: 183px;
+    margin: 0 auto;
+    height: 183px;
+  }
+  .team-image img{
+    border-radius: 50%;
+  }
+  .section-contact-address p{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    margin: 0px 0px 0px 5px;
+  }
+  .section-contact-address img, .section-contact-address p{
+    display: inline-block;
+  }
   .my-row{
     display: flex;
     max-width: 1024px;
@@ -579,7 +615,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   margin-left: 6px;} */
 .inner-banner .banner-text p {
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
 }
 .inner-banner img{
   max-height: 480px;
@@ -602,9 +638,9 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
 }
 .bottom-box{
   background: #f0f2ff;
-  padding: 70px 100px 80px;
-  margin: 50px 0px 0px;
-  border-radius: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 50px 50px 60px 50px;
 }
 .bottom-box a:hover{
   text-decoration: none;
@@ -885,6 +921,63 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
   }
   
   @media (max-width: 768px){
+
+    body{
+       font-size: 14px;
+    }
+    .box-img{
+      width: 122px;
+    margin: 0 auto;
+    }
+    .mt-30{
+      margin-top: 10px;
+    }
+    .mt-50 {
+      margin-top: 25px;
+  }
+    .bottom-box p {
+      margin-bottom: 25px;
+  }
+    .com{ font-size: 12px;}
+.hdfc{font-size: 12px;}
+.company-section {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.inner-page-content{
+  padding: 15px;
+}
+.get1, .get{
+  padding: 0px !important;
+}
+.private img{
+  width: 100%;
+}
+.get1 p, .get p{
+  margin-bottom: 10px;
+}
+.about2, .about3{margin-top: 25px;margin-bottom: 25px}
+.about3 h2 {
+  font-weight: bold;
+  padding: 30px 0 7px;
+}
+.about-last {
+  background: #fcfbff;
+  padding: 50px 0;
+  margin-top: 80px;
+}
+.found p{
+  text-align: center;
+}
+.second-section .box{
+  margin-top: 5px !important;
+}
+    #toggle-menu, #menu a {
+      padding: 10px 12px;
+  }
+    .addsection{
+      margin: 0px 15px;
+    }
     .col-two::after{
      display: block !important;
   
@@ -978,9 +1071,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     margin-top: 8px;
     max-width: 144px;
 }
-.header ul li{
-  padding: 10px 5px;
-}
+
   
     .mobile-login-btn{
       display: inline-block;
@@ -1041,6 +1132,14 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
 .button1{
   padding: 10px 40px;
 }
+  }
+  @media (max-width: 420px){
+    .topheader a{
+      margin-top: 5px;
+    }
+   
+    .topheader p{  padding: 5px 5px 0px 5px; }
+    .topheader a, .topheader p{ font-size: 13px; }
   }
   @media (min-width: 992px){
 		.dropdown-menu .dropdown-toggle:after{
@@ -1119,6 +1218,10 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     background-repeat: no-repeat;
     background-position: right top, left bottom;
     background-size: 18% auto, 30% auto;
+  }
+  .underconstruction .form-margin{
+    width: 100% !important;
+    margin-bottom: 40px;
   }
   .bottom-img img{
     width: 100%;
@@ -1556,9 +1659,14 @@ font-size: 13px;
 	.item img{ margin-top: 30px }
 	.carousel-indicators{display: none; z-index: 1 !important; }
 	.about2 h3,.about2 p{padding-left: 0}
-	.found{margin-left: 0; padding-left: 15px}
+	.found{margin-left: 0;}
+
 	.trust,.integrity,.analysis,.get1, .get,.access,.insights,.bank1,.bank,.bank2,.bank3{padding: 20px 0;}
-	.private{margin-top: 50px}
+	.private{margin-top: 40px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #d9dbec;
+    }
 	*:after{display: none;}
   .pl0 p{text-align: center;}
   .pr0 img{display: block;

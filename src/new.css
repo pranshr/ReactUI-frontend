@@ -19,8 +19,9 @@
 .newsection1{padding: 50px 0 70px}
 .second-section .box{ margin-top:40px !important;  }
 .addsection .col-md-12{ background: #f0f2ff }
-.addsection1{padding-bottom: 70px}
-.addsection1 .col-md-10{ background: #f0f2ff;     border: 1px solid #eae8ea;border-radius: 20px;padding: 40px 0;}
+.addsection1 .col-md-10{ background: #f0f2ff;     border: 1px solid #eae8ea;border-radius: 20px;padding: 50px 50px 60px 50px;
+}
+
 .private1{ margin-bottom: 30px; }
 .private1 img{  border: 1px solid #bdc4e0; border-radius: 5px; box-shadow: 0 0 5px #bdc4e0; }
 .private1 h4{ margin-top: 0 }

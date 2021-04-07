@@ -32,7 +32,9 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/Divam.png"} className="img-responsive center-block" alt="team1"/>
+                      <div className="team-image">
+                       <img src={process.env.PUBLIC_URL + "./assets/images/Divam.png"} className="img-responsive center-block" alt="team1"/>
+                      </div>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
@@ -45,7 +47,9 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
+                    <div className="team-image">
                       <img src={process.env.PUBLIC_URL + "./assets/images/Manish-Khanna.png"} className="img-responsive center-block"  alt="team2"/>
+                      </div>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
@@ -58,7 +62,9 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
+                    <div className="team-image">
                       <img src={process.env.PUBLIC_URL + "./assets/images/Shubham.png"} className="img-responsive center-block"  alt="team3"/>
+                    </div>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
@@ -71,7 +77,9 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
+                    <div className="team-image">
                       <img src={process.env.PUBLIC_URL + "./assets/images/Sunil-Jain.png"} className="img-responsive center-block"  alt="team4"/>
+                    </div>
                     </div>
                     <div className="col-md-9">
                       <div className="found">
@@ -84,7 +92,9 @@ const About = () => {
                 <div className="mt-40">
                   <div className="row">
                     <div className="col-md-3">
+                    <div className="team-image">
                       <img src={process.env.PUBLIC_URL + "./assets/images/AnkushGorav.png"} className="img-responsive center-block"  alt="team4"/>
+                    </div>
                     </div>
                     <div className="col-md-9">
                       <div className="found">

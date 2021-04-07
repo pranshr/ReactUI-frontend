@@ -35,7 +35,7 @@ export default class NewsLatterButton extends Component {
         return (
             <>
             
-               <Link to="#" className="ml-50 btn-white" onClick={this.showModal}>Join our platform</Link>
+               <Link to="#" className="ml-20 btn-white" onClick={this.showModal}>Join our platform</Link>
             
                  
                  { !this.state.show ? null :<NewsLatterModal show={this.state.show} handleClose={this.hideModal}/>}
