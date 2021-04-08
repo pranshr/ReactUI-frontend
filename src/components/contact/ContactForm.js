@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //import Recaptcha from "react-recaptcha";
-import {GoogleReCaptchaProvider,GoogleReCaptcha} from 'react-google-recaptcha-v3';
+//import {GoogleReCaptchaProvider,GoogleReCaptcha} from 'react-google-recaptcha-v3';
+import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 
 const profileChoices = [
 
@@ -25,7 +26,8 @@ export default class ContactForm extends Component {
       nameError:'',
       emailError:'',
       messageError:'',
-      captchVerified:false
+      captchVerified:false,
+      captchError:'',
     }
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -138,27 +140,41 @@ export default class ContactForm extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
+    let user_captcha_value = document.getElementById('user_captcha_input').value;
+   
+     
     const nameValid = this.handleNameValidation();
     const emailValid = this.handleEmailValidation();
     const messageValid = this.handleMessageValidation();
    
     
     if(nameValid && emailValid && messageValid){
-        // console.log(this.state);
-        if(this.state.captchVerified){
-          this.props.onSubmit(this.state);
+      if(user_captcha_value === ''){
+        this.setState({
+          captchError:'Please verify captcha.'
+        });
+      }else {
+        if (validateCaptcha(user_captcha_value)===true) {
+          this.props.onSubmit(this.state);  
         }else{
-          alert('Please verify captcha.');
+          this.setState({
+            captchError:'Invalid captcha code.'
+          });
         }
+      }
     }else{
-      console.log('not valid name');
-    }
+       console.log('Invalid data.');
+    } 
+ 
     
     //this.setState(this.initialState);
 }
 
+componentDidMount () {
+  loadCaptchaEnginge(6); 
+};
     render() {
-       const { profile, nameError, emailError, messageError } = this.state;
+       const { profile, nameError, emailError, messageError, captchError } = this.state;
         return (  
             <>
                 <form onSubmit={ this.handleSubmit}>
@@ -226,9 +242,21 @@ export default class ContactForm extends Component {
     verifyCallback={this.verifyCallback}
     onloadCallback={this.recaptchaLoaded}
   /> */}
-  <GoogleReCaptchaProvider reCaptchaKey="[6LcCIZgaAAAAALArkX6mk3CD2sZp5FCWborqB-5n]">
+  {/* <GoogleReCaptchaProvider reCaptchaKey="[6LcCIZgaAAAAALArkX6mk3CD2sZp5FCWborqB-5n]">
     <GoogleReCaptcha onVerify={this.verifyCallback} />
-  </GoogleReCaptchaProvider>
+  </GoogleReCaptchaProvider> */}
+  <div className="row">
+    <div className="col-md-3">
+    <LoadCanvasTemplate />
+    </div>
+    <div className="col-md-3">
+    <input placeholder="Enter Captcha Value" id="user_captcha_input" name="user_captcha_input" type="text" />
+  <span className="error-help">{captchError}</span>
+      </div>
+  </div>
+ 
+  
+  
   </div>
   <div className="sbt">
     <button className="button1">Submit</button>

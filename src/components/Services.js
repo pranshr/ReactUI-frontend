@@ -100,7 +100,7 @@ const Services = () => {
                 <div className="private">
                   <div className="row">
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/sr5.png"} className="img-respnsive center-block wh100" alt="ins3"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/consulting.png"} className="img-respnsive center-block wh100" alt="ins3"/>
                     </div>
                     <div className="col-md-9 d-flex align-item minHeight214">
                       <div className="get1">
@@ -121,7 +121,7 @@ const Services = () => {
                       </div>
                     </div>
                     <div className="col-md-3">
-                      <img src={process.env.PUBLIC_URL + "./assets/images/sr3.png"} className="img-respnsive center-block wh100" alt="ins2"/>
+                      <img src={process.env.PUBLIC_URL + "./assets/images/valuation-services.png"} className="img-respnsive center-block wh100" alt="ins2"/>
                     </div>
                   </div>
                 </div>

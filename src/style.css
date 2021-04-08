@@ -1,6 +1,9 @@
 body{font-family: 'Montserrat', sans-serif; font-size: 15px;
   /* user-select:none */
 }
+b, strong{
+  font-weight: 600 !important;
+  }
 button:focus{
   outline: none !important;
 }
@@ -468,6 +471,20 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
     background: #731b67;
     color: #fff;
   } */
+  .info-text-12{
+    margin-bottom: 0px;
+    font-size: 12px;
+  }
+  .recap input{ height: 30px;
+   
+    padding: 5px;
+    font-size: 12px;}
+    #reload_href{
+      font-size: 12px;
+      color: #000 !important;
+      font-weight: 600;
+      text-decoration: none;
+    }
   .team-image{
     width: 183px;
     margin: 0 auto;
@@ -1305,7 +1322,7 @@ color: #fff;font-weight: bold;padding: 53px 0 0;margin-bottom: 20px;
  	.angle{border: none !important; margin-top: 0 !important}
  	.pad0{padding: 0 !important}
  	.ml-10{ padding-left: 25px; }
- 	.single-com h3{ margin-top: 10px; font-weight: bold; }
+ 	.single-com h3{ margin-top: 10px; font-weight: 600; }
  	.ml-20{ margin-left: 20px; }
  	.greenb{ background: #00cd82; }
  	.btn-trade{ background:#731b67; border-color:#731b67;  }

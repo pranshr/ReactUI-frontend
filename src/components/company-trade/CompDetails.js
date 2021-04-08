@@ -50,7 +50,7 @@ function CompDetails(props) {
                   <div className="row">
                     <div className="col-sm-1"><img src={process.env.PUBLIC_URL + data.company_logo} className="pc-img"  alt="logo"/></div>
                     <div className="col-sm-8 ml-10 single-com"><h3>{data.company_name}{/*-<span class="badge greenb ml-20"><i class="fa fa-check"></i> Available</span>-*/}</h3>
-                      <p>{data.legal_name} <a href={data.legal_website_link} target={'_blank'} rel="noreferrer" className="text-bold ml-20">WEBSITE</a></p></div>
+                      <p>{data.legal_name} <a href={data.legal_website_link} target={'_blank'} rel="noreferrer" className="text-bold ml-20">Website</a></p></div>
                     <div className="col-sm-3"><span className="pull-right"><img src={process.env.PUBLIC_URL + "../assets/images/c1.png"} alt="c1" /><img src={process.env.PUBLIC_URL + "../assets/images/download.png"} alt="download" /></span></div>
                   </div>
                   <p className="mt-1">{data.company_desc}</p>
@@ -68,7 +68,7 @@ function CompDetails(props) {
                         <p>Sector</p>
                         <p><strong>{ data.sector }</strong></p>
                         <p className="mt-20">Total funding raised</p>
-                        <p><strong><i className="fa fa-rupee" />{ data.total_funding_raised }</strong></p>
+                        <p><strong><i className="fa fa-rupee" /> { data.total_funding_raised }</strong></p>
                         <p className="mt-20">ISIN</p>
                         <p><strong>{ data.company_isin }</strong></p>
                       </div>
@@ -131,7 +131,7 @@ function CompDetails(props) {
                 <div className="angle">
                   <div className="row">
                     <div className="col-md-12">
-                      <p>This information is subject to change</p>
+                      <p className="info-text-12">*This information is subject to change</p>
                       <p className="text-bold">
                       <a href={ data.crunchbase_link } target={'_blank'} rel="noreferrer">Read more on crunchbase</a>
                       </p>
