@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-//import Recaptcha from "react-recaptcha";
-//import {GoogleReCaptchaProvider,GoogleReCaptcha} from 'react-google-recaptcha-v3';
-import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
-
+import Recaptcha from 'react-google-invisible-recaptcha';
 const profileChoices = [
 
     {  id:1, el_id: 'pickup-1', value: 'Investor', label:"Investor" },
@@ -27,27 +24,17 @@ export default class ContactForm extends Component {
       emailError:'',
       messageError:'',
       captchVerified:false,
-      captchError:'',
     }
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePhone = this.handleChangePhone.bind(this);
     this.handleChangeProfile = this.handleChangeProfile.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
-    //this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    this.onResolved = this.onResolved.bind( this );
     this.handleSubmit = this.handleSubmit.bind(this);
     
   }
-  // recaptchaLoaded(){
-  //   console.log('Google recaptcha loaded successfully.')
-  // }
-  verifyCallback(responce){
-    this.setState({
-      captchVerified:true
-    });
-  }
- 
+
   handleNameValidation = () => {
     const { name } = this.state;
     let formIsValid = true;
@@ -114,7 +101,6 @@ export default class ContactForm extends Component {
 
   }
   
-  
 
   handleChangeName = (e) => {
     this.setState({ name: e.target.value }, () => {
@@ -138,46 +124,31 @@ export default class ContactForm extends Component {
     this.setState({ message: e.target.value });
     this.handleMessageValidation();
   };
+  
+  onResolved() {
+    this.props.onSubmit(this.state);  
+    document.getElementById("contactForm").reset();
+   }
+ 
   handleSubmit = (e) => {
     e.preventDefault();
-    let user_captcha_value = document.getElementById('user_captcha_input').value;
-   
-     
     const nameValid = this.handleNameValidation();
     const emailValid = this.handleEmailValidation();
     const messageValid = this.handleMessageValidation();
-   
-    
     if(nameValid && emailValid && messageValid){
-      if(user_captcha_value === ''){
-        this.setState({
-          captchError:'Please verify captcha.'
-        });
-      }else {
-        if (validateCaptcha(user_captcha_value)===true) {
-          this.props.onSubmit(this.state);  
-        }else{
-          this.setState({
-            captchError:'Invalid captcha code.'
-          });
-        }
-      }
+      this.recaptcha.execute();
     }else{
-       console.log('Invalid data.');
+      console.log('Invalid data.');
     } 
- 
-    
     //this.setState(this.initialState);
 }
 
-componentDidMount () {
-  loadCaptchaEnginge(6); 
-};
+
     render() {
-       const { profile, nameError, emailError, messageError, captchError } = this.state;
+       const { profile, nameError, emailError, messageError } = this.state;
         return (  
             <>
-                <form onSubmit={ this.handleSubmit}>
+                <form id="contactForm" onSubmit={ this.handleSubmit}>
 <div className="row"> 
   <div className="col-md-6">
     <p>Name*</p>
@@ -237,26 +208,15 @@ componentDidMount () {
 </div>
   <div className="form-group recap">
   {/* <Recaptcha
-    sitekey="6Lcc_Z8aAAAAADWd3rScf0rA1y2qWVtLraRLIy3z"
+    sitekey="6LfQlaIaAAAAAE52jBkbPonbClnGBedl8OtbM7JT"
     render="explicit"
     verifyCallback={this.verifyCallback}
-    onloadCallback={this.recaptchaLoaded}
   /> */}
-  {/* <GoogleReCaptchaProvider reCaptchaKey="[6LcCIZgaAAAAALArkX6mk3CD2sZp5FCWborqB-5n]">
-    <GoogleReCaptcha onVerify={this.verifyCallback} />
-  </GoogleReCaptchaProvider> */}
-  <div className="row">
-    <div className="col-md-3">
-    <LoadCanvasTemplate />
-    </div>
-    <div className="col-md-3">
-    <input placeholder="Enter Captcha Value" id="user_captcha_input" name="user_captcha_input" type="text" />
-  <span className="error-help">{captchError}</span>
-      </div>
-  </div>
- 
-  
-  
+  <Recaptcha
+  ref={ ref => this.recaptcha = ref }
+  sitekey="6LeD1qIaAAAAAHI3aXdEcwe6V1hku6c1JIimpRsq"
+  onResolved={ this.onResolved }
+  />
   </div>
   <div className="sbt">
     <button className="button1">Submit</button>

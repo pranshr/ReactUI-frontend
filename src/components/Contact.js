@@ -62,17 +62,17 @@ export default class Contact extends Component {
                   {
                     this.state.error ? <div class="alert alert-danger alert-dismissible fade show" role="alert">
    {this.state.respMessage }
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  {/* <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
-  </button>
+  </button> */}
 </div> : null
                   }
                   {
                     this.state.success ? <div class="alert alert-success alert-dismissible show" role="alert">
-  <strong>Thank You</strong> {this.state.respMessage }
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <strong>Thank You! </strong> {this.state.respMessage }
+  {/* <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
-  </button>
+  </button> */}
 </div> : null
                   }
                   

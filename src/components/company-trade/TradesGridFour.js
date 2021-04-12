@@ -6,7 +6,16 @@ import useSWR from "swr";
 function TradesGridFour() {
   const [tradeModal, setModal] = useState(false);
   const [item_id, setItem_id] = useState(0);
- 
+
+  function ValuationConvertion(val) {
+    var final_amt = val/1000000;
+    if(final_amt >= 1000 ){
+      final_amt = final_amt/1000;
+      return final_amt + "B";
+    }
+    return final_amt + "M";
+  }
+
   function showModal(event, data) {
     setModal(true);
     setItem_id(data);
@@ -49,7 +58,7 @@ function TradesGridFour() {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="value content-box">
-                        <p>Valuation<span className="pull-right text-bold">{ trade.last_fund_raising_valuation }</span></p>
+                        <p>Valuation<span className="pull-right text-bold"><i className="fa fa-rupee" /> { ValuationConvertion(trade.last_fund_raising_valuation) }</span></p>
                         <p>Series of Funding<span className="pull-right text-bold">{ trade.series_of_funding }</span></p>
                         <p>{ trade.company_desc.substring(0, 120) }...</p>
                         <div className="hover-box">

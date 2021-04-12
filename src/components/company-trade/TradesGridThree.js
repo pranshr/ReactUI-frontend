@@ -68,7 +68,7 @@ export default function TradesGridThree(props) {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="value content-box">
-                        <p>Valuation<span className="pull-right text-bold">$ { ValuationConvertion(trade.last_fund_raising_valuation) }</span></p>
+                        <p>Valuation<span className="pull-right text-bold"><i className="fa fa-rupee" /> { ValuationConvertion(trade.last_fund_raising_valuation) }</span></p>
                         <p>Series of Funding<span className="pull-right text-bold">{ trade.series_of_funding }</span></p>
                         <p>{ trade.company_desc.substring(0, 120) }...</p>
                         <div className="hover-box">

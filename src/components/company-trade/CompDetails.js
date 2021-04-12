@@ -21,7 +21,14 @@ function CompDetails(props) {
   function ShowMore() {
     setShowMore(!showMore);
   }
-  
+  function ValuationConvertion(val) {
+    var final_amt = val/1000000;
+    if(final_amt >= 1000 ){
+      final_amt = final_amt/1000;
+      return final_amt + "B";
+    }
+    return final_amt + "M";
+  }
   if(error) return <h1>{error}</h1>
 
   return (
@@ -68,13 +75,13 @@ function CompDetails(props) {
                         <p>Sector</p>
                         <p><strong>{ data.sector }</strong></p>
                         <p className="mt-20">Total funding raised</p>
-                        <p><strong><i className="fa fa-rupee" /> { data.total_funding_raised }</strong></p>
+                        <p><strong><i className="fa fa-rupee" /> { ValuationConvertion(data.total_funding_raised) }</strong></p>
                         <p className="mt-20">ISIN</p>
                         <p><strong>{ data.company_isin }</strong></p>
                       </div>
                       <div className="col-md-4">
                         <p>Last fund raising valuation</p>
-                        <p><strong><i className="fa fa-rupee" /> { data.last_fund_raising_valuation }</strong></p>
+                        <p><strong><i className="fa fa-rupee" /> { ValuationConvertion(data.last_fund_raising_valuation) }</strong></p>
                         <p className="mt-20">Last funding date</p>
                         <p><strong>{ data.last_funding_date }</strong></p>
                       </div>
