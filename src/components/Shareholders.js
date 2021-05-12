@@ -5,7 +5,9 @@ const Shareholders = () => {
   const bannerImage = "shaerholder.png";
 	const headingtxt = "For Shareholders";
 	const subHeadingtxt = "Start selling your unlisted company shares without waiting to encash after IPO/ exit as you might have to wait for the event much longer than expected. You can take the first step by exploring and assessing the worth of your assets through our guidance and help.";
-	return(
+  document.title ="Unlisted Shares/Trading/Pre IPO Solutions For the Shareholders - Unlistedassets"; 
+  document.getElementsByTagName("META")[3].content="Pre IPO solutions are available along with IPO trading shade price, Pre IPO and Pre IPO solutions for the shareholders. ";
+  return(
 		<>
 		<InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
         <section className="investors">

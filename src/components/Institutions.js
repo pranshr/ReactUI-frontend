@@ -5,7 +5,9 @@ const Institutions = () => {
   const bannerImage = "ins-banner.png";
 	const headingtxt = "For Institutions";
 	const subHeadingtxt = "We work with all types of institutions, Family Offices to facilitate unlisted stocks transactions. We have relations with institutions across the world primary and to help primary and secondary investments and help them liquidate their investments in unlisted stocks";
-	return(
+  document.title ="Unlisted Shares/Trading/Pre IPO Solutions For the Institutions -Unlistedassets"; 
+  document.getElementsByTagName("META")[3].content="Pre IPO solutions are available along with IPO trading shade price, Pre IPO and Pre IPO solutions for the institutions. ";
+  return(
 		<>
 		<InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
         <section className="institutions">

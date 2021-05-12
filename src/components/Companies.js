@@ -220,7 +220,7 @@ export default class Companies extends Component {
             <div className="col-md-3">
               <div className="sun">
                 <div className="moon">
-                  <h4>Filter<span className="pull-right"><Link to="#">Clear All</Link></span></h4>
+                  <h4>Filter<span className="pull-right"><button onClick={() => window.location.reload(false)} className="clear-btn">Clear All</button></span></h4>
                 </div>
                 <div className="earth">
                   <button className={panelShow1 ? "accor active1" : "accor"} onClick={this.showPanel1}>Sector</button>

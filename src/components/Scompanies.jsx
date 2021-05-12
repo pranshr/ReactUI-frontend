@@ -5,6 +5,8 @@ const Scompanies = () => {
 	const bannerImage = "company-banner.png";
 	const headingtxt = "For Companies";
 	const subHeadingtxt = "We offer tailor made programs to match your need to do secondary placement and primary placement of your shares and ESOPS, provide liquidity to investors/Employees, provide professional consultancy and insights into various unlisted shares. We work hand in hand to provide a customized solution to ensure that all your needs are taken care of.";
+    document.title ="Unlisted Shares/Trading/Pre IPO Solutions For the Companies - Unlistedassets"; 
+    document.getElementsByTagName("META")[3].content="Buy or sell unlisted shares at the best prices on unlistedassets.com. It provides prices for Pre IPO solutions or Pre IPO solutions for the companies and Pre IPO trading share.";
 	return(
 		<>
 			<InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>

@@ -5,7 +5,9 @@ const Investors = () => {
   const bannerImage = "inv-banner.png";
 	const headingtxt = "For Investors";
 	const subHeadingtxt = "Get easy access to our marketplace. Quickly interact, negotiate, close deal and transact with verified buyers and verified inventories. Get transparer quick liquidity for your unlisted stocks. Interact with thousands of potential buyers and sellers.Access company details, available investment opportunities, premium services using the platform.";
-	return(
+	document.title ="Unlisted Shares/Trading/Pre IPO Solutions For the Investors - Unlistedassets"; 
+  document.getElementsByTagName("META")[3].content="unlistedassets.com provides Pre IPO solutions, Pre IPO trading share price and Pre IPO solutions for the investors.";
+  return(
 		<>
     <InnerBanner headingtxt={headingtxt} subHeadingtxt={subHeadingtxt} bannerImage={bannerImage}/>
 		
