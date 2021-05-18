@@ -1,17 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Subscribe from '../subscribe/Subscribe'
 export default function NewsLatterModal(props) {
+  const [loaded, setLoaded] = useState(false)
     const showHideClassName = props.show ? "modal pd-50 display-block " : "modal pd-50 display-none";
     return (
         <><div className={showHideClassName}>
-            <section className="modal-main newslatter-modal-main">
+            <section className={`modal-main newslatter-modal-main ${loaded ? " " : "tp30"}`}>
          
             <div class="modal-content">
              <div className="bgImages">
-               <img src={process.env.PUBLIC_URL + "./assets/images/formandtextRe.jpg"} alt="icon_share_invest"/>
+               <img  src={process.env.PUBLIC_URL + "./assets/images/formandtextRe.jpg"} alt="icon_share_invest" onLoad={() => setLoaded(true)}/>
              </div>
-                
-                <div class="modal-body newslatter-modal">
+            
+                <div className={`modal-body newslatter-modal ${loaded ? "ht100 " : "bg-dark-blue"}`}>
                 <button type="button" class="close" onClick={props.handleClose}><i class="fa fa-times"></i></button>
                   <div className="newlatter-popup">
                   <div className="heading-pop">

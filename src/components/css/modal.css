@@ -189,7 +189,18 @@ border-top: 0px; border-left: 0px;}
   top: 0;
   padding-left: 50px;
   width: 100%;
+  
+  
+
+}
+.ht100{
   height: 100%;
+}
+.bg-dark-blue{
+  background: #051628 !important;
+} 
+.tp30{
+  top: 30% !important;
 }
 .heading-pop{text-align: left;}
 .heading-pop h2{
